@@ -1,0 +1,531 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  /* --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset)); */
+}
+
+.hide-logo {
+  display: none;
+}
+
+.show-logo {
+  display: block;
+}
+
+.bg-darker {
+  background: #222425;
+  color: #ffffff;
+}
+
+.bg-darker:focus {
+  background: #222425;
+  color: #ffffff;
+}
+
+.w-md-25 {
+  width: 25%;
+  height: 100%;
+}
+
+.text-mama {
+  color: #f06d06;
+}
+
+.bg-mama {
+  background-color: #f06d06;
+  color: #ffffff;
+}
+
+.second-nav-link {
+  color: #343a40;
+}
+
+.second-nav-link:hover {
+  color: #f06d06;
+}
+
+.main-nav-link {
+  color: #f06d06;
+}
+
+.main-nav-link:hover {
+  color: #ffc107;
+}
+
+.bg-gradient-nav {
+  /* Fallback (could use .jpg/.png alternatively) */
+  background-color: #ffc107;
+  /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffc107),
+    to(#f06d06)
+  );
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image: -webkit-linear-gradient(left, #ffc107, #f06d06);
+  /* Firefox 3.6 - 15 */
+  background-image: -moz-linear-gradient(left, #ffc107, #f06d06);
+  /* Opera 11.1 - 12 */
+  background-image: -o-linear-gradient(left, #ffc107, #f06d06);
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image: linear-gradient(to right, #ffc107, #f06d06);
+  color: #ffffff;
+}
+
+.nav-fa-xs {
+  font-size: 0.7em;
+}
+
+.btn-mama {
+  background-color: #f06d06;
+  border: none;
+  color: #ffffff;
+  height: 4em;
+  font-size: 0.8em;
+}
+
+.btn-mama:hover {
+  background-color: #a84d08;
+  color: #ebe9e9;
+}
+
+.btn-mama-order {
+  background-color: #f06d06;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-outline-mama {
+  color: #f06d06;
+  background: #ffffff;
+  border: 1px solid #f06d06;
+  height: 2.8em;
+  font-size: 0.9em;
+}
+
+.btn-outline-mama:hover {
+  background-color: #f06d06;
+  color: #ffffff;
+  border: none;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.mobile-view-products {
+  display: none;
+}
+
+.mobile-nav {
+  background-color: #f8f9fa;
+  -webkit-box-shadow: 0 3px 5px 6px #ccc;
+  -moz-box-shadow: 0 3px 5px 6px #ccc;
+  box-shadow: 0 3px 5px 6px #ccc;
+}
+
+.mobile-nav .nav-link:not(.active) {
+  color: #343a40;
+}
+
+.mobile-nav .nav-link {
+  color: #f06d06;
+}
+
+.bg-nav {
+  background-color: #f8f9fa;
+}
+
+.bg-gradient {
+  /* Fallback (could use .jpg/.png alternatively) */
+  background-color: #ffc107;
+  /* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ffc107),
+    to(#f06d06)
+  );
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image: -webkit-linear-gradient(left, #ffc107, #f06d06);
+  /* Firefox 3.6 - 15 */
+  background-image: -moz-linear-gradient(left, #ffc107, #f06d06);
+  /* Opera 11.1 - 12 */
+  background-image: -o-linear-gradient(left, #ffc107, #f06d06);
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image: linear-gradient(to right, #ffc107, #f06d06);
+  color: #ffffff;
+}
+
+.fa-naira:before {
+  content: "₦";
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.merit {
+  display: flex;
+  flex-flow: row;
+}
+
+.fa-x {
+  font-size: 3em;
+}
+
+.merit p {
+  margin: 0 0 0 0.5em;
+}
+
+.tab-head {
+  color: #ffffff;
+  padding-bottom: 0;
+}
+
+.tab-head:hover {
+  color: #ffc107;
+  border-bottom: 1px solid #ffc107;
+}
+
+.mobileCategories .nav-pills .nav-item .nav-link:not(.active) {
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+}
+
+.mobileCategories .nav-pills .nav-item .nav-link {
+  color: #ffc107;
+  border-bottom: 2px solid #ffc107;
+  border-radius: 0;
+}
+
+.pcCategories .nav-pills .nav-link:not(.active) {
+  color: #343a40;
+  border-bottom: 1px solid #343a40;
+  border-radius: 0;
+  background-color: #ffffff;
+  font-size: 0.9em;
+}
+
+.pcCategories .nav-pills .nav-link {
+  color: #ffc107;
+  border-bottom: 1px solid #ffc107;
+  border-radius: 0;
+  background-color: #ffffff;
+  font-size: 0.9em;
+}
+
+.homeProductList {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.homeProductList::-webkit-scrollbar-track {
+  background: #c3c5c7;
+  border-radius: 10px;
+}
+
+.homeProductList::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px;
+  border: 1px solid #6c757d;
+  /* width: 5px; */
+}
+
+.homeProductList::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+  border: none;
+}
+
+.category-head {
+  color: #164702;
+}
+
+.produce {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.produce:hover {
+  transform: scale(1.01);
+}
+
+.produce img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 180px;
+}
+
+.name {
+  font-size: 0.9em;
+}
+
+.click-order {
+  font-size: 0.7em;
+}
+
+.order-link:hover {
+  color: #bd5404;
+}
+
+.ad-1 {
+  height: 99.19px;
+}
+
+.btn-trade {
+  height: 4em;
+  font-size: 0.8em;
+}
+
+.text-decoration-mama {
+  text-decoration: underline;
+  text-decoration-color: #f06d06;
+}
+
+.text-decoration-mama:hover {
+  color: #f06d06;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.trade-produce {
+  width: 250px;
+}
+
+.trade-produce:hover {
+  transform: scale(1.01);
+}
+
+.trade-produce img {
+  height: 180px;
+}
+
+.shopper-overflow {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.shopper-overflow::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  /* padding: 1px; */
+}
+.shopper-overflow::-webkit-scrollbar-track {
+  background: #c3c5c7;
+  border-radius: 10px;
+}
+.shopper-overflow::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px;
+  border: 1px solid #6c757d;
+  /* width: 5px; */
+}
+.shopper-overflow::-webkit-scrollbar-thumb:hover {
+  background: #6c757d;
+  border: none;
+}
+
+.sh-list {
+  list-style: none;
+}
+
+.shopper {
+  width: 250px;
+  border-radius: 3px;
+}
+
+.shopper:hover {
+  transform: scale(1.01);
+  cursor: default;
+}
+
+.shopper img {
+  height: 220px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.shopper-img {
+  position: relative;
+}
+
+.about-shopper {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 3%;
+  line-height: 80%;
+}
+
+.shopper:hover .shopper-avi {
+  opacity: 0.3;
+}
+
+.shopper:hover .about-shopper {
+  opacity: 1;
+}
+
+.certified {
+  position: absolute;
+  top: 2%;
+  right: -5%;
+}
+
+.shopper:hover .certified {
+  opacity: 0;
+}
+
+.sh-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.sh {
+  position: relative;
+  z-index: 1;
+  padding-left: 2.2em;
+  bottom: 0.5em;
+  right: 2em;
+}
+
+.fa-sh-2x {
+  font-size: 2em;
+}
+
+.fa-sh {
+  font-size: 0.8em;
+}
+
+.sh-name {
+  font-size: 2em;
+}
+
+.sh-fa-xs {
+  font-size: 0.7em;
+}
+
+.shopper-link {
+  font-size: 0.8em;
+}
+
+.footer-input {
+  height: 4em;
+  font-size: 0.8em;
+}
+
+.footer-rights {
+  border-top: 1px solid #6c757d;
+}
+
+.footer-icon {
+  width: 2em;
+}
+
+/*login and signup style*/
+.mama-logo {
+  width: 100px;
+  height: 50px;
+}
+
+.searchForm {
+  width: 75%;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-white .nav-link {
+  color: #343a40;
+}
+
+.bg-white .nav-link:hover {
+  color: #f06d06;
+}
+
+.container-login {
+  height: 90vh;
+}
+
+.btn-login {
+  background-color: #03478f;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9em;
+  height: 3.2em;
+}
+
+.btn-login:hover {
+  background-color: #011f3f;
+  color: #ebe9e9;
+}
+
+.btn-fb,
+.btn-signup {
+  font-size: 0.9em;
+  height: 3.2em;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.ellipse1 {
+  position: relative;
+  z-index: 0;
+  margin-top: 10%;
+}
+
+.ellipse2 {
+  position: relative;
+  z-index: 1;
+  margin-left: 20%;
+  margin-top: -15%;
+}
+
+.ellipse3 {
+  position: relative;
+  z-index: 2;
+  margin-top: -15%;
+}
+
+/*css for extra large screen*/
+@media screen and (min-width: 1800px) {
+  .mx-xxl-auto {
+    margin: 0 auto;
+  }
+
+  .ad-1 {
+    height: min-content;
+  }
+}
+
+/*the marquee scroll in index-mobile*/
+.mobileCategories {
+  position: relative;
+}
+
+.mobile-view-products {
+  position: relative;
+  z-index: 1;
+}
+
+#slideLeft {
+  position: absolute;
+  top: 6%;
+  left: 1%;
+  z-index: 2;
+}
+
+#slideRight {
+  position: absolute;
+  top: 6%;
+  right: 1%;
+  z-index: 2;
+}

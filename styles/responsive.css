@@ -1,0 +1,454 @@
+@media screen and (max-width: 768px) {
+  .bg-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .pc-view {
+    display: none;
+  }
+
+  .mobile-view {
+    display: block;
+  }
+
+  .mobile-nav-text {
+    font-size: 0.8em;
+  }
+
+  .mobile-view-products {
+    display: flex;
+  }
+
+  .pc-view-products {
+    display: none;
+  }
+
+  .w-65 {
+    width: 65%;
+  }
+
+  .bg-gradient {
+    background-color: #ffffff;
+    background-image: none;
+    color: #ffc107;
+  }
+
+  .merit {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+  }
+
+  .fa-x {
+    font-size: 2em;
+  }
+
+  .merit p {
+    margin: 1em 0 0 0;
+    font-size: 0.8em;
+    color: #343a40;
+  }
+
+  .tab-head {
+    font-size: 0.9em;
+  }
+
+  .produce {
+    width: 200px;
+  }
+
+  .produce img {
+    height: 150px;
+  }
+
+  .trade-produce {
+    width: 200px;
+  }
+
+  .trade-produce img {
+    height: 150px;
+  }
+
+  .shopper {
+    width: 200px;
+  }
+
+  .shopper img {
+    height: 180px;
+  }
+
+  .about-shopper {
+    top: 30%;
+    left: 3%;
+    line-height: 80%;
+  }
+
+  .sh {
+    padding-left: 2.25em;
+    bottom: 0.5em;
+    right: 2.1em;
+  }
+
+  .fa-sh-2x {
+    font-size: 1.8em;
+  }
+
+  .fa-sh {
+    font-size: 0.7em;
+  }
+
+  .sh-name {
+    font-size: 1.5em;
+  }
+
+  .sh-fa-xs {
+    font-size: 0.65em;
+  }
+
+  .btn-outline-mama {
+    height: 2.6em;
+    font-size: 0.8em;
+  }
+
+  .last {
+    margin-bottom: 64px;
+  }
+
+  /*login and signup style*/
+  .searchForm {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .text-small {
+    font-size: 0.75em;
+  }
+
+  .w-md-25 {
+    width: 40%;
+    height: 90%;
+  }
+
+  .nav-fa-xs {
+    font-size: 0.6em;
+  }
+
+  .mobile-nav-text {
+    font-size: 0.65em;
+  }
+
+  .fa-x {
+    font-size: 1.5em;
+  }
+
+  .merit p {
+    font-size: 0.6em;
+  }
+
+  .tab-head {
+    font-size: 0.8em;
+  }
+
+  .produce {
+    width: 150px;
+    height: max-content;
+  }
+
+  .produce img {
+    height: 130px;
+  }
+
+  .name {
+    font-size: 0.7em;
+  }
+
+  .amount {
+    font-size: 0.8em;
+  }
+
+  .star .fa-xs {
+    font-size: 0.5em;
+  }
+
+  .click-order {
+    font-size: 0.6em;
+  }
+
+  .ad-1 {
+    height: 80px;
+  }
+
+  .trade-produce {
+    width: 150px;
+    height: max-content;
+  }
+
+  .trade-produce img {
+    height: 130px;
+  }
+
+  .shopper {
+    width: 150px;
+    height: max-content;
+  }
+
+  .shopper img {
+    height: 150px;
+  }
+
+  .about-shopper {
+    top: 20%;
+    left: 3%;
+    line-height: 80%;
+  }
+
+  #fa-icon1,
+  #fa-icon2 {
+    font-size: 1.3em;
+  }
+
+  .sh {
+    padding-left: 2.25em;
+    bottom: 0.5em;
+    right: 2.1em;
+  }
+
+  .fa-sh-2x {
+    font-size: 1.6em;
+  }
+
+  .fa-sh {
+    font-size: 0.6em;
+  }
+
+  .sh-name {
+    font-size: 1.3em;
+  }
+
+  .sh-fa-xs {
+    font-size: 0.6em;
+  }
+
+  .btn-outline-mama {
+    height: 2.6em;
+    font-size: 0.6em;
+  }
+
+  .btn-sh {
+    font-size: 0.7em;
+  }
+
+  .testimony {
+    font-size: 0.8em;
+  }
+
+  /*login and signup style*/
+  .mama-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .searchForm {
+    width: 55%;
+  }
+
+  /*product page style*/
+  .reviewModal {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .w-65 {
+    width: 60%;
+  }
+
+  .w-md-25 {
+    width: 50%;
+    height: 90%;
+  }
+
+  .nav-fa-xs {
+    font-size: 0.5em;
+  }
+
+  .produce {
+    width: 130px;
+  }
+
+  .produce img {
+    height: 90px;
+  }
+
+  .name {
+    font-size: 0.6em;
+  }
+
+  .amount {
+    font-size: 0.75em;
+  }
+
+  .star .fa-xs {
+    font-size: 0.5em;
+  }
+
+  .click-order {
+    font-size: 0.55em;
+  }
+
+  .ad-1 {
+    height: 70px;
+  }
+
+  .trade-produce {
+    width: 130px;
+  }
+
+  .trade-produce img {
+    height: 90px;
+  }
+
+  .shopper {
+    width: 130px;
+  }
+
+  .shopper img {
+    height: 120px;
+  }
+
+  .about-shopper {
+    top: 20%;
+    left: 3%;
+    line-height: 60%;
+  }
+
+  #fa-icon1,
+  #fa-icon2 {
+    font-size: 0.8em;
+  }
+
+  .sh {
+    padding-left: 2.28em;
+    bottom: 0.5em;
+    right: 2.25em;
+  }
+
+  .fa-sh-2x {
+    font-size: 1.4em;
+  }
+
+  .fa-sh {
+    font-size: 0.5em;
+  }
+
+  .sh-name {
+    font-size: 1.2em;
+  }
+
+  .sh-fa-xs {
+    font-size: 0.5em;
+  }
+
+  .btn-outline-mama {
+    height: 2.6em;
+    font-size: 0.58em;
+    padding: 0.12em 0;
+  }
+
+  .btn-barter {
+    font-size: 0.5em;
+  }
+
+  .btn-sh {
+    font-size: 0.7em;
+  }
+
+  /*login and signup style*/
+  .mama-logo {
+    width: 70px;
+    height: 40px;
+  }
+
+  .searchForm {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .mobile-nav-text .hide {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .mobile-nav-text {
+    font-size: 0.6em;
+  }
+
+  .text-small {
+    font-size: 0.7em;
+  }
+
+  .nav-fa-xs {
+    font-size: 0.45em;
+  }
+
+  .w-65 {
+    width: 55%;
+  }
+
+  .produce {
+    width: 120px;
+  }
+
+  .amount {
+    font-size: 0.7em;
+  }
+
+  .ad-1 {
+    height: 68px;
+  }
+
+  .trade-produce {
+    width: 120px;
+  }
+
+  .shopper {
+    width: 120px;
+  }
+
+  .shopper img {
+    height: 110px;
+  }
+
+  .sh-name {
+    font-size: 1em;
+  }
+
+  .sh-fa-xs {
+    font-size: 0.5em;
+  }
+
+  .btn-outline-mama {
+    height: 2.6em;
+    font-size: 0.5em;
+    padding: 0.12em 0;
+  }
+
+  .btn-sh {
+    font-size: 0.7em;
+  }
+
+  /*login and signup style*/
+  .mama-logo {
+    width: 57px;
+    height: 35px;
+  }
+
+  .searchForm {
+    width: 45%;
+  }
+}

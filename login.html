@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"
+    />
+    <!--Google fonts link for Montserrat font family-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font awesome 5.13.0 link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!--bootstrap link-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--css link-->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <!--contact navbar-->
+    <div class="container-fluid">
+      <div class="row" id="top">
+        <div class="col-12 d-flex bg-light py-2">
+          <a href="" class="pt-2 text-dark text-uppercase fa-xs"
+            >help & support</a
+          >
+          <a href="#" class="ml-auto"
+            ><button class="btn btn-success rounded btn-sm">
+              <small>Sell on Mama's Market</small>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <!--nav bar-->
+    <nav class="navbar navbar-light bg-white shadow-sm bg-nav">
+      <div class="container justify-content-start">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+            alt="logo"
+            class="mama-logo"
+        /></a>
+        <form action="" class="searchForm">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            style="height: 3em;"
+            class="form-control form-control-sm rounded-pill border-0 bg-light"
+            placeholder="Search for product close to your location..."
+          />
+        </form>
+        <a
+          href="signup.html"
+          class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1"
+          >Sign up</a
+        >
+        <a href="" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1"
+          ><i class="fas fa-shopping-cart"></i
+        ></a>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!--login-->
+      <div class="row">
+        <div class="col-lg-6 pc-view bg-light">
+          <div
+            class="container container-login d-flex flex-column justify-content-center align-items-center"
+          >
+            <img
+              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+              alt="logo"
+              width="200"
+              height="120"
+            />
+            <h3 class="text-dark w-50 text-center">
+              The revolutionary way of mordern day shopping.
+            </h3>
+            <p class="text-muted">
+              Personal Shopper | Trade by barter | Easy Shopping
+            </p>
+            <button class="btn btn-mama px-4">Start Shopping Today</button>
+          </div>
+        </div>
+        <div class="col-lg-6 bg-primary text-light">
+          <!--the login form-->
+          <div
+            class="container container-login d-flex flex-column justify-content-center px-md-5 my-5 my-lg-0 py-5 py-lg-0"
+          >
+            <h3 class="mx-md-5">Welcome back</h3>
+            <p class="mx-md-5 fa-xs">
+              Log in and enjoy our amazing shopping experience
+            </p>
+            <form action="" class="mx-md-5 mt-5">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="form-group my-4">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+              </div>
+              <button type="submit" class="my-4 btn btn-login form-control">
+                Log In
+              </button>
+            </form>
+            <div class="text-center">
+              <a href="" class="fa-xs text-decoration-none text-light"
+                >Forgot password?</a
+              >
+            </div>
+            <a href="" class="mx-md-5"
+              ><button
+                type="submit"
+                class="my-4 btn btn-success btn-fb form-control"
+              >
+                Log in using Facebook
+              </button></a
+            >
+            <div class="text-center">
+              Not a member yet?
+              <a
+                href="signup.html"
+                class="signup-link text-dark font-weight-bold"
+                >Sign up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

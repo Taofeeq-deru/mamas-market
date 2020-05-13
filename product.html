@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"
+    />
+    <!--Google fonts link for Montserrat font family-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font awesome 5.13.0 link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!--bootstrap link-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--css link-->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/product.css" />
+    <title>Product</title>
+  </head>
+  <body>
+    <!--contact navbar-->
+    <div class="container-fluid">
+      <div class="row" id="top">
+        <div class="col-12 d-flex bg-light py-2">
+          <a href="" class="pt-2 text-dark text-uppercase fa-xs"
+            >help & support</a
+          >
+          <a href="#" class="ml-auto"
+            ><button class="btn btn-success rounded btn-sm">
+              <small>Sell on Mama's Market</small>
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+    <!--nav bar-->
+    <nav class="navbar navbar-light bg-white shadow-sm bg-nav sticky-top">
+      <div class="container justify-content-start">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+            alt="logo"
+            class="mama-logo"
+        /></a>
+        <form action="" class="searchForm">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            style="height: 3em;"
+            class="form-control form-control-sm rounded-pill border-0 bg-light"
+            placeholder="Search for product close to your location..."
+          />
+        </form>
+        <a
+          href="login.html"
+          class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1"
+          >Log in</a
+        >
+        <a href="" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1"
+          ><i class="fas fa-shopping-cart"></i
+        ></a>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!--product-->
+      <div class="row my-5">
+        <div class="container border-muted">
+          <div class="col-12 border-muted">
+            <!--product name-->
+            <span class="d-flex">
+              <i
+                onclick="goBack()"
+                class="fas fa-angle-left fa-2x mr-3 back"
+              ></i>
+              <h4 class="font-weight-bold text-capitalize">Fresh Tomatoes</h4>
+            </span>
+          </div>
+          <!--product details-->
+          <div class="row my-4">
+            <div class="col-md-6">
+              <div
+                id="carouselExampleSlidesOnly"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                      class="d-block w-100 product-image"
+                      alt="tomato"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg"
+                      class="d-block w-100 product-image"
+                      alt="tomato"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"
+                      class="d-block w-100 product-image"
+                      alt="tomato"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row accordion" id="accordionProducts">
+                <div
+                  class="col-12 d-flex flex-row flex-nowrap justify-content-between justify-content-lg-start accord"
+                >
+                  <div class="text-center headingOne mr-lg-4">
+                    <h6
+                      class="text-uppercase font-weight-bold px-0 py-2 accordionHead"
+                      id="head1"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      description
+                    </h6>
+                  </div>
+                  <div class="text-center headingTwo mr-lg-4">
+                    <h6
+                      class="text-uppercase font-weight-bold px-0 py-2 accordionHead"
+                      id="head2"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      seller
+                    </h6>
+                  </div>
+                  <div class="text-center headingThree mr-lg-4">
+                    <h6
+                      class="text-uppercase font-weight-bold px-0 py-2 accordionHead"
+                      id="head3"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      reviews
+                    </h6>
+                  </div>
+                </div>
+                <div
+                  id="collapseOne"
+                  class="row container collapse show my-2"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionProducts"
+                >
+                  <!--product description-->
+                  <div class="col-12">
+                    Fresh tomato for you to make your amazing stew and for
+                    frying eggs
+                  </div>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="row container collapse my-2"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionProducts"
+                >
+                  <!--product seller-->
+                  <div class="col-12">
+                    <span class="seller-name">Ajagbe Dimeji</span> <br />
+                    <a href="tel+" class="text-decoration-none text-dark"
+                      ><i class="fas fa-phone text-mama"></i>+2349070557573</a
+                    >
+                  </div>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="row container collapse my-2"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionProducts"
+                >
+                  <!--product review-->
+                  <div
+                    class="col-12 d-flex flex-row flex-nowrap product-overflow"
+                  >
+                    <span class="mx-auto">
+                      <span
+                        class="d-flex flex-column text-center mr-3 mb-3 eachReview"
+                      >
+                        <!--user reviews-->
+                        <span class="review"
+                          ><i
+                            class="fas fa-quote-left fa-xs text-muted mb-2"
+                          ></i
+                          >&nbsp; Great product, well packaged &nbsp;<i
+                            class="fas fa-quote-right fa-xs text-muted mb-2"
+                          ></i
+                        ></span>
+                        <!--product rating-->
+                        <span class="mr-4">
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="far fa-star fa-xs text-success"></i
+                        ></span>
+                        <span class="userName fa-xs text-muted font-weight-bold"
+                          >Brendan Enis</span
+                        >
+                      </span>
+                    </span>
+                    <span class="mx-auto">
+                      <span
+                        class="d-flex flex-column text-center mr-3 mb-3 eachReview"
+                      >
+                        <!--user reviews-->
+                        <span class="review"
+                          ><i
+                            class="fas fa-quote-left fa-xs text-muted mb-2"
+                          ></i
+                          >&nbsp; Great product, well packaged &nbsp;<i
+                            class="fas fa-quote-right fa-xs text-muted mb-2"
+                          ></i
+                        ></span>
+                        <!--product rating-->
+                        <span class="">
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="far fa-star fa-xs text-success"></i
+                        ></span>
+                        <span class="userName fa-xs text-muted font-weight-bold"
+                          >Brendan Enis</span
+                        >
+                      </span>
+                    </span>
+                    <span class="mx-auto">
+                      <span
+                        class="d-flex flex-column text-center mr-3 mb-3 eachReview"
+                      >
+                        <!--user reviews-->
+                        <span class="review"
+                          ><i
+                            class="fas fa-quote-left fa-xs text-muted mb-2"
+                          ></i
+                          >&nbsp; Great product, well packaged &nbsp;<i
+                            class="fas fa-quote-right fa-xs text-muted mb-2"
+                          ></i
+                        ></span>
+                        <!--product rating-->
+                        <span class="mr-4">
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="fas fa-star fa-xs text-success"></i>
+                          <i class="far fa-star fa-xs text-success"></i
+                        ></span>
+                        <span class="userName fa-xs text-muted font-weight-bold"
+                          >Brendan Enis</span
+                        >
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="row col-12 d-flex my-2 pb-4 border-muted">
+                <!--product rating-->
+                <span class="mr-4">
+                  <i class="fas fa-star fa-xs text-success"></i>
+                  <i class="fas fa-star fa-xs text-success"></i>
+                  <i class="fas fa-star fa-xs text-success"></i>
+                  <i class="fas fa-star fa-xs text-success"></i>
+                  <i class="far fa-star fa-xs text-success"></i
+                ></span>
+                <!--enter review, if user is not logged in, prompt login-->
+                <span
+                  class="text-success text-underline enterReview"
+                  data-toggle="modal"
+                  data-target="#reviewModalForm"
+                  >Write a review</span
+                >
+                <!--review modal form-->
+                <div
+                  class="modal fade"
+                  tabindex="-1"
+                  role="dialog"
+                  id="reviewModalForm"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered reviewModal"
+                    role="document"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Review</h5>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="">
+                          <div class="form-group">
+                            <div class="stars" id="rate">
+                              <input
+                                class="star star-5"
+                                id="star-5"
+                                type="radio"
+                                name="star"
+                              />
+                              <label class="star star-5" for="star-5"></label>
+                              <input
+                                class="star star-4"
+                                id="star-4"
+                                type="radio"
+                                name="star"
+                              />
+                              <label class="star star-4" for="star-4"></label>
+                              <input
+                                class="star star-3"
+                                id="star-3"
+                                type="radio"
+                                name="star"
+                              />
+                              <label class="star star-3" for="star-3"></label>
+                              <input
+                                class="star star-2"
+                                id="star-2"
+                                type="radio"
+                                name="star"
+                              />
+                              <label class="star star-2" for="star-2"></label>
+                              <input
+                                class="star star-1"
+                                id="star-1"
+                                type="radio"
+                                name="star"
+                              />
+                              <label class="star star-1" for="star-1"></label>
+                            </div>
+                          </div>
+                          <div class="form-group mt-n2">
+                            <label for="reviewInput">Enter Review</label>
+                            <textarea
+                              name="review"
+                              id="reviewInput"
+                              rows="3"
+                              class="form-control"
+                            ></textarea>
+                          </div>
+                          <button
+                            type="submit"
+                            class="btn btn-primary form-control"
+                          >
+                            Submit
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="price row">
+                <div class="col-12">
+                  <h3 class="text-dark font-weight-bold">
+                    <i class="fa fa-naira"></i>1200
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <form
+                    action=""
+                    class="d-flex flex-nowrap justify-content-start"
+                  >
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      class="rounded w-15 px-1 mr-3"
+                    />
+                    <button
+                      type="submit"
+                      class="btn btn-success w-50 text-uppercase btn-cart w-75"
+                    >
+                      <i class="fas fa-cart-plus"></i> &nbsp; add to cart
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--other products from seller-->
+      <div class="row">
+        <div class="container">
+          <div class="col-12">
+            <h4 class="font-weight-bold text-capitalize">
+              other products from seller
+            </h4>
+          </div>
+          <!--product list-->
+          <ul
+            class="row col-12 d-flex flex-row flex-nowrap product-overflow my-4"
+          >
+            <li class="mx-auto product-list">
+              <span
+                class="produce d-flex flex-column shadow bg-white mb-4 mx-2"
+              >
+                <a
+                  href="product.html"
+                  class="d-flex flex-column text-decoration-none"
+                >
+                  <img
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                    alt="tomato"
+                    class="picture w-100"
+                  />
+                  <span class="name-star-amount px-2 mt-2 d-flex flex-row">
+                    <span class="name-star d-flex flex-column">
+                      <span
+                        class="name text-decoration-none font-weight-bold text-dark text-capitalize"
+                        >Fresh Tomato</span
+                      >
+                      <span class="star">
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="far fa-star fa-xs text-success"></i>
+                      </span>
+                    </span>
+                    <span
+                      class="amount text-success ml-auto mt-2 font-weight-bold"
+                      ><i class="fa fa-naira text-success"></i>1200</span
+                    >
+                  </span>
+                </a>
+                <form action="" class="place-order d-flex px-2 my-2">
+                  <span class="amount d-flex">
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      class="w-md-25 rounded px-1"
+                    />
+                  </span>
+                  <button
+                    type="submit"
+                    class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
+                  >
+                    <i class="fas fa-plus-square fa-xs"></i>
+                    <span class="click-order text-nowrap"> Place order</span>
+                  </button>
+                </form>
+              </span>
+            </li>
+            <li class="mx-auto product-list">
+              <span
+                class="produce d-flex flex-column shadow bg-white mb-4 mx-2"
+              >
+                <a
+                  href="product.html"
+                  class="d-flex flex-column text-decoration-none"
+                >
+                  <img
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                    alt="tomato"
+                    class="picture w-100"
+                  />
+                  <span class="name-star-amount px-2 mt-2 d-flex flex-row">
+                    <span class="name-star d-flex flex-column">
+                      <span
+                        class="name text-decoration-none font-weight-bold text-dark text-capitalize"
+                        >Fresh Tomato</span
+                      >
+                      <span class="star">
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="far fa-star fa-xs text-success"></i>
+                      </span>
+                    </span>
+                    <span
+                      class="amount text-success ml-auto mt-2 font-weight-bold"
+                      ><i class="fa fa-naira text-success"></i>1200</span
+                    >
+                  </span>
+                </a>
+                <form action="" class="place-order d-flex px-2 my-2">
+                  <span class="amount d-flex">
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      class="w-md-25 rounded px-1"
+                    />
+                  </span>
+                  <button
+                    type="submit"
+                    class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
+                  >
+                    <i class="fas fa-plus-square fa-xs"></i>
+                    <span class="click-order text-nowrap"> Place order</span>
+                  </button>
+                </form>
+              </span>
+            </li>
+            <li class="mx-auto product-list">
+              <span
+                class="produce d-flex flex-column shadow bg-white mb-4 mx-2"
+              >
+                <a
+                  href="product.html"
+                  class="d-flex flex-column text-decoration-none"
+                >
+                  <img
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                    alt="tomato"
+                    class="picture w-100"
+                  />
+                  <span class="name-star-amount px-2 mt-2 d-flex flex-row">
+                    <span class="name-star d-flex flex-column">
+                      <span
+                        class="name text-decoration-none font-weight-bold text-dark text-capitalize"
+                        >Fresh Tomato</span
+                      >
+                      <span class="star">
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="far fa-star fa-xs text-success"></i>
+                      </span>
+                    </span>
+                    <span
+                      class="amount text-success ml-auto mt-2 font-weight-bold"
+                      ><i class="fa fa-naira text-success"></i>1200</span
+                    >
+                  </span>
+                </a>
+                <form action="" class="place-order d-flex px-2 my-2">
+                  <span class="amount d-flex">
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      class="w-md-25 rounded px-1"
+                    />
+                  </span>
+                  <button
+                    type="submit"
+                    class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
+                  >
+                    <i class="fas fa-plus-square fa-xs"></i>
+                    <span class="click-order text-nowrap"> Place order</span>
+                  </button>
+                </form>
+              </span>
+            </li>
+            <li class="mx-auto product-list">
+              <span
+                class="produce d-flex flex-column shadow bg-white mb-4 mx-2"
+              >
+                <a
+                  href="product.html"
+                  class="d-flex flex-column text-decoration-none"
+                >
+                  <img
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                    alt="tomato"
+                    class="picture w-100"
+                  />
+                  <span class="name-star-amount px-2 mt-2 d-flex flex-row">
+                    <span class="name-star d-flex flex-column">
+                      <span
+                        class="name text-decoration-none font-weight-bold text-dark text-capitalize"
+                        >Fresh Tomato</span
+                      >
+                      <span class="star">
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="fas fa-star fa-xs text-success"></i>
+                        <i class="far fa-star fa-xs text-success"></i>
+                      </span>
+                    </span>
+                    <span
+                      class="amount text-success ml-auto mt-2 font-weight-bold"
+                      ><i class="fa fa-naira text-success"></i>1200</span
+                    >
+                  </span>
+                </a>
+                <form action="" class="place-order d-flex px-2 my-2">
+                  <span class="amount d-flex">
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      class="w-md-25 rounded px-1"
+                    />
+                  </span>
+                  <button
+                    type="submit"
+                    class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
+                  >
+                    <i class="fas fa-plus-square fa-xs"></i>
+                    <span class="click-order text-nowrap"> Place order</span>
+                  </button>
+                </form>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer last bg-dark row">
+        <div class="container">
+          <div class="mt-3 pt-5 pb-2 row">
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                mama's market
+              </h6>
+              <p class="fa-xs text-mama">Your No. 1 online fresh food store</p>
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Help Centre</a
+              >
+              <a
+                href="index.html"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Home</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Contact us</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Delivery options and timelines</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >How to make an order</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Gettings started with personal shopper</a
+              >
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                about mama's market
+              </h6>
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >About us</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Mama's Market Careers</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Mama's market niche</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Terms & Conditions</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Package Delivery</a
+              >
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                sell on mama's market
+              </h6>
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Sell on Mama's Market</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Become a certified Personal Shopper</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Become a Logistics Service Partner</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Product Categories</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Trade by barter</a
+              >
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs"
+                >Blogs & Reviews</a
+              >
+            </div>
+            <div class="col-3">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                newsletter
+              </h6>
+              <form action="">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-darker form-control text-light border-0 rounded-0 footer-input"
+                  placeholder="Enter email address"
+                />
+                <button type="submit" class="btn btn-mama form-control my-2">
+                  Subscribe
+                </button>
+              </form>
+              <span class="d-flex justify-content-around mt-3">
+                <a
+                  href="https://twitter.com/MamasmarketN?s=08"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon"
+                  ><i class="fab fa-twitter text-dark"></i
+                ></a>
+                <a
+                  href=""
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon"
+                  ><i class="fab fa-google-plus-g text-dark"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/Mamas-Market-Online-Store-111442090546702/"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon"
+                  ><i class="fab fa-facebook-f text-dark"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/mamasmarket_ng/"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon"
+                  ><i class="fab fa-instagram text-dark"></i
+                ></a>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
+                All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/product.js"></script>
+
+    <!--bootstrap scripts-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
