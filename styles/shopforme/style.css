@@ -84,3 +84,185 @@
 }
 
 /*order styles*/
+#pills-tabContent {
+  height: 140vh;
+}
+
+.shop-order .nav-pills .nav-item {
+  color: #343a40;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+.filling {
+  color: #ffffff;
+  background-color: #0a8787;
+}
+
+.filled {
+  color: #ffffff;
+  background-color: #23b771;
+}
+
+.border-grey {
+  border: 1px solid #8b8b8b;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #8b8b8b;
+}
+
+.btn-submit {
+  background: #23b771;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-submit:hover {
+  background: rgb(28, 148, 92);
+  color: #e6e6e6;
+}
+
+.fa-order-xs {
+  font-size: 0.65em;
+}
+
+.bg-trans {
+  background: transparent;
+}
+
+.fa-form-md {
+  font-size: 1.3em;
+}
+
+.btn-pay {
+  background: #03acff;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-pay:hover {
+  background: rgb(2, 141, 211);
+  color: #e6e6e6;
+}
+
+.check-label {
+  color: #6c757d;
+}
+
+.checkbox input:checked + .check-label {
+  color: #343a40;
+}
+
+.btn-add-item {
+  background: #008dda;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-add-item:hover {
+  background: rgb(1, 119, 182);
+  color: #e6e6e6;
+}
+
+.btn-upload-item {
+  background: #8b8b8b;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-upload-item:hover {
+  background: rgb(110, 110, 110);
+  color: #e6e6e6;
+}
+
+.give-position {
+  position: relative;
+}
+
+.select-shopper-list {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 34vh;
+  position: relative;
+  z-index: 1;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.select-shopper-list::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.input-hidden {
+  position: absolute;
+  display: none;
+}
+
+.input-hidden:checked + .hover-effect > label > img {
+  -webkit-filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+  -moz-filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+  filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+}
+
+.input-hidden:checked + .hover-effect > label > .the-shopper-words {
+  opacity: 1;
+}
+
+.w-shopper {
+  width: 30vw;
+}
+
+.each-shopper-avi {
+  position: relative;
+  height: 28vh;
+}
+
+.the-shopper-words {
+  line-height: 100%;
+  position: absolute;
+  top: 30%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.hover-effect:hover .each-shopper-avi {
+  -webkit-filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+  -moz-filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+  filter: brightness(0.3) grayscale(2.5) opacity(0.9);
+}
+
+.hover-effect:hover .the-shopper-words {
+  opacity: 1;
+}
+
+.hide-slide-button {
+  display: none;
+}
+
+.show-slide-button {
+  display: block;
+}
+
+#slideShopperLeft {
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  z-index: 2;
+}
+
+#slideShopperRight {
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  z-index: 2;
+}

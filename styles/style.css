@@ -364,7 +364,9 @@ body {
 }
 
 .shopper:hover .shopper-avi {
-  opacity: 0.3;
+  -webkit-filter: brightness(0.7) grayscale(1) opacity(0.9);
+  -moz-filter: brightness(0.7) grayscale(1) opacity(0.9);
+  filter: brightness(0.7) grayscale(1) opacity(0.9);
 }
 
 .shopper:hover .about-shopper {
