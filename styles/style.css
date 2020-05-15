@@ -112,6 +112,19 @@ body {
   border: none;
 }
 
+.btn-mama-sm {
+  background-color: #f06d06;
+  border: none;
+  color: #ffffff;
+  height: 2.8em;
+  font-size: 0.9em;
+}
+
+.btn-mama-sm:hover {
+  background-color: #cf5d06;
+  color: #ebe9e9;
+}
+
 .mobile-view {
   display: none;
 }

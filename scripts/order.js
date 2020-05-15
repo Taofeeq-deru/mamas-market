@@ -21,4 +21,8 @@ buttonLeft.onclick = function () {
   selectList.scrollLeft -= 200;
 };
 
+function goBack() {
+  window.history.back();
+}
+
 window.addEventListener("load", handleRightButton);

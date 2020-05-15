@@ -84,6 +84,15 @@
 }
 
 /*order styles*/
+.back {
+  color: #343a40;
+}
+
+.back:hover {
+  cursor: pointer;
+  color: #f06d06;
+}
+
 #pills-tabContent {
   height: 140vh;
 }
