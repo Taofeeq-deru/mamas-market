@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <!--prettier-ignore-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"/>
+    <!--Google fonts link for Montserrat font family-->
+    <!--prettier-ignore-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"/>
+    <!--Font awesome 5.13.0 link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <!--bootstrap link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <!--css link-->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/shopforme/style.css" />
+    <title>Shop For Me: Order</title>
+  </head>
+  <body>
+    <!--contact navbar-->
+    <div class="container-fluid">
+      <div class="row" id="top">
+        <div class="col-12 d-flex bg-light py-2">
+          <a href="" class="pt-2 text-dark text-uppercase fa-xs">
+            help & support
+          </a>
+          <a href="#" class="ml-auto">
+            <button class="btn btn-success rounded btn-sm">
+              <small>Sell on Mama's Market</small>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--nav bar-->
+    <nav class="navbar navbar-light bg-white shadow-sm bg-nav sticky-top">
+      <div class="container-fluid pl-5">
+        <div class="row col-12 my-2">
+          <a class="navbar-brand mt-n3" href="/index.html">
+            <!--prettier-ignore-->
+            <img
+              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+              alt="logo"
+              class="mama-logo"/>
+          </a>
+          <form action="" class="searchForm">
+            <!--prettier-ignore-->
+            <input
+              type="search"
+              name="search"
+              id="search"
+              style="height: 3em;"
+              class="form-control form-control-sm rounded-lg border-0 bg-light"
+              placeholder="Search for product close to your location..."/>
+          </form>
+          <!--prettier-ignore-->
+          <a
+            href="/login.html"
+            class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1">
+            Log in
+          </a>
+          <a href="" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+        <!--second nav-->
+        <div class="row col-12 second-nav">
+          <div class="d-flex fa-xs text-capitalize">
+            <a class="nav-item nav-link text-mama" href="#">all categories</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">fresh farm produce</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">processed food products</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">canned food product</a>
+            <a class="nav-item nav-link text-mama" href="#">fresh food</a>
+            <a class="nav-item nav-link text-mama" href="#">veggie/fruits</a>
+            <a class="nav-item nav-link text-mama" href="#">beverages</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">home cleaning supplies</a>
+            <a class="nav-link shop-link" href="#">shop for me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 my-5">
+          <div class="container text-center text-dark my-5 px-5">
+            <h1>Start creating an amazing personal shopping experience.</h1>
+          </div>
+        </div>
+      </div>
+      <!--ordering forms-->
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="container mb-5">
+            <ul
+              class="nav nav-pills nav-justified mb-3 fa-sm"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <!--prettier-ignore-->
+                <a
+                  class="nav-link active"
+                  id="pills-details-tab"
+                  data-toggle="pill"
+                  href="#pills-details"
+                  role="tab"
+                  aria-controls="pills-details"
+                  aria-selected="true">
+                  Shopping Details
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <!--prettier-ignore-->
+                <a
+                  class="nav-link disabled"
+                  id="pills-address-tab"
+                  data-toggle="pill"
+                  href="#pills-address"
+                  role="tab"
+                  aria-controls="pills-address"
+                  aria-selected="false">
+                  Delivery Address
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <!--prettier-ignore-->
+                <a
+                  class="nav-link disabled"
+                  id="pills-summary-tab"
+                  data-toggle="pill"
+                  href="#pills-summary"
+                  role="tab"
+                  aria-controls="pills-summary"
+                  aria-selected="false">
+                  Shop for me Summary
+                </a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <!--prettier-ignore-->
+                <a
+                  class="nav-link disabled"
+                  id="pills-pay-tab"
+                  data-toggle="pill"
+                  href="#pills-pay"
+                  role="tab"
+                  aria-controls="pills-pay"
+                  aria-selected="false">
+                  Pay
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <!--shopping details-->
+              <!--prettier-ignore-->
+              <div
+                class="tab-pane fade show active"
+                id="pills-details"
+                role="tabpanel"
+                aria-labelledby="pills-details-tab">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, fugiat! In sapiente ratione adipisci saepe aliquid eveniet voluptatem praesentium perferendis rerum, similique neque libero impedit cupiditate, odit voluptas nam alias!
+              </div>
+              <!--delivery address-->
+              <!--prettier-ignore-->
+              <div
+                class="tab-pane fade"
+                id="pills-address"
+                role="tabpanel"
+                aria-labelledby="pills-address-tab">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat harum est voluptas aut, repudiandae nemo non tenetur a beatae vel, odio deleniti nobis animi eum doloribus, modi corporis blanditiis.
+              </div>
+              <!--shp for me summary-->
+              <!--prettier-ignore-->
+              <div
+                class="tab-pane fade"
+                id="pills-summary"
+                role="tabpanel"
+                aria-labelledby="pills-summary-tab">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quos aliquam sit molestias quasi maiores aliquid nesciunt facere dolorem mollitia sunt officiis eligendi architecto facilis quia blanditiis consectetur, earum voluptas.
+              </div>
+              <!--pay-->
+              <!--prettier-ignore-->
+              <div
+                class="tab-pane fade"
+                id="pills-pay"
+                role="tabpanel"
+                aria-labelledby="pills-pay-tab">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident quos aliquam sit molestias quasi maiores aliquid nesciunt facere dolorem mollitia sunt officiis eligendi architecto facilis quia blanditiis consectetur, earum voluptas.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer bg-dark row">
+        <div class="container">
+          <div class="mt-3 pt-5 pb-2 row">
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                mama's market
+              </h6>
+              <p class="fa-xs text-mama">Your No. 1 online fresh food store</p>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Help Centre
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="index.html"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Home
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Contact us
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Delivery options and timelines
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  How to make an order
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Gettings started with personal shopper
+                </a>
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                about mama's market
+              </h6>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  About us
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Mama's Market Careers
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Mama's market niche
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Terms & Conditions
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Privacy Policy
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Package Delivery
+                </a>
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                sell on mama's market
+              </h6>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Sell on Mama's Market
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Become a certified Personal Shopper
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Become a Logistics Service Partner
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Product Categories
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Trade by barter
+                </a>
+              <!--prettier-ignore-->
+              <a
+                  href="#"
+                  class="footer-link text-decoration-none text-light fa-xs">
+                  Blogs & Reviews
+                </a>
+            </div>
+            <div class="col-3">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                newsletter
+              </h6>
+              <form action="">
+                <!--prettier-ignore-->
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="bg-darker form-control text-light border-0 rounded-0 footer-input"
+                    placeholder="Enter email address"/>
+                <button type="submit" class="btn btn-mama form-control my-2">
+                  Subscribe
+                </button>
+              </form>
+              <span class="d-flex justify-content-around mt-3">
+                <!--prettier-ignore-->
+                <a
+                    href="https://twitter.com/MamasmarketN?s=08"
+                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                    <i class="fab fa-twitter text-dark"></i>
+                  </a>
+                <!--prettier-ignore-->
+                <a
+                    href=""
+                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                    <i class="fab fa-google-plus-g text-dark"></i>
+                  </a>
+                <!--prettier-ignore-->
+                <a
+                    href="https://www.facebook.com/Mamas-Market-Online-Store-111442090546702/"
+                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                    <i class="fab fa-facebook-f text-dark"></i>
+                  </a>
+                <!--prettier-ignore-->
+                <a
+                    href="https://www.instagram.com/mamasmarket_ng/"
+                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                    <i class="fab fa-instagram text-dark"></i>
+                  </a>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
+                All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap scripts-->
+    <!--prettier-ignore-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
