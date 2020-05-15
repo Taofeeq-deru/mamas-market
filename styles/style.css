@@ -437,10 +437,6 @@ body {
   width: 75%;
 }
 
-.bg-white {
-  background-color: #ffffff;
-}
-
 .bg-white .nav-link {
   color: #343a40;
 }
