@@ -1,0 +1,85 @@
+.seller-logo {
+  color: #005693;
+}
+
+.text-seller {
+  color: #db2721;
+}
+
+.seller-link {
+  text-decoration: underline;
+  text-decoration-color: #db2721;
+}
+
+.seller-link:hover {
+  text-decoration: none;
+}
+
+.btn-seller {
+  background-color: #db2721;
+  border: none;
+  color: #ffffff;
+  font-size: 0.9em;
+  height: 3.2em;
+}
+
+.btn-seller:hover {
+  background-color: #aa1e19;
+  color: #ebe9e9;
+}
+
+.btn-seller:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #db2721;
+  color: #ffffff;
+}
+
+/*handle multiple step form*/
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4caf50;
+}
+
+/*map style*/
+#map {
+  height: 300px;
+}
+
+/*sign in styles*/
+.text-forgot {
+  color: #008dda;
+}
+
+.text-create-link:hover {
+  color: #db2721;
+  text-decoration: underline;
+  text-decoration-color: #db2721;
+}
