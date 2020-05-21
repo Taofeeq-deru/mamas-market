@@ -114,144 +114,313 @@
       <div class="row mb-5">
         <div class="col-12">
           <div class="container shop-order mb-5">
-            <!--the pill heads for each tab always change colour when being filled and on submit. 
-              user has to fill form and submit to view next tab during which the pills head colour changes.
-              I wrote js codes to do this, but i advise that this is added to the php code since validation should 
-              be done after submission before going to next tab. the js code is written in this file order-form.js
-              which is linked in at the bottom-->
-            <ul
-              class="nav nav-pills nav-justified mb-3 fa-sm"
-              id="pills-tab"
-              role="tablist"
-            >
-              <li class="nav-item mx-3" role="presentation">
-                <!--prettier-ignore-->
-                <a
-                  class="nav-link filling text-light disabled"
-                  id="pills-details-tab"
-                  data-toggle="pill"
-                  href="#pills-details"
-                  role="tab"
-                  aria-controls="pills-details"
-                  aria-selected="true">
-                  Shopping Details
-                </a>
-              </li>
-              <li class="nav-item mx-3" role="presentation">
-                <!--prettier-ignore-->
-                <a
-                  class="nav-link text-dark disabled"
-                  id="pills-address-tab"
-                  data-toggle="pill"
-                  href="#pills-address"
-                  role="tab"
-                  aria-controls="pills-address"
-                  aria-selected="false">
-                  Delivery Address
-                </a>
-              </li>
-              <li class="nav-item mx-3" role="presentation">
-                <!--prettier-ignore-->
-                <a
-                  class="nav-link text-dark disabled"
-                  id="pills-summary-tab"
-                  data-toggle="pill"
-                  href="#pills-summary"
-                  role="tab"
-                  aria-controls="pills-summary"
-                  aria-selected="false">
-                  Shop for me Summary
-                </a>
-              </li>
-              <li class="nav-item mx-3" role="presentation">
-                <!--prettier-ignore-->
-                <a
-                  class="nav-link text-dark disabled"
-                  id="pills-pay-tab"
-                  data-toggle="pill"
-                  href="#pills-pay"
-                  role="tab"
-                  aria-controls="pills-pay"
-                  aria-selected="false">
-                  Pay
-                </a>
-              </li>
-            </ul>
-            <div
-              class="tab-content rounded-lg border-grey mx-3"
-              id="pills-tabContent"
-            >
-              <!--shopping details-->
+            <form action="" class="mx-auto" id="orderForm">
               <!--prettier-ignore-->
-              <div
-                class="tab-pane show active fade p-5"
-                id="pills-details"
-                role="tabpanel"
-                aria-labelledby="pills-details-tab">
-                <form class="px-5" id="details-form">
+              <div class="d-flex flex-row justify-content-between indicators fa-sm">
+                <span class="step">Shopping Details</span>
+                <span class="step">Delivery Address</span>
+                <span class="step">Shop for me Summary</span>
+                <span class="step">Pay</span>
+              </div>
+
+              <div class="border-grey rounded-lg p-5 my-3" id="formContent">
+                <!--shopping details-->
+                <div class="tab py-3 px-4">
                   <!--select what is being shoppped for or type in-->
                   <div class="form-group">
                     <p class="fa-md mb-2">What are you shopping for?</p>
                     <div class="form-check form-check-inline checkbox">
-                        <input
+                      <!--prettier-ignore-->
+                      <input
                         type="checkbox"
                         name="grocery"
                         id="grocery"
                         class="form-check-input"
                         value="grocery" />
-                        <label for="grocery" class="form-check-label fa-sm check-label">Groceries</label>
+                      <!--prettier-ignore-->
+                      <label
+                        for="grocery"
+                        class="form-check-label fa-sm check-label">
+                        Groceries
+                      </label>
                     </div>
                     <div class="form-check form-check-inline checkbox">
-                        <input
+                      <!--prettier-ignore-->
+                      <input
                         type="checkbox"
                         name="home-care"
                         id="home-care"
                         class="form-check-input"
                         value="home-care" />
-                        <label for="home-care" class="form-check-label fa-sm check-label">Home care</label>
+                      <!--prettier-ignore-->
+                      <label
+                        for="home-care"
+                        class="form-check-label fa-sm check-label">
+                        Home care
+                      </label>
                     </div>
                     <div class="form-check form-check-inline checkbox">
-                        <input
+                      <!--prettier-ignore-->
+                      <input
                         type="checkbox"
                         name="foodstuff"
                         id="foodstuff"
                         class="form-check-input"
                         value="foodstuff" />
-                        <label for="foodstuff" class="form-check-label fa-sm check-label">Foodstuff</label>
+                      <!--prettier-ignore-->
+                      <label
+                        for="foodstuff"
+                        class="form-check-label fa-sm check-label">
+                        Foodstuff
+                      </label>
                     </div>
+                    <!--prettier-ignore-->
                     <input
-                     type="text"
-                     name="others"
-                     id="others"
-                     class="form-control my-3"
-                     placeholder="Others" />
+                      type="text"
+                      name="others"
+                      id="others"
+                      class="form-control my-3"
+                      placeholder="Others" />
                   </div>
                   <!--add to list or upload list-->
                   <div class="form-group">
                     <p class="fa-md mb-2">Shopping items/list</p>
-                    <div class="d-flex flex-row justify-content-start">
-                        <button class="btn btn-add-item px-5 py-3">Add Item</button>
+                    <div class="accordion" id="accordionList">
+                      <!--add list-->
+                      <!--prettier-ignore-->
+                      <div
+                        id="collapseOne"
+                        class="collapse bg-grey border-grey my-3 rounded-lg"
+                        aria-labelledby="#headingOne"
+                        data-parent="#accordionList">
+                        <ul class="pl-2 pr-3 py-3" id="item-list">
+                          <!--prettier-ignore-->
+                          <li id="1" class="each-li">
+                            <div class="form-row bg-grey rounded-lg each-item pt-3 px-3 mb-3">
+                              <div class="form-group col-2">
+                                <div class="bg-white d-flex rounded-lg pr-2">
+                                  <!--prettier-ignore-->
+                                  <select
+                                    name="unit1"
+                                    id="unit1"
+                                    class="form-control unit border-0 w-50 h-50 my-1">
+                                    <option value="kg">kg</option>
+                                    <option value="">.</option>
+                                  </select>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="number"
+                                    name="weight1"
+                                    id="weight1"
+                                    value="1"
+                                    class="form-control weight bg-grey w-50 h-50 my-1" />
+                                </div>
+                              </div>
+                              <div class="form-group col-8">
+                                <!--prettier-ignore-->
+                                <select name="list1" id="list1" class="form-control select-list">
+                                  <option value="">Select from the list (Click dropdown to see list)</option>
+                                  <option value="">.</option>
+                                  <option value="">..</option>
+                                  <option value="">...</option>
+                                </select>
+                                <!--prettier-ignore-->
+                                <input 
+                                  type="text"
+                                  name="product-preference1" 
+                                  id="product-preference1" 
+                                  class="form-control my-2 list-preference"
+                                  placeholder="Do you have any preference? Kindly type it here" />
+                              </div>
+                              <div class="form-group col-2">
+                                <div class="d-flex">
+                                  <i class="fa fa-naira mt-2 fa-lg"></i>
+                                  <!--prettier-ignore-->
+                                  <input 
+                                    type="text"
+                                    name="product-amount1"
+                                    id="product-amount1" 
+                                    class="form-control bg-white font-weight-bold text-center product-amount" 
+                                    placeholder="Amount"
+                                    value=""
+                                    readonly />
+                                </div>
+                                <p class="mt-4 text-center text-underline text-mama fa-xs remove-product" onclick="removeProduct(event)">Remove item</p>
+                              </div>
+                            </div>
+                          </li>
+                          <!--prettier-ignore-->
+                          <li id="2" class="each-li">
+                            <div class="form-row bg-grey rounded-lg each-item pt-3 px-3 mb-3">
+                              <div class="form-group col-2">
+                                <div class="bg-white d-flex rounded-lg pr-2">
+                                  <!--prettier-ignore-->
+                                  <select
+                                    name="unit2"
+                                    id="unit2"
+                                    class="form-control unit border-0 w-50 h-50 my-1">
+                                    <option value="kg">kg</option>
+                                    <option value="">.</option>
+                                  </select>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="number"
+                                    name="weight2"
+                                    id="weight2"
+                                    value="1"
+                                    class="form-control weight bg-grey w-50 h-50 my-1" />
+                                </div>
+                              </div>
+                              <div class="form-group col-8">
+                                <!--prettier-ignore-->
+                                <select name="list2" id="list2" class="form-control select-list">
+                                  <option value="">Select from the list (Click dropdown to see list)</option>
+                                  <option value="">.</option>
+                                  <option value="">..</option>
+                                  <option value="">...</option>
+                                </select>
+                                <!--prettier-ignore-->
+                                <input 
+                                  type="text"
+                                  name="product-preference2" 
+                                  id="product-preference2" 
+                                  class="form-control my-2 list-preference"
+                                  placeholder="Do you have any preference? Kindly type it here" />
+                              </div>
+                              <div class="form-group col-2">
+                                <div class="d-flex">
+                                  <i class="fa fa-naira mt-2 fa-lg"></i>
+                                  <!--prettier-ignore-->
+                                  <input 
+                                    type="text"
+                                    name="product-amount2"
+                                    id="product-amount2" 
+                                    class="form-control bg-white font-weight-bold text-center product-amount" 
+                                    placeholder="Amount"
+                                    value=""
+                                    readonly />
+                                </div>
+                                <p class="mt-4 text-center text-underline text-mama fa-xs remove-product" onclick="removeProduct(event)">Remove item</p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="d-flex justify-content-center pb-3 mt-n4 pt-0">
+                          <!--prettier-ignore-->
+                          <button
+                            type="button"
+                            id="more"
+                            class="border-0 bg-success fa-sm px-3 py-2 text-white rounded-lg text-capitalize"
+                            onclick="addMore()">
+                            add more
+                          </button>
+                        </div>
+                      </div>
+                      <!--upload list-->
+                      <!--prettier-ignore-->
+                      <div
+                        id="collapseTwo"
+                        class="collapse my-3"
+                        aria-labelledby="#headingTwo"
+                        data-parent="#accordionList">
+                      <div class="form-group d-flex">
+                        <img id="output" class="fileImage rounded-lg mr-3 border-grey hide-image" />
+                        <!--prettier-ignore-->
+                        <input 
+                          type="file" 
+                          accept="image/*" 
+                          name="image" 
+                          id="shopList"
+                          class="input-hide"  
+                          onchange="loadShopList(event)" />
+                        <!--prettier-ignore-->
+                        <label 
+                          for="shopList" 
+                          class="fileLabel d-flex flex-column justify-content-center align-items-center border-grey rounded-lg">
+                          <i class="fas fa-camera text-primary fa-lg"></i>
+                          <span class="text-muted mt-2" id="imageText">Add New Image</span>
+                        </label>
+                      </div>
+                      </div>
+                      <div class="d-flex flex-row justify-content-start">
+                        <!--add item list button-->
+                        <!--prettier-ignore-->
+                        <button
+                          type="button"
+                          class="btn btn-add-item collapsed px-5 py-3"
+                          id="headingOne"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne">
+                          Add Shopping List
+                        </button>
                         <p class="text-muted my-3 fa-sm mx-1">---OR---</p>
-                        <button class="btn btn-upload-item px-5 py-3">Upload Item list</button>
+                        <!--upload item list button-->
+                        <!--prettier-ignore-->
+                        <button
+                          type="button"
+                          class="btn btn-add-item px-5 py-3 collapsed"
+                          id="headingTwo"
+                          data-toggle="collapse"
+                          data-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          Upload Shopping list
+                        </button>
+                        <p class="text-muted my-3 fa-sm mx-1">---OR---</p>
+                        <!--call in order button, should call random shopper number-->
+                        <!--prettier-ignore-->
+                        <a href="tel:+">
+                          <button
+                          type="button"
+                          class="btn btn-add-item px-5 py-3 collapsed"
+                          id="headingThree"
+                          data-toggle="collapse"
+                          data-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree">
+                          Call-in Order
+                        </button>
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <!--select shopper-->
                   <div class="form-group give-position my-3">
-                    <p class="fa-md mb-3">Select shopper</p>
+                    <p class="fa-md mb-0">Select shopper</p>
+                    <p class="fa-xs text-muted mb-3">
+                      Click on shopper to select
+                    </p>
                     <!--list of shoppers-->
-                    <div class="form-group select-shopper-list py-3 border-grey rounded px-3 d-flex flex-row flex-nowrap" id="selectList">
+                    <!--prettier-ignore-->
+                    <div
+                      class="form-group select-shopper-list py-3 border-grey rounded px-2 d-flex flex-row flex-nowrap"
+                      id="selectShopperList" >
                       <div class="form-check each-shopper w-shopper mr-1">
-                        <input class="form-check-input input-hidden" type="radio" name="shopper" id="shopper1" value="shopper1">
+                        <!--prettier-ignore-->
+                        <input
+                          class="form-check-input input-hidden"
+                          type="radio"
+                          name="shopper"
+                          id="shopper1"
+                          value="shopper1" />
                         <div class="hover-effect">
                           <label class="form-check-label mr-3" for="shopper1">
-                            <img 
-                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png" 
-                              alt="shopper" 
+                            <!--prettier-ignore-->
+                            <img
+                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png"
+                              alt="shopper"
                               class="each-shopper-avi" />
+                            <!--prettier-ignore-->
                             <div class="the-shopper-words each-shopper-desc text-light font-weight-bold text-center">
                               <p class="fa-sm each-shopper-name">
                                 Elizabeth Olisa
                               </p>
+                              <p class="shopper-no hide-image">
+                                08023423125
+                              </p>
+                              <!--prettier-ignore-->
                               <p class="fa-order-xs w-75 ml-3 each-shopper-story">
                                 I am Olisa, I will be glad to take your personal
                                 shopping experience to the next level.
@@ -261,17 +430,29 @@
                         </div>
                       </div>
                       <div class="form-check each-shopper w-shopper mr-1">
-                        <input class="form-check-input input-hidden" type="radio" name="shopper" id="shopper2" value="shopper2">
+                        <!--prettier-ignore-->
+                        <input
+                          class="form-check-input input-hidden"
+                          type="radio"
+                          name="shopper"
+                          id="shopper2"
+                          value="shopper2" />
                         <div class="hover-effect">
                           <label class="form-check-label mr-3" for="shopper2">
-                            <img 
-                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png" 
-                              alt="shopper" 
+                            <!--prettier-ignore-->
+                            <img
+                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png"
+                              alt="shopper"
                               class="each-shopper-avi" />
+                            <!--prettier-ignore-->
                             <div class="the-shopper-words each-shopper-desc text-light font-weight-bold text-center">
                               <p class="fa-sm each-shopper-name">
                                 Elizabeth Olisa
                               </p>
+                              <p class="shopper-no hide-image">
+                                08023423125
+                              </p>
+                              <!--prettier-ignore-->
                               <p class="fa-order-xs w-75 ml-3 each-shopper-story">
                                 I am Olisa, I will be glad to take your personal
                                 shopping experience to the next level.
@@ -281,17 +462,29 @@
                         </div>
                       </div>
                       <div class="form-check each-shopper w-shopper mr-1">
-                        <input class="form-check-input input-hidden" type="radio" name="shopper" id="shopper3" value="shopper3">
+                        <!--prettier-ignore-->
+                        <input
+                          class="form-check-input input-hidden"
+                          type="radio"
+                          name="shopper"
+                          id="shopper3"
+                          value="shopper3" />
                         <div class="hover-effect">
                           <label class="form-check-label mr-3" for="shopper3">
-                            <img 
-                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png" 
-                              alt="shopper" 
+                            <!--prettier-ignore-->
+                            <img
+                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png"
+                              alt="shopper"
                               class="each-shopper-avi" />
+                            <!--prettier-ignore-->
                             <div class="the-shopper-words each-shopper-desc text-light font-weight-bold text-center">
                               <p class="fa-sm each-shopper-name">
                                 Elizabeth Olisa
                               </p>
+                              <p class="shopper-no hide-image">
+                                08023423125
+                              </p>
+                              <!--prettier-ignore-->
                               <p class="fa-order-xs w-75 ml-3 each-shopper-story">
                                 I am Olisa, I will be glad to take your personal
                                 shopping experience to the next level.
@@ -301,17 +494,29 @@
                         </div>
                       </div>
                       <div class="form-check each-shopper w-shopper mr-1">
-                        <input class="form-check-input input-hidden" type="radio" name="shopper" id="shopper4" value="shopper4">
+                        <!--prettier-ignore-->
+                        <input
+                          class="form-check-input input-hidden"
+                          type="radio"
+                          name="shopper"
+                          id="shopper4"
+                          value="shopper4" />
                         <div class="hover-effect">
                           <label class="form-check-label mr-3" for="shopper4">
-                            <img 
-                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png" 
-                              alt="shopper" 
+                            <!--prettier-ignore-->
+                            <img
+                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png"
+                              alt="shopper"
                               class="each-shopper-avi" />
+                            <!--prettier-ignore-->
                             <div class="the-shopper-words each-shopper-desc text-light font-weight-bold text-center">
                               <p class="fa-sm each-shopper-name">
                                 Elizabeth Olisa
                               </p>
+                              <p class="shopper-no hide-image">
+                                08023423125
+                              </p>
+                              <!--prettier-ignore-->
                               <p class="fa-order-xs w-75 ml-3 each-shopper-story">
                                 I am Olisa, I will be glad to take your personal
                                 shopping experience to the next level.
@@ -321,17 +526,29 @@
                         </div>
                       </div>
                       <div class="form-check each-shopper w-shopper mr-1">
-                        <input class="form-check-input input-hidden" type="radio" name="shopper" id="shopper5" value="shopper5">
+                        <!--prettier-ignore-->
+                        <input
+                          class="form-check-input input-hidden"
+                          type="radio"
+                          name="shopper"
+                          id="shopper5"
+                          value="shopper5" />
                         <div class="hover-effect">
                           <label class="form-check-label mr-3" for="shopper5">
-                            <img 
-                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png" 
-                              alt="shopper" 
+                            <!--prettier-ignore-->
+                            <img
+                              src="https://res.cloudinary.com/mama-s-market/image/upload/v1589561639/shopper-select_roa7nr.png"
+                              alt="shopper"
                               class="each-shopper-avi" />
+                            <!--prettier-ignore-->
                             <div class="the-shopper-words each-shopper-desc text-light font-weight-bold text-center">
                               <p class="fa-sm each-shopper-name">
                                 Elizabeth Olisa
                               </p>
+                              <p class="shopper-no hide-image">
+                                08023423125
+                              </p>
+                              <!--prettier-ignore-->
                               <p class="fa-order-xs w-75 ml-3 each-shopper-story">
                                 I am Olisa, I will be glad to take your personal
                                 shopping experience to the next level.
@@ -341,304 +558,252 @@
                         </div>
                       </div>
                     </div>
-                    <!--scroll buttons-->          
-                    <span class="badge badge-light hide-slide-button" id="slideShopperLeft">
+                    <!--scroll buttons-->
+                    <!--prettier-ignore-->
+                    <span
+                      class="badge badge-light hide-slide-button"
+                      id="slideShopperLeft">
                       <i class="fas fa-angle-left text-dark fa-2x"></i>
                     </span>
-                    <span class="badge badge-light hide-slide-button" id="slideShopperRight">
+                    <!--prettier-ignore-->
+                    <span
+                      class="badge badge-light hide-slide-button"
+                      id="slideShopperRight">
                       <i class="fas fa-angle-right text-dark fa-2x"></i>
                     </span>
                   </div>
                   <!--shopping preference-->
                   <div class="form-group my-3">
-                    <p class="fa-md mb-2">Any shopping preference you will like the shopper to know</p>
-                    <input 
+                    <p class="fa-md mb-2">
+                      Any shopping preference you will like the shopper to know
+                    </p>
+                    <!--prettier-ignore-->
+                    <input
                       type="text"
                       name="preference"
-                      id="preference" 
+                      id="preference"
                       class="form-control" />
                   </div>
-                  <div class="form-group my-4 d-flex flex-row justify-content-end">
-                      <button type="submit" class="btn btn-submit py-3 px-5">Continue</button>
+                </div>
+                <!--delivery address-->
+                <div class="tab py-3 px-4">
+                  <h6 class="fa-lg text-capitalize mb-4">delivery address</h6>
+                  <div class="form-group">
+                    <select id="selectAddress" class="form-control bg-grey">
+                      <!--prettier-ignore-->
+                      <option>
+                        Select from saved delivery addresses
+                        ------------------------------------------------------------------------------------
+                      </option>
+                      <option>...</option>
+                    </select>
                   </div>
-                </form>
-              </div>
-              <!--delivery address-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade p-5"
-                id="pills-address"
-                role="tabpanel"
-                aria-labelledby="pills-address-tab">
-                <div class="px-5">
-                    <h6 class="fa-lg text-capitalize mb-4" id="address-head">delivery address</h6>                
-                    <form id="address-form">
-                        <div class="form-group">
-                            <select id="selectAddress" class="form-control bg-grey">
-                            <option selected>Select from saved delivery addresses ------------------------------------------------------------------------------------</option>
-                            <option>...</option>
-                            </select>
-                        </div>
-                        <p class="fa-md text-capitalize mt-3 mb-1">enter new address</p>
-                        <div class="form-row mb-2">
-                        <div class="form-group col-6 pr-3">
-                            <input type="text" class="form-control fa-sm" id="address1" placeholder="Address1">
-                        </div>
-                        <div class="form-group col-6 pl-3">
-                            <input type="text" class="form-control fa-sm" id="address2" placeholder="Address2">
-                        </div>
-                        </div>
-                        <div class="form-row">
-                        <div class="form-group col-6 pr-3">
-                            <input type="text" class="form-control fa-sm" id="city" placeholder="City">
-                        </div>
-                        <div class="form-group col-6 pl-3">
-                            <input type="text" class="form-control fa-sm" id="state" placeholder="State">
-                        </div>
-                        </div>
-                        <div class="form-group d-flex justify-content-end my-2">
-                            <button type="submit" class="btn btn-submit py-3 px-5">Next</button>
-                        </div>
-                        
-                    </form>
+                  <p class="fa-md text-capitalize mt-3 mb-1">
+                    enter new address
+                  </p>
+                  <div class="form-row mb-2">
+                    <div class="form-group col-6 pr-3">
+                      <!--prettier-ignore-->
+                      <input
+                        type="text"
+                        class="form-control fa-sm"
+                        id="address1"
+                        placeholder="Address1" />
+                    </div>
+                    <div class="form-group col-6 pl-3">
+                      <!--prettier-ignore-->
+                      <input
+                        type="text"
+                        class="form-control fa-sm"
+                        id="address2"
+                        placeholder="Address2" />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-6 pr-3">
+                      <!--prettier-ignore-->
+                      <input
+                        type="text"
+                        class="form-control fa-sm"
+                        id="city"
+                        placeholder="City" />
+                    </div>
+                    <div class="form-group col-6 pl-3">
+                      <!--prettier-ignore-->
+                      <input
+                        type="text"
+                        class="form-control fa-sm"
+                        id="state"
+                        placeholder="State" />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <!--shop for me summary-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade p-5"
-                id="pills-summary"
-                role="tabpanel"
-                aria-labelledby="pills-summary-tab">
-                <div class="px-5">
-                    <h6 class="fa-lg text-capitalize mb-4" id="summary-head">shopping details</h6>
-                    <form action="" id="summary-form">
-                        <div class="bg-grey rounded py-3 px-4">
-                            <!--list of product-->
-                            <div class="form-row pb-3 pt-3 border-bottom-grey">
-                                <div class="form-group col-5 text-dark">
-                                    <!--name of product-->
-                                    <p class="fa-sm mt-2 mb-3 text-capitalize">beef meat</p>
-                                    <p class="fa-xs text-capitalize mb-0">description:</p>
-                                    <!--preference description from user-->
-                                    <p class="fa-order-xs text-muted mb-0">Tell them to help sliced and add more biscuit bones too.</p>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-around">
-                                    <!--click to increase-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 subtract">-</a>
-                                    <!--product quantity-->
-                                    <input 
-                                      type="text" 
-                                      name="quantity" 
-                                      id="quantity1" 
-                                      class="form-control w-50 bg-white quantity" 
-                                      value="4kg" disabled />
-                                    <!--click to decrease-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 add">+</a>
-                                </div>
-                                <div class="form-group col-3 d-flex flex-row justify-content-around">
-                                    <!--product price-->
-                                    <input 
-                                      type="text" 
-                                      name="price" 
-                                      id="price1" 
-                                      class="form-control w-50 bg-white price text-center" 
-                                      value="N 3,600" disabled />
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-start">
-                                    <!--click to remove product-->
-                                    <a href="" class="fa-xs text-decoration-none text-dark mt-2 remove">Remove</a>
-                                </div>
-                            </div>
-                            <div class="form-row pb-3 pt-3 border-bottom-grey">
-                                <div class="form-group col-5 text-dark">
-                                    <!--name of product-->
-                                    <p class="fa-sm mt-2 mb-3 text-capitalize">beef meat</p>
-                                    <p class="fa-xs text-capitalize mb-0">description:</p>
-                                    <!--preference description from user-->
-                                    <p class="fa-order-xs text-muted mb-0">Tell them to help sliced and add more biscuit bones too.</p>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-around">
-                                    <!--click to increase-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 subtract">-</a>
-                                    <!--product quantity-->
-                                    <input type="text" name="quantity" id="quantity1" class="form-control w-50 bg-white quantity" value="4kg" disabled>
-                                    <!--click to decrease-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 add">+</a>
-                                </div>
-                                <div class="form-group col-3 d-flex flex-row justify-content-around">
-                                    <!--product price-->
-                                    <input type="text" name="price" id="price1" class="form-control w-50 bg-white price text-center" value="N 3,600" disabled>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-start">
-                                    <!--click to remove product-->
-                                    <a href="" class="fa-xs text-decoration-none text-dark mt-2 remove">Remove</a>
-                                </div>
-                            </div>
-                            <div class="form-row pb-3 pt-3 border-bottom-grey">
-                                <div class="form-group col-5 text-dark">
-                                    <!--name of product-->
-                                    <p class="fa-sm mt-2 mb-3 text-capitalize">beef meat</p>
-                                    <p class="fa-xs text-capitalize mb-0">description:</p>
-                                    <!--preference description from user-->
-                                    <p class="fa-order-xs text-muted mb-0">Tell them to help sliced and add more biscuit bones too.</p>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-around">
-                                    <!--click to increase-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 subtract">-</a>
-                                    <!--product quantity-->
-                                    <input type="text" name="quantity" id="quantity1" class="form-control w-50 bg-white quantity" value="4kg" disabled>
-                                    <!--click to decrease-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 add">+</a>
-                                </div>
-                                <div class="form-group col-3 d-flex flex-row justify-content-around">
-                                    <!--product price-->
-                                    <input type="text" name="price" id="price1" class="form-control w-50 bg-white price text-center" value="N 3,600" disabled>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-start">
-                                    <!--click to remove product-->
-                                    <a href="" class="fa-xs text-decoration-none text-dark mt-2 remove">Remove</a>
-                                </div>
-                            </div>
-                            <div class="form-row pb-3 pt-3 border-bottom-grey">
-                                <div class="form-group col-5 text-dark">
-                                    <!--name of product-->
-                                    <p class="fa-sm mt-2 mb-3 text-capitalize">beef meat</p>
-                                    <p class="fa-xs text-capitalize mb-0">description:</p>
-                                    <!--preference description from user-->
-                                    <p class="fa-order-xs text-muted mb-0">Tell them to help sliced and add more biscuit bones too.</p>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-around">
-                                    <!--click to increase-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 subtract">-</a>
-                                    <!--product quantity-->
-                                    <input type="text" name="quantity" id="quantity1" class="form-control w-50 bg-white quantity" value="4kg" disabled>
-                                    <!--click to decrease-->
-                                    <a href="" class="fa-lg text-decoration-none text-dark mt-2 add">+</a>
-                                </div>
-                                <div class="form-group col-3 d-flex flex-row justify-content-around">
-                                    <!--product price-->
-                                    <input type="text" name="price" id="price1" class="form-control w-50 bg-white price text-center" value="N 3,600" disabled>
-                                </div>
-                                <div class="form-group col-2 d-flex flex-row justify-content-start">
-                                    <!--click to remove product-->
-                                    <a href="" class="fa-xs text-decoration-none text-dark mt-2 remove">Remove</a>
-                                </div>
-                            </div>
-                            <!--sub total and delivery cost-->
-                            <div class="form-row pb-0 pt-5 border-bottom-grey">
-                                <div class="form-group col-4"></div>
-                                <div class="form-group col-4"></div>
-                                <div class="form-group col-4">
-                                    <div class="form-group d-flex flex-row justify-content-start mb-n3">
-                                        <!--subtotal price-->
-                                        <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
-                                        <input 
-                                          type="text" 
-                                          name="subtotal" 
-                                          id="subtotal" 
-                                          class="form-control w-50 bg-trans subtotal border-0 font-weight-bold fa-form-md" 
-                                          value="N12,600" disabled />
-                                    </div>
-                                    <div class="form-group d-flex flex-row justify-content-start mb-n2">
-                                        <!--delivery cost-->
-                                        <p class="fa-sm text-muted mt-3 mr-1">Delivery cost</p>
-                                        <input 
-                                          type="text" 
-                                          name="delivery-cost" 
-                                          id="delivery-cost" 
-                                          class="form-control w-50 bg-trans delivery-cost border-0 font-weight-bold fa-form-md" 
-                                          value="N800" disabled />
-                                    </div>
-                                </div>
-                            </div>
-                            <!--grand total-->
-                            <div class="form-row pb-0">
-                                <div class="form-group col-4"></div>
-                                <div class="form-group col-4"></div>
-                                <div class="form-group col-4">
-                                    <div class="form-group d-flex flex-row justify-content-start mb-n4">
-                                        <!--grand total-->
-                                        <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
-                                        <input 
-                                          type="text" 
-                                          name="grand-total" 
-                                          id="grand-total" 
-                                          class="form-control w-50 bg-trans grand-total border-0 font-weight-bold fa-form-md" 
-                                          value="N13,400" disabled />
-                                    </div>
-                                </div>
-                            </div>
+                <!--shop for me summary-->
+                <div class="tab py-3 px-4">
+                  <h6 class="fa-lg text-capitalize mb-4">shopping details</h6>
+                  <div class="bg-grey rounded py-3 px-4" id="allDetails">
+                    <!--list of product-->
+                    <ul id="allProductList" class="pl-0"></ul>
+                    <!--sub total and delivery cost-->
+                    <div class="form-row pb-0 pt-5">
+                      <div class="form-group col-4"></div>
+                      <div class="form-group col-4"></div>
+                      <div class="form-group col-4">
+                        <!--subtotal price-->
+                        <!--prettier-ignore-->
+                        <div class="form-group d-flex flex-row justify-content-start mb-n3">
+                          <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
+                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <!--prettier-ignore-->
+                          <input
+                            type="text"
+                            name="subtotal"
+                            id="subtotal"
+                            class="form-control w-50 bg-trans subtotal border-0 font-weight-bold fa-form-md"
+                            value=""
+                            disabled />
                         </div>
-                        <div class="form-group d-flex justify-content-end my-4">
-                            <button type="submit" class="btn btn-submit py-3 px-5">Make Payment</button>
+                        <!--delivery cost-->
+                        <!--prettier-ignore-->
+                        <div class="form-group d-flex flex-row justify-content-start mb-n2">
+                          <p class="fa-sm text-muted mt-3 mr-1">
+                            Delivery cost
+                          </p>
+                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <!--prettier-ignore-->
+                          <input
+                            type="text"
+                            name="delivery-cost"
+                            id="delivery-cost"
+                            class="form-control w-50 bg-trans delivery-cost border-0 font-weight-bold fa-form-md"
+                            value="800"
+                            disabled />
                         </div>
-                    </form>
+                      </div>
+                    </div>
+                    <!--grand total-->
+                    <div class="form-row border-bottom-grey">
+                      <div class="form-group col-4"></div>
+                      <div class="form-group col-4"></div>
+                      <div class="form-group col-4">
+                        <!--prettier-ignore-->
+                        <div class="form-group d-flex flex-row justify-content-start mb-n2">
+                          <!--grand total-->
+                          <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
+                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <!--prettier-ignore-->
+                          <input
+                            type="text"
+                            name="grand-total"
+                            id="grand-total"
+                            class="form-control w-50 bg-trans grand-total border-0 font-weight-bold fa-form-md"
+                            value=""
+                            disabled />
+                        </div>
+                      </div>
+                    </div>
+                    <!--shopper details-->
+                    <div class="form-row">
+                      <div class="form-group col-4" id="selectedShopperDetails">
+                        <p class="fa-lg my-4 text-dark">Shopper Details</p>
+                        <p class="fa-xs text-muted mb-0">
+                          Contact details:
+                          <span class="selected-shopper-no"></span>
+                        </p>
+                        <p class="fa-xs text-muted">
+                          Full Name: <span class="selected-shopper-name"></span>
+                        </p>
+                      </div>
+                      <div class="form-group col-4"></div>
+                      <div class="form-group col-4"></div>
+                    </div>
+                  </div>
+                  <!--prettier-ignore-->
+                  <img
+                    id="uploadedImage"
+                    class="hide-image mx-auto border-grey rounded-lg"
+                    width="500"
+                    height="700" />
                 </div>
-              </div>
-              <!--pay-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade py-5"
-                id="pills-pay"
-                role="tabpanel"
-                aria-labelledby="pills-pay-tab">
-                <div class="px-5">
-                    <h6 class="fa-lg text-capitalize mb-4 mx-5" id="pay-head">make payment</h6>
-                    <form action="" class="mx-5" id="pay-form">
-                        <div class="form-row pb-0 border-bottom-grey">
-                            <div class="form-group col-4"></div>
-                            <div class="form-group col-4"></div>
-                            <div class="form-group col-4">
-                                <div class="form-group d-flex flex-row justify-content-start mb-n3">
-                                    <!--subtotal price-->
-                                    <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
-                                    <input 
-                                        type="text" 
-                                        name="subtotal" 
-                                        id="subtotal" 
-                                        class="form-control w-50 bg-white subtotal border-0 font-weight-bold fa-form-md" 
-                                        value="N12,600" disabled />
-                                </div>
-                                <div class="form-group d-flex flex-row justify-content-start mb-n2">
-                                    <!--delivery cost-->
-                                    <p class="fa-sm text-muted mt-3 mr-1">Delivery cost</p>
-                                    <input 
-                                        type="text" 
-                                        name="delivery-cost" 
-                                        id="delivery-cost" 
-                                        class="form-control w-50 bg-white delivery-cost border-0 font-weight-bold fa-form-md" 
-                                        value="N800" disabled />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row pb-0">
-                            <div class="form-group col-4"></div>
-                            <div class="form-group col-4"></div>
-                            <div class="form-group col-4">
-                                <div class="form-group d-flex flex-row justify-content-start mb-n4">
-                                    <!--grand total-->
-                                    <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
-                                    <input 
-                                        type="text" 
-                                        name="grand-total" 
-                                        id="grand-total" 
-                                        class="form-control w-50 bg-white grand-total border-0 font-weight-bold fa-form-md" 
-                                        value="N13,400" disabled />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group d-flex justify-content-center my-5 pb-2 border-bottom-grey">
-                            <button type="submit" class="btn btn-pay py-3 px-5 mb-5">Make Payment</button>
-                        </div>
-                    </form>
+                <!--pay-->
+                <div class="tab py-3 px-4">
+                  <h6 class="fa-lg text-capitalize mb-4 mx-5">make payment</h6>
+                  <div class="form-row pb-0 border-bottom-grey paymentDetails">
+                    <div class="form-group col-4"></div>
+                    <div class="form-group col-4"></div>
+                    <div class="form-group col-4">
+                      <!--subtotal price-->
+                      <!--prettier-ignore-->
+                      <div class="form-group d-flex flex-row justify-content-start mb-n3">
+                        <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
+                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <!--prettier-ignore-->
+                        <input
+                          type="text"
+                          name="subtotal2"
+                          id="subtotal2"
+                          class="form-control w-50 bg-white subtotal2 border-0 font-weight-bold fa-form-md"
+                          value="12,600"
+                          disabled />
+                      </div>
+                      <!--delivery cost-->
+                      <!--prettier-ignore-->
+                      <div class="form-group d-flex flex-row justify-content-start mb-n2">
+                        <p class="fa-sm text-muted mt-3 mr-1">Delivery cost</p>
+                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <!--prettier-ignore-->
+                        <input
+                          type="text"
+                          name="delivery-cost2"
+                          id="delivery-cost2"
+                          class="form-control w-50 bg-white delivery-cost2 border-0 font-weight-bold fa-form-md"
+                          value="N800"
+                          disabled />
+                      </div>
+                    </div>
+                  </div>
+                  <!--grand total-->
+                  <div class="form-row pb-0 paymentDetails">
+                    <div class="form-group col-4"></div>
+                    <div class="form-group col-4"></div>
+                    <div class="form-group col-4">
+                      <!--grand total-->
+                      <!--prettier-ignore-->
+                      <div class="form-group d-flex flex-row justify-content-start mb-n4">
+                        <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
+                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <!--prettier-ignore-->
+                        <input
+                          type="text"
+                          name="grand-total2"
+                          id="grand-total2"
+                          class="form-control w-50 bg-white grand-total2 border-0 font-weight-bold fa-form-md"
+                          value=""
+                          disabled />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <!--next/submit and previous uttons-->
+                <!--prettier-ignore-->
+                <div class="form-group mt-4 mb-5 px-4 d-flex flex-row justify-content-end">
+                  <!--.btn-pay for make payment-->
+                  <!--prettier-ignore-->
+                  <button type="button" class="btn btn-previous py-3 px-5 mx-3" id="prevBtn" onclick="nextPrev(-1)">
+                    Previous
+                  </button>
+                  <!--prettier-ignore-->
+                  <button type="button" class="btn btn-submit py-3 px-5" id="nextBtn" onclick="nextPrev(1)">
+                    Continue
+                  </button>
+                </div>
+                <!--prettier-ignore-->
                 <img 
                   src="https://res.cloudinary.com/mama-s-market/image/upload/v1589552244/delivery_wyhgc0.png" 
                   alt="delivery"
-                  class="delivery-man w-100" />
+                  class="delivery-man w-100 border-top-grey hide-image" id="deliveryMan" />
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
