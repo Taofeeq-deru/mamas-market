@@ -74,7 +74,7 @@
             class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1">
             Log in
           </a>
-          <a href="" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1">
+          <a href="../cart.html" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -645,37 +645,37 @@
                     <!--list of product-->
                     <ul id="allProductList" class="pl-0"></ul>
                     <!--sub total and delivery cost-->
-                    <div class="form-row pb-0 pt-5">
+                    <div class="form-row pb-0 pt-3">
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4">
                         <!--subtotal price-->
                         <!--prettier-ignore-->
                         <div class="form-group d-flex flex-row justify-content-start mb-n3">
-                          <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
-                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <p class="fa-sm text-muted mt-4 mr-1">Subtotal</p>
+                          <i class="fa fa-naira fa-lg mt-4"></i>
                           <!--prettier-ignore-->
                           <input
                             type="text"
                             name="subtotal"
                             id="subtotal"
-                            class="form-control w-50 bg-trans subtotal border-0 font-weight-bold fa-form-md"
+                            class="form-control-plaintext w-50 subtotal font-weight-bold fa-form-md"
                             value=""
                             disabled />
                         </div>
                         <!--delivery cost-->
                         <!--prettier-ignore-->
                         <div class="form-group d-flex flex-row justify-content-start mb-n2">
-                          <p class="fa-sm text-muted mt-3 mr-1">
+                          <p class="fa-sm text-muted mt-4 mr-1">
                             Delivery cost
                           </p>
-                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <i class="fa fa-naira fa-lg mt-4"></i>
                           <!--prettier-ignore-->
                           <input
                             type="text"
                             name="delivery-cost"
                             id="delivery-cost"
-                            class="form-control w-50 bg-trans delivery-cost border-0 font-weight-bold fa-form-md"
+                            class="form-control-plaintext w-50 delivery-cost font-weight-bold fa-form-md"
                             value="800"
                             disabled />
                         </div>
@@ -689,14 +689,14 @@
                         <!--prettier-ignore-->
                         <div class="form-group d-flex flex-row justify-content-start mb-n2">
                           <!--grand total-->
-                          <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
-                          <i class="fa fa-naira fa-lg mt-3"></i>
+                          <p class="fa-sm text-muted mt-4 mr-1">Grand total</p>
+                          <i class="fa fa-naira fa-lg mt-4"></i>
                           <!--prettier-ignore-->
                           <input
                             type="text"
                             name="grand-total"
                             id="grand-total"
-                            class="form-control w-50 bg-trans grand-total border-0 font-weight-bold fa-form-md"
+                            class="form-control-plaintext w-50 grand-total font-weight-bold fa-form-md"
                             value=""
                             disabled />
                         </div>
@@ -735,29 +735,29 @@
                       <!--subtotal price-->
                       <!--prettier-ignore-->
                       <div class="form-group d-flex flex-row justify-content-start mb-n3">
-                        <p class="fa-sm text-muted mt-3 mr-1">Subtotal</p>
-                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <p class="fa-sm text-muted mt-4 mr-1">Subtotal</p>
+                        <i class="fa fa-naira fa-lg mt-4"></i>
                         <!--prettier-ignore-->
                         <input
                           type="text"
                           name="subtotal2"
                           id="subtotal2"
-                          class="form-control w-50 bg-white subtotal2 border-0 font-weight-bold fa-form-md"
-                          value="12,600"
+                          class="form-control-plaintext w-50 subtotal2 font-weight-bold fa-form-md"
+                          value=""
                           disabled />
                       </div>
                       <!--delivery cost-->
                       <!--prettier-ignore-->
                       <div class="form-group d-flex flex-row justify-content-start mb-n2">
-                        <p class="fa-sm text-muted mt-3 mr-1">Delivery cost</p>
-                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <p class="fa-sm text-muted mt-4 mr-1">Delivery cost</p>
+                        <i class="fa fa-naira fa-lg mt-4"></i>
                         <!--prettier-ignore-->
                         <input
                           type="text"
                           name="delivery-cost2"
                           id="delivery-cost2"
-                          class="form-control w-50 bg-white delivery-cost2 border-0 font-weight-bold fa-form-md"
-                          value="N800"
+                          class="form-control-plaintext w-50 delivery-cost2 font-weight-bold fa-form-md"
+                          value="800"
                           disabled />
                       </div>
                     </div>
@@ -770,14 +770,14 @@
                       <!--grand total-->
                       <!--prettier-ignore-->
                       <div class="form-group d-flex flex-row justify-content-start mb-n4">
-                        <p class="fa-sm text-muted mt-3 mr-1">Grand total</p>
-                        <i class="fa fa-naira fa-lg mt-3"></i>
+                        <p class="fa-sm text-muted mt-4 mr-1">Grand total</p>
+                        <i class="fa fa-naira fa-lg mt-4"></i>
                         <!--prettier-ignore-->
                         <input
                           type="text"
                           name="grand-total2"
                           id="grand-total2"
-                          class="form-control w-50 bg-white grand-total2 border-0 font-weight-bold fa-form-md"
+                          class="form-control-plaintext w-50 grand-total2 font-weight-bold fa-form-md"
                           value=""
                           disabled />
                       </div>
@@ -787,7 +787,6 @@
                 <!--next/submit and previous uttons-->
                 <!--prettier-ignore-->
                 <div class="form-group mt-4 mb-5 px-4 d-flex flex-row justify-content-end">
-                  <!--.btn-pay for make payment-->
                   <!--prettier-ignore-->
                   <button type="button" class="btn btn-previous py-3 px-5 mx-3" id="prevBtn" onclick="nextPrev(-1)">
                     Previous

@@ -1,0 +1,95 @@
+.tab {
+  display: none;
+}
+
+.border-right-grey {
+  border-right: 1px solid #8b8b8b;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #8b8b8b;
+}
+
+.border-top-grey {
+  border-top: 1px solid #8b8b8b;
+}
+
+table thead tr .borderCol,
+table .borderCol {
+  border-right: 1px solid #8b8b8b;
+}
+
+.w-summary {
+  width: 30%;
+}
+
+.w-product {
+  width: 35%;
+}
+
+.w-qtty {
+  width: 35%;
+}
+
+.product-name {
+  line-height: 120%;
+}
+
+.fa-cart-xs {
+  font-size: 0.55em;
+  line-height: 95%;
+}
+
+.remove-cart-product:hover,
+.addQtty:hover,
+.subtractQtty:hover {
+  cursor: pointer;
+}
+
+.mt-25 {
+  margin-top: 0.7em;
+}
+
+.fa-label-xs {
+  font-size: 0.9em;
+}
+
+.btn-submit {
+  background: #23b771;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-submit:hover {
+  background: rgb(28, 148, 92);
+  color: #e6e6e6;
+}
+
+.btn-previous {
+  background: #8b8b8b;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-previous:hover {
+  background: rgb(110, 110, 110);
+  color: #e6e6e6;
+}
+
+.btn-submit:focus,
+.btn-previous:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.dont-show {
+  display: none;
+}
+
+.now-show {
+  display: block;
+}
