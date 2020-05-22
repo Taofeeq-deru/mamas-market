@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <!--prettier-ignore-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"/>
+    <!--Google fonts link for Montserrat font family-->
+    <!--prettier-ignore-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"/>
+    <!--Font awesome 5.13.0 link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <!--bootstrap link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <!--css link-->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <!--contact navbar-->
+    <div class="container-fluid">
+      <div class="row" id="top">
+        <div class="col-12 d-flex bg-light py-2">
+          <a href="" class="pt-2 text-dark text-uppercase fa-xs">
+            help & support
+          </a>
+          <a href="sellers-hub/create-account.html" class="ml-auto">
+            <button class="btn btn-success rounded btn-sm">
+              <small>Sell on Mama's Market</small>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--nav bar-->
+    <nav class="navbar navbar-light bg-white shadow-sm bg-nav sticky-top">
+      <div class="container-fluid pl-5">
+        <div class="row col-12 my-2 mx-auto">
+          <a class="navbar-brand mt-n3" href="index.html">
+            <!--prettier-ignore-->
+            <img
+              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+              alt="logo"
+              class="mama-logo"/>
+          </a>
+          <form action="" class="searchForm mx-auto">
+            <!--prettier-ignore-->
+            <input
+              type="search"
+              name="search"
+              id="search"
+              style="height: 3em;"
+              class="form-control form-control-sm rounded-lg border-0 bg-light"
+              placeholder="Search for product close to your location..."/>
+          </form>
+          <!--prettier-ignore-->
+          <a
+            href="login.html"
+            class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1">
+            Log in
+          </a>
+          <a href="" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+        <!--second nav-->
+        <div class="row col-12 second-nav mx-auto">
+          <div class="d-flex fa-xs text-capitalize">
+            <a class="nav-item nav-link text-mama" href="#">all categories</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">fresh farm produce</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">processed food products</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">canned food product</a>
+            <a class="nav-item nav-link text-mama" href="#">fresh food</a>
+            <a class="nav-item nav-link text-mama" href="#">veggie/fruits</a>
+            <a class="nav-item nav-link text-mama" href="#">beverages</a>
+            <!--prettier-ignore-->
+            <a class="nav-item nav-link text-mama" href="#">home cleaning supplies</a>
+            <!--prettier-ignore-->
+            <a class="nav-link shop-link" href="shop-for-me/homepage.html">shop for me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 my-5">
+          <div class="container mb-5">
+            <form action="" id="cartForm">
+              <!--shopping cart-->
+              <div class="tab form-row">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr class="border-bottom-grey">
+                      <th scope="col" class="text-capitalize fa-md">
+                        <h5>shopping cart</h5>
+                      </th>
+                      <!--prettier-ignore-->
+                      <th
+                        scope="col"
+                        class="text-capitalize fa-md text-right borderCol">
+                        <h5>price of items</h5>
+                      </th>
+                      <th scope="col" class="text-capitalize fa-md w-summary">
+                        <h5>order summary</h5>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2" class="borderCol">
+                        <!--contains product list-->
+                        <table class="table table-borderless" id="cartTable">
+                          <thead>
+                            <tr>
+                              <!--prettier-ignore-->
+                              <th
+                                scope="col"
+                                class="fa-md text-uppercase font-weight-bold text-muted">
+                                product details
+                              </th>
+                              <!--prettier-ignore-->
+                              <th
+                                scope="col"
+                                class="fa-md text-uppercase font-weight-bold text-muted">
+                                quantity
+                              </th>
+                              <!--prettier-ignore-->
+                              <th
+                                scope="col"
+                                class="fa-md text-uppercase font-weight-bold text-muted">
+                                price
+                              </th>
+                              <!--prettier-ignore-->
+                              <th
+                                scope="col"
+                                class="fa-md text-uppercase font-weight-bold text-muted">
+                                total
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <!--list of products in cart-->
+                            <tr>
+                              <!--product image, name and brief description-->
+                              <th scope="row" class="w-product">
+                                <!--prettier-ignore-->
+                                <div class="d-flex flex-row flex-nowrap px-0">
+                                    <!--prettier-ignore-->
+                                    <img 
+                                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg" 
+                                      alt="product" 
+                                      width="80"
+                                      height="70"
+                                      class="mr-2" />
+                                    <div class="d-flex flex-column px-0">
+                                        <!--prettier-ignore-->
+                                        <p class="fa-xs product-name text-capitalize font-weight-bold mb-1">
+                                        fresh tomatoes
+                                        </p>
+                                        <!--prettier-ignore-->
+                                        <p class="fa-cart-xs product-description text-muted w-100">
+                                        Fresh tomatoes you can use to fry egg
+                                        </p>
+                                        <!--prettier-ignore-->
+                                        <p 
+                                        class="fa-xs remove-cart-product text-mama text-underline mt-auto px-0 align-self-start"
+                                        onclick="removeCartProduct(event)">
+                                        Remove
+                                        </p>
+                                    </div>
+                                </div>
+                              </th>
+                              <!--quantity of product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <!--click to increase-->
+                                  <!--prettier-ignore-->
+                                  <p 
+                                    class="fa-lg text-decoration-none text-dark mt-2 subtractQtty mr-2" 
+                                    onclick="decreaseQtty(event)">
+                                    -
+                                  </p>
+                                  <!--product quantity-->
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text" name="quantity1" id="quantity1"
+                                    class="form-control w-qtty bg-white quantity" 
+                                    value="10" disabled />
+                                  <!--click to decrease-->
+                                  <!--prettier-ignore-->
+                                  <p 
+                                    class="fa-lg text-decoration-none text-dark mt-2 addQtty ml-2" 
+                                    onclick="increaseQtty(event)">
+                                    +
+                                  </p>
+                                </div>
+                              </td>
+                              <!--price per product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <i class="fa fa-naira fa-md mt-25"></i>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text"
+                                    name="product-price"
+                                    id="product-price1"
+                                    class="form-control-plaintext product-price fa-md"
+                                    value="250"
+                                    disabled />
+                                </div>
+                              </td>
+                              <!--total price for product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <i class="fa fa-naira fa-md mt-25"></i>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text"
+                                    name="product-total"
+                                    id="product-total1"
+                                    class="form-control-plaintext product-total fa-md"
+                                    value="2500"
+                                    disabled />
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <!--product image, name and brief description-->
+                              <th scope="row" class="w-product">
+                                <!--prettier-ignore-->
+                                <div class="d-flex flex-row flex-nowrap px-0">
+                                    <!--prettier-ignore-->
+                                    <img 
+                                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg" 
+                                      alt="product" 
+                                      width="80"
+                                      height="70"
+                                      class="mr-2" />
+                                    <div class="d-flex flex-column px-0">
+                                    <!--prettier-ignore-->
+                                    <p class="fa-xs product-name text-capitalize font-weight-bold mb-1">
+                                      fresh tomatoes
+                                    </p>
+                                    <!--prettier-ignore-->
+                                    <p class="fa-cart-xs product-description text-muted w-100">
+                                      Fresh tomatoes you can use to fry egg
+                                    </p>
+                                    <!--prettier-ignore-->
+                                    <p 
+                                      class="fa-xs remove-cart-product text-mama text-underline mt-auto px-0 align-self-start"
+                                      onclick="removeCartProduct(event)">
+                                      Remove
+                                    </p>
+                                    </div>
+                                </div>
+                              </th>
+                              <!--quantity of product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <!--click to increase-->
+                                  <!--prettier-ignore-->
+                                  <p 
+                                    class="fa-lg text-decoration-none text-dark mt-2 subtractQtty mr-2" 
+                                    onclick="decreaseQtty(event)">
+                                    -
+                                  </p>
+                                  <!--product quantity-->
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text" name="quantity1" id="quantity1"
+                                    class="form-control w-qtty bg-white quantity" 
+                                    value="10" disabled />
+                                  <!--click to decrease-->
+                                  <!--prettier-ignore-->
+                                  <p 
+                                    class="fa-lg text-decoration-none text-dark mt-2 addQtty ml-2" 
+                                    onclick="increaseQtty(event)">
+                                    +
+                                  </p>
+                                </div>
+                              </td>
+                              <!--price per product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <i class="fa fa-naira fa-md mt-25"></i>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text"
+                                    name="product-price"
+                                    id="product-price1"
+                                    class="form-control-plaintext product-price fa-md"
+                                    value="250"
+                                    disabled />
+                                </div>
+                              </td>
+                              <!--total price for product-->
+                              <td>
+                                <div class="d-flex flex-row flex-nowrap">
+                                  <i class="fa fa-naira fa-md mt-25"></i>
+                                  <!--prettier-ignore-->
+                                  <input
+                                    type="text"
+                                    name="product-total"
+                                    id="product-total1"
+                                    class="form-control-plaintext product-total fa-md"
+                                    value="2500"
+                                    disabled />
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                      <td>
+                        <!--total price-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="total-price"
+                            class="col-8 col-form-label fa-label-xs text-uppercase">
+                            total price of items
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="total-price"
+                              id="total-price"
+                              class="form-control-plaintext total-price fa-md"
+                              value=""
+                              disabled />
+                          </div>
+                        </div>
+                        <!--shipping fee-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="shipping-fee"
+                            class="col-8 col-form-label fa-label-xs text-uppercase">
+                            shipping fee
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="shipping-fee"
+                              id="shipping-fee"
+                              class="form-control-plaintext shipping-fee fa-md"
+                              value="1500"
+                              disabled />
+                          </div>
+                        </div>
+                        <!--promo code-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                              for="promo-code"
+                              class="col-5 col-form-label fa-label-xs text-uppercase">
+                              promo code
+                            </label>
+                          <div class="col-7">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="promo-code"
+                              id="promo-code"
+                              class="form-control promo-code fa-xs"
+                              placeholder="Enter code here" />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-top-grey">
+                      <td colspan="2" class="borderCol">
+                        <!--prettier-ignore-->
+                        <a href="index.html" class="text-mama text-underline font-weight-bold fa-md">
+                          Continue Shopping
+                        </a>
+                      </td>
+                      <td>
+                        <!--total cost-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="total-cost"
+                            class="col-8 col-form-label fa-label-xs text-uppercase font-weight-bold">
+                            total cost
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="total-cost"
+                              id="total-cost"
+                              class="form-control-plaintext total-cost fa-md font-weight-bold"
+                              value=""
+                              disabled />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--delivery address-->
+              <div class="tab form-row">
+                <table class="table table-borderless">
+                  <thead>
+                    <tr class="border-bottom-grey">
+                      <!--prettier-ignore-->
+                      <th scope="col" colspan="2" class="text-capitalize fa-md borderCol">
+                        <h5>delivery address</h5>
+                      </th>
+                      <th scope="col" class="text-capitalize fa-md w-summary">
+                        <h5>checking out</h5>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="2" class="borderCol">
+                        <!--select from existing address-->
+                        <div class="form-group mt-2">
+                          <!--prettier-ignore-->
+                          <p class="fa-sm text-warning dont-show" id="warningText">
+                            * Please select from previous addresses or enter new
+                            address
+                          </p>
+                          <!--prettier-ignore-->
+                          <select id="selectAddress" class="form-control bg-grey">
+                            <!--prettier-ignore-->
+                            <option value="">Select from saved delivery addresses</option>
+                            <option value="ade">...</option>
+                          </select>
+                        </div>
+                        <p class="fa-md text-capitalize mt-3 mb-1">
+                          enter new address
+                        </p>
+                        <div class="form-row mb-2">
+                          <div class="form-group col-6 pr-3">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              class="form-control fa-sm required"
+                              id="address1"
+                              placeholder="Address1" />
+                          </div>
+                          <div class="form-group col-6 pl-3">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              class="form-control fa-sm required"
+                              id="address2"
+                              placeholder="Address2" />
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-6 pr-3">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              class="form-control fa-sm required"
+                              id="city"
+                              placeholder="City" />
+                          </div>
+                          <div class="form-group col-6 pl-3">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              class="form-control fa-sm required"
+                              id="state"
+                              placeholder="State" />
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <!--total price-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="total-price2"
+                            class="col-8 col-form-label fa-label-xs text-uppercase">
+                            total price of items
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="total-price"
+                              id="total-price2"
+                              class="form-control-plaintext total-price fa-md"
+                              value=""
+                              disabled />
+                          </div>
+                        </div>
+                        <!--shipping fee-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="shipping-fee2"
+                            class="col-8 col-form-label fa-label-xs text-uppercase">
+                            shipping fee
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="shipping-fee"
+                              id="shipping-fee2"
+                              class="form-control-plaintext shipping-fee fa-md"
+                              value="1500"
+                              disabled />
+                          </div>
+                        </div>
+                        <!--promo code-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                              for="promo-code2"
+                              class="col-8 col-form-label fa-label-xs text-uppercase">
+                              promo code
+                            </label>
+                          <div class="col-4">
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="promo-code"
+                              id="promo-code2"
+                              class="form-control-plaintext promo-code fa-xs"
+                              value=""
+                              disabled />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-top-grey">
+                      <td colspan="2" class="borderCol"></td>
+                      <td>
+                        <!--total cost-->
+                        <div class="form-group row mb-0">
+                          <!--prettier-ignore-->
+                          <label
+                            for="total-cost2"
+                            class="col-8 col-form-label fa-label-xs text-uppercase font-weight-bold">
+                            total cost
+                          </label>
+                          <div class="col-4 d-flex flex-row">
+                            <i class="fa fa-naira fa-md mt-25"></i>
+                            <!--prettier-ignore-->
+                            <input
+                              type="text"
+                              name="total-cost"
+                              id="total-cost2"
+                              class="form-control-plaintext total-cost fa-md font-weight-bold"
+                              value=""
+                              disabled />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--checkout button-->
+              <div class="form-group d-flex justify-content-end">
+                <!--prettier-ignore-->
+                <button type="button" class="btn btn-previous px-5 py-3 mx-3" id="prevBtn" onclick="nextPrev(-1)">GO BACK</button>
+                <!--prettier-ignore-->
+                <button type="button" class="btn btn-submit px-5 py-3" id="nextBtn" onclick="nextPrev(1)">CHECKOUT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer bg-dark row">
+        <div class="container">
+          <div class="mt-3 pt-5 pb-2 row">
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                mama's market
+              </h6>
+              <p class="fa-xs text-mama">Your No. 1 online fresh food store</p>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Help Centre
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="../index.html"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Home
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Contact us
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Delivery options and timelines
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                How to make an order
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Gettings started with personal shopper
+              </a>
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                about mama's market
+              </h6>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                About us
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Mama's Market Careers
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Mama's market niche
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Terms & Conditions
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Privacy Policy
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Package Delivery
+              </a>
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                sell on mama's market
+              </h6>
+              <!--prettier-ignore-->
+              <a
+                href="../sellers-hub/create-account.html"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Sell on Mama's Market
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Become a certified Personal Shopper
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Become a Logistics Service Partner
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Product Categories
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Trade by barter
+              </a>
+              <!--prettier-ignore-->
+              <a
+                href="#"
+                class="footer-link text-decoration-none text-light fa-xs">
+                Blogs & Reviews
+              </a>
+            </div>
+            <div class="col-3">
+              <h6 class="font-weight-bold text-uppercase text-light">
+                newsletter
+              </h6>
+              <form action="">
+                <!--prettier-ignore-->
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="bg-darker form-control text-light border-0 rounded-0 footer-input"
+                  placeholder="Enter email address"/>
+                <button type="submit" class="btn btn-mama form-control my-2">
+                  Subscribe
+                </button>
+              </form>
+              <span class="d-flex justify-content-around mt-3">
+                <!--prettier-ignore-->
+                <a
+                  href="https://twitter.com/MamasmarketN?s=08"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                  <i class="fab fa-twitter text-dark"></i>
+                </a>
+                <!--prettier-ignore-->
+                <a
+                  href=""
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                  <i class="fab fa-google-plus-g text-dark"></i>
+                </a>
+                <!--prettier-ignore-->
+                <a
+                  href="https://www.facebook.com/Mamas-Market-Online-Store-111442090546702/"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                  <i class="fab fa-facebook-f text-dark"></i>
+                </a>
+                <!--prettier-ignore-->
+                <a
+                  href="https://www.instagram.com/mamasmarket_ng/"
+                  class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
+                  <i class="fab fa-instagram text-dark"></i>
+                </a>
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
+                All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/cart.js"></script>
+
+    <!--bootstrap scripts-->
+    <!--prettier-ignore-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

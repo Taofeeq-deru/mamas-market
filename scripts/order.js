@@ -1,6 +1,6 @@
 const buttonRight = document.getElementById("slideShopperRight");
 const buttonLeft = document.getElementById("slideShopperLeft");
-const selectList = document.getElementById("selectList");
+const selectList = document.getElementById("selectShopperList");
 
 let shoppers = document.querySelectorAll(".each-shopper");
 

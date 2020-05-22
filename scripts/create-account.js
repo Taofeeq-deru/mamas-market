@@ -9,8 +9,10 @@ function showTab(n) {
   //... and fix the Previous/Next buttons:
   if (n == 0) {
     document.getElementById("nextBtn").innerHTML = "Continue";
+    document.getElementById("prevBtn").style.display = "none";
   } else if (n == 1) {
     document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("prevBtn").style.display = "inline";
   } else {
     document.getElementById("nextBtn").style.display = "none";
   }
