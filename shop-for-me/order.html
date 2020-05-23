@@ -39,7 +39,8 @@
           <a href="" class="pt-2 text-dark text-uppercase fa-xs">
             help & support
           </a>
-          <a href="../sellers-hub/create-account.html" class="ml-auto">
+          <!--prettier-ignore-->
+          <a href="../sellers-hub/create-account.html" target="_blank" class="ml-auto">
             <button class="btn btn-success rounded btn-sm">
               <small>Sell on Mama's Market</small>
             </button>
@@ -74,7 +75,10 @@
             class="nav-link text-small px-0 ml-md-3 mx-md-2 mx-0 mx-sm-1">
             Log in
           </a>
-          <a href="../cart.html" class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1">
+          <a
+            href="../cart.html"
+            class="nav-link text-small px-0 mx-md-2 mx-0 mx-sm-1"
+          >
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -105,7 +109,9 @@
             <span class="d-flex">
               <!--prettier-ignore-->
               <i onclick="goBack()" class="fas fa-angle-left fa-2x back mt-2 ml-5"></i>
-              <h1>Start creating an amazing personal shopping experience.</h1>
+              <h1 id="mainHead">
+                Start creating an amazing personal shopping experience.
+              </h1>
             </span>
           </div>
         </div>
@@ -129,6 +135,10 @@
                   <!--select what is being shoppped for or type in-->
                   <div class="form-group">
                     <p class="fa-md mb-2">What are you shopping for?</p>
+                    <!--prettier-ignore-->
+                    <p class="fa-sm text-warning dont-show" id="chooseCategory">
+                      * Please select category/categories of items being shopped for or enter category
+                    </p>
                     <div class="form-check form-check-inline checkbox">
                       <!--prettier-ignore-->
                       <input
@@ -180,11 +190,15 @@
                       name="others"
                       id="others"
                       class="form-control my-3"
-                      placeholder="Others" />
+                      placeholder="Others (Don't see the category you're shopping for? Enter it here)" />
                   </div>
                   <!--add to list or upload list-->
                   <div class="form-group">
                     <p class="fa-md mb-2">Shopping items/list</p>
+                    <!--prettier-ignore-->
+                    <p class="fa-sm text-warning dont-show" id="addOrUploadList">
+                      * Please make upload shopping list
+                    </p>
                     <div class="accordion" id="accordionList">
                       <!--add list-->
                       <!--prettier-ignore-->
@@ -220,9 +234,9 @@
                                 <!--prettier-ignore-->
                                 <select name="list1" id="list1" class="form-control select-list">
                                   <option value="">Select from the list (Click dropdown to see list)</option>
-                                  <option value="">.</option>
-                                  <option value="">..</option>
-                                  <option value="">...</option>
+                                  <option value=".">.</option>
+                                  <option value=".">..</option>
+                                  <option value=".">...</option>
                                 </select>
                                 <!--prettier-ignore-->
                                 <input 
@@ -324,14 +338,23 @@
                         aria-labelledby="#headingTwo"
                         data-parent="#accordionList">
                       <div class="form-group d-flex">
-                        <img id="output" class="fileImage rounded-lg mr-3 border-grey hide-image" />
+                        <div id="showOutput" class="showDelete mr-3 hide-image">
+                          <img id="output" class="fileImage rounded-lg border-grey" />
+                          <!--prettier-ignore-->
+                          <button 
+                            type="button" 
+                            class="btn btn-delete py-3 px-5 deleteBtn" 
+                            onclick="deleteImage()">
+                            Delete
+                          </button>
+                        </div>
                         <!--prettier-ignore-->
                         <input 
                           type="file" 
                           accept="image/*" 
                           name="image" 
                           id="shopList"
-                          class="input-hide"  
+                          class="input-hide"
                           onchange="loadShopList(event)" />
                         <!--prettier-ignore-->
                         <label 
@@ -353,7 +376,7 @@
                           data-target="#collapseOne"
                           aria-expanded="false"
                           aria-controls="collapseOne">
-                          Add Shopping List
+                          Make Shopping List
                         </button>
                         <p class="text-muted my-3 fa-sm mx-1">---OR---</p>
                         <!--upload item list button-->
@@ -389,8 +412,8 @@
                   <!--select shopper-->
                   <div class="form-group give-position my-3">
                     <p class="fa-md mb-0">Select shopper</p>
-                    <p class="fa-xs text-muted mb-3">
-                      Click on shopper to select
+                    <p class="fa-xs text-muted mb-3" id="clickShopper">
+                      * Click on shopper to select
                     </p>
                     <!--list of shoppers-->
                     <!--prettier-ignore-->
@@ -400,7 +423,7 @@
                       <div class="form-check each-shopper w-shopper mr-1">
                         <!--prettier-ignore-->
                         <input
-                          class="form-check-input input-hidden"
+                          class="form-check-input input-hidden shopper"
                           type="radio"
                           name="shopper"
                           id="shopper1"
@@ -432,7 +455,7 @@
                       <div class="form-check each-shopper w-shopper mr-1">
                         <!--prettier-ignore-->
                         <input
-                          class="form-check-input input-hidden"
+                          class="form-check-input input-hidden shopper"
                           type="radio"
                           name="shopper"
                           id="shopper2"
@@ -464,7 +487,7 @@
                       <div class="form-check each-shopper w-shopper mr-1">
                         <!--prettier-ignore-->
                         <input
-                          class="form-check-input input-hidden"
+                          class="form-check-input input-hidden shopper"
                           type="radio"
                           name="shopper"
                           id="shopper3"
@@ -496,7 +519,7 @@
                       <div class="form-check each-shopper w-shopper mr-1">
                         <!--prettier-ignore-->
                         <input
-                          class="form-check-input input-hidden"
+                          class="form-check-input input-hidden shopper"
                           type="radio"
                           name="shopper"
                           id="shopper4"
@@ -528,7 +551,7 @@
                       <div class="form-check each-shopper w-shopper mr-1">
                         <!--prettier-ignore-->
                         <input
-                          class="form-check-input input-hidden"
+                          class="form-check-input input-hidden shopper"
                           type="radio"
                           name="shopper"
                           id="shopper5"
@@ -589,13 +612,18 @@
                 <div class="tab py-3 px-4">
                   <h6 class="fa-lg text-capitalize mb-4">delivery address</h6>
                   <div class="form-group">
+                    <!--prettier-ignore-->
+                    <p class="fa-sm text-warning dont-show" id="warningText">
+                      * Please select from previous addresses or enter new
+                      address
+                    </p>
                     <select id="selectAddress" class="form-control bg-grey">
                       <!--prettier-ignore-->
-                      <option>
+                      <option value="">
                         Select from saved delivery addresses
                         ------------------------------------------------------------------------------------
                       </option>
-                      <option>...</option>
+                      <option value=".">...</option>
                     </select>
                   </div>
                   <p class="fa-md text-capitalize mt-3 mb-1">
@@ -606,7 +634,7 @@
                       <!--prettier-ignore-->
                       <input
                         type="text"
-                        class="form-control fa-sm"
+                        class="form-control fa-sm reqAddress"
                         id="address1"
                         placeholder="Address1" />
                     </div>
@@ -614,7 +642,7 @@
                       <!--prettier-ignore-->
                       <input
                         type="text"
-                        class="form-control fa-sm"
+                        class="form-control fa-sm reqAddress"
                         id="address2"
                         placeholder="Address2" />
                     </div>
@@ -624,7 +652,7 @@
                       <!--prettier-ignore-->
                       <input
                         type="text"
-                        class="form-control fa-sm"
+                        class="form-control fa-sm reqAddress"
                         id="city"
                         placeholder="City" />
                     </div>
@@ -632,7 +660,7 @@
                       <!--prettier-ignore-->
                       <input
                         type="text"
-                        class="form-control fa-sm"
+                        class="form-control fa-sm reqAddress"
                         id="state"
                         placeholder="State" />
                     </div>
@@ -643,9 +671,9 @@
                   <h6 class="fa-lg text-capitalize mb-4">shopping details</h6>
                   <div class="bg-grey rounded py-3 px-4" id="allDetails">
                     <!--list of product-->
-                    <ul id="allProductList" class="pl-0"></ul>
+                    <ul id="allProductList" class="pl-0 eachDetail"></ul>
                     <!--sub total and delivery cost-->
-                    <div class="form-row pb-0 pt-3">
+                    <div class="form-row pb-0 pt-3 eachDetail">
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4">
@@ -682,7 +710,7 @@
                       </div>
                     </div>
                     <!--grand total-->
-                    <div class="form-row border-bottom-grey">
+                    <div class="form-row border-bottom-grey eachDetail">
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4">
@@ -702,6 +730,13 @@
                         </div>
                       </div>
                     </div>
+                    <!--uploaded list-->
+                    <!--prettier-ignore-->
+                    <img
+                      id="uploadedImage"
+                      class="hide-image mx-auto border-grey rounded-lg"
+                      width="450"
+                      height="600" />
                     <!--shopper details-->
                     <div class="form-row">
                       <div class="form-group col-4" id="selectedShopperDetails">
@@ -717,13 +752,13 @@
                       <div class="form-group col-4"></div>
                       <div class="form-group col-4"></div>
                     </div>
+                    <div class="form-group">
+                      <!--prettier-ignore-->
+                      <p class="fa-sm text-mama font-weight-bold hide-image quotation">
+                          Please wait for selected shopper's call to get price of items on uploaded list
+                        </p>
+                    </div>
                   </div>
-                  <!--prettier-ignore-->
-                  <img
-                    id="uploadedImage"
-                    class="hide-image mx-auto border-grey rounded-lg"
-                    width="500"
-                    height="700" />
                 </div>
                 <!--pay-->
                 <div class="tab py-3 px-4">
@@ -900,6 +935,7 @@
               <!--prettier-ignore-->
               <a
                   href="../sellers-hub/create-account.html"
+                  target="_blank"
                   class="footer-link text-decoration-none text-light fa-xs">
                   Sell on Mama's Market
                 </a>
