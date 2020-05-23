@@ -10,7 +10,7 @@ const shopperList = document.querySelector(".shopper-overflow");
 let shoppers = document.querySelectorAll(".sh-list");
 
 function handleRightButton() {
-  if (shoppers.length > 4) {
+  if (shoppers.length > 3) {
     buttonRight.classList.remove("hide-slide-button");
     buttonRight.classList.add("show-slide-button");
     buttonLeft.classList.remove("hide-slide-button");
