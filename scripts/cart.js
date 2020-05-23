@@ -26,7 +26,7 @@ function nextPrev(n) {
   // Exit the function if any field in the current tab is invalid:
   //if (n == 1 && !validateForm()) return false;
   if (n == 1 && currentTab == 1 && !validateAddress()) return false;
-  console.log("valid address");
+  //console.log("valid address");
   // Hide the current tab:
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -43,55 +43,32 @@ function nextPrev(n) {
   //console.log("new tab");
 }
 
-// function validateForm() {
-//   // This function deals with validation of the form fields
-//   var x,
-//     y,
-//     i,
-//     valid = true;
-//   x = document.getElementsByClassName("tab");
-//   y = x[currentTab].getElementsByTagName("input");
-//   //z = x[currentTab].getElementById("selectAddress");
-//   // A loop that checks every input field in the current tab:
-//   for (i = 0; i < y.length; i++) {
-//     // If a field is empty...
-//     if (y[i].value == "" && y[i].classList.contains("required")) {
-//       // add an "invalid" class to the field:
-//       y[i].classList.add("invalid");
-//       // and set the current valid status to false
-//       //console.log("invalid");
-//       valid = false;
-//     }
-//   }
-//   return valid; // return the valid status
-// }
-
 function validateAddress() {
   let v = 0;
   let valid;
   let selectAddress = document.getElementById("selectAddress");
   let addressInputs = document.querySelectorAll(".required");
 
-  console.log("checking");
+  //console.log("checking");
 
   addressInputs.forEach((addressInput) => {
     if (addressInput.value == "") {
       v++;
-      console.log("empty address");
+      //console.log("empty address");
     }
   });
 
   if (selectAddress.value == "" && v >= 3) {
-    console.log("no address entered");
+    //console.log("no address entered");
     document.getElementById("warningText").classList.remove("dont-show");
     document.getElementById("warningText").classList.add("now-show");
     valid = false;
   } else {
     valid = true;
-    console.log("Address entered");
+    //console.log("Address entered");
   }
 
-  console.log("done checking");
+  // console.log("done checking");
 
   return valid;
 }

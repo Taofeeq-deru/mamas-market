@@ -76,7 +76,7 @@
             class="main-nav-link mx-3 text-decoration-none"
             >Trade by barter</a
           >
-          <a href="sellers-hub/create-account.html" class="mx-3"
+          <a href="sellers-hub/create-account.html" target="_blank" class="mx-3"
             ><button class="btn btn-success rounded-pill btn-lg">
               <small>Sell on Mama's Market</small>
             </button></a
@@ -120,7 +120,9 @@
                   class="text-decoration-none second-nav-link ml-auto"
                   ><i class="far fa-user text-mama"></i> Log in</a
                 >
-                <a href="cart.html" class="text-decoration-none second-nav-link mx-4"
+                <a
+                  href="cart.html"
+                  class="text-decoration-none second-nav-link mx-4"
                   ><i class="fas fa-cart-plus text-mama"></i> Cart</a
                 >
               </div>
@@ -2525,7 +2527,7 @@
           </p>
         </div>
         <ul
-          class="row col-12 d-flex flex-row flex-nowrap shopper-overflow mb-3"
+          class="row col-12 d-flex flex-row flex-nowrap py-2 shopper-overflow mb-3"
         >
           <!--shopper list-->
           <li class="mx-auto sh-list">
@@ -2854,6 +2856,19 @@
             </span>
           </li>
         </ul>
+        <!--scroll buttons-->
+        <!--prettier-ignore-->
+        <span
+          class="badge badge-mama hide-slide-button"
+          id="slideShopperLeft">
+          <i class="fas fa-angle-left text-light fa-2x"></i>
+        </span>
+        <!--prettier-ignore-->
+        <span
+          class="badge badge-mama hide-slide-button"
+          id="slideShopperRight">
+          <i class="fas fa-angle-right text-light fa-2x"></i>
+        </span>
         <div class="row col-12 d-flex justify-content-around mb-4">
           <a href="#" class="text-decoration-none"
             ><button class="btn btn-outline-mama btn-sh px-3">
@@ -3158,6 +3173,7 @@
               </h6>
               <a
                 href="sellers-hub/create-account.html"
+                target="_blank"
                 class="footer-link text-decoration-none text-light fa-xs"
                 >Sell on Mama's Market</a
               >

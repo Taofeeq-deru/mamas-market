@@ -206,9 +206,26 @@ input.invalid {
   cursor: pointer;
 }
 
+.showDelete {
+  position: relative;
+  width: 30%;
+}
+
 .fileImage {
   height: 50vh;
-  width: 30%;
+  width: 100%;
+  position: relative;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 40%;
+  left: 23%;
+  display: none;
+}
+
+.showDelete:hover .deleteBtn {
+  display: block;
 }
 
 .hide-image {
@@ -216,6 +233,14 @@ input.invalid {
 }
 
 .show-image {
+  display: block;
+}
+
+.dont-show {
+  display: none;
+}
+
+.now-show {
   display: block;
 }
 
@@ -246,6 +271,24 @@ input.invalid {
 .btn-submit:hover {
   background: rgb(28, 148, 92);
   color: #e6e6e6;
+}
+
+.btn-delete {
+  background: #ff6400;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-delete:hover {
+  background: rgb(197, 81, 3);
+  color: #e6e6e6;
+}
+
+.btn-delete:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .btn-previous {

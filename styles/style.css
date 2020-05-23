@@ -316,14 +316,52 @@ body {
   height: 180px;
 }
 
+#shopForMe {
+  position: relative;
+}
+
 .shopper-overflow {
   overflow-x: scroll;
   overflow-y: hidden;
+  position: relative;
+  z-index: 1;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
+
 .shopper-overflow::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+.badge-mama {
+  background-color: #f06d06;
+}
+
+.hide-slide-button {
+  display: none;
+}
+
+.show-slide-button {
+  display: block;
+}
+
+#slideShopperLeft {
+  position: absolute;
+  top: 32%;
+  left: 1.5%;
+  z-index: 2;
+}
+
+#slideShopperRight {
+  position: absolute;
+  top: 32%;
+  right: 4%;
+  z-index: 2;
+}
+/* .shopper-overflow::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  /* padding: 1px; */
 }
 .shopper-overflow::-webkit-scrollbar-track {
   background: #c3c5c7;
@@ -333,12 +371,11 @@ body {
   background: #f1f1f1;
   border-radius: 10px;
   border: 1px solid #6c757d;
-  /* width: 5px; */
 }
 .shopper-overflow::-webkit-scrollbar-thumb:hover {
   background: #6c757d;
   border: none;
-}
+} */
 
 .sh-list {
   list-style: none;

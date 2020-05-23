@@ -2,6 +2,15 @@ let itemList = [];
 
 let shopper = [];
 
+let showOutput = document.getElementById("showOutput");
+let image = document.getElementById("output");
+let text = document.getElementById("imageText");
+let allDetails = document.getElementById("allDetails");
+let summaryDetails = document.querySelectorAll(".eachDetail");
+let paymentDetails = document.querySelectorAll(".paymentDetails");
+let quotation = document.querySelector(".quotation");
+let summaryImage = document.getElementById("uploadedImage");
+
 let id = 2;
 let uuid = 0;
 
@@ -21,7 +30,12 @@ function showTab(n) {
     document.getElementById("nextBtn").innerHTML = "Next";
     document.getElementById("prevBtn").style.display = "inline";
   } else if (n == 2) {
-    document.getElementById("nextBtn").innerHTML = "Make Payment";
+    if (summaryImage.classList.contains("show-image")) {
+      document.getElementById("nextBtn").innerHTML = "Submit";
+    } else {
+      document.getElementById("nextBtn").innerHTML = "Make Payment";
+    }
+
     document.getElementById("prevBtn").style.display = "inline";
     //show shopper details
     let selectedShopper = document.getElementById("selectedShopperDetails");
@@ -34,7 +48,7 @@ function showTab(n) {
   } else {
     //show prices
     document.getElementById("nextBtn").innerHTML = "Make Payment";
-    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("prevBtn").style.display = "inline";
     document.getElementById("nextBtn").classList.remove("btn-submit");
     document.getElementById("nextBtn").classList.add("btn-pay");
     document.getElementById("deliveryMan").classList.remove("hide-image");
@@ -49,7 +63,26 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
+  if (n == 1 && currentTab == 0 && !validateSelectShopFor()) {
+    return false;
+  } else if (n == 1 && currentTab == 0 && !validateAddOrUploadList()) {
+    return false;
+  } else if (n == 1 && currentTab == 0 && !validateSelectShopper()) {
+    return false;
+  } else if (n == 1 && currentTab == 1 && !validateAddress()) {
+    return false;
+  }
+
+  if (
+    n == 1 &&
+    currentTab == 0 &&
+    validateSelectShopper() &&
+    validateAddOrUploadList() &&
+    validateSelectShopper()
+  ) {
+    document.getElementsByClassName("step")[currentTab].classList.add("finish");
+  }
+
   //get data
   if (currentTab == 0) {
     let shopperList = document.getElementById("selectShopperList");
@@ -66,7 +99,7 @@ function nextPrev(n) {
 
     allItems.forEach((eachItem) => saveItem(eachItem));
     allShoppers.forEach((eachShopper) => {
-      if (eachShopper.querySelector('input[name="shopper"]').checked) {
+      if (eachShopper.querySelector(".shopper").checked) {
         saveShopper(eachShopper);
       }
     });
@@ -80,8 +113,16 @@ function nextPrev(n) {
   x[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
+  // if you have reached the end of the form or user uploaded list...
+  if (
+    currentTab == x.length - 1 &&
+    summaryImage.classList.contains("show-image")
+  ) {
+    // ... the form gets submitted:
+    document.getElementById("orderForm").submit();
+    //console.log("submitted");
+    return false;
+  } else if (currentTab >= x.length) {
     // ... the form gets submitted:
     document.getElementById("orderForm").submit();
     //console.log("submitted");
@@ -92,31 +133,135 @@ function nextPrev(n) {
   //console.log("new tab");
 }
 
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x,
-    y,
-    i,
-    valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "" && y[i].classList.contains("required")) {
-      // add an "invalid" class to the field:
-      y[i].classList.add("invalid");
-      // and set the current valid status to false
-      //console.log("invalid");
-      valid = false;
+function validateAddress() {
+  let v = 0;
+  let valid;
+  let selectAddress = document.getElementById("selectAddress");
+  let addressInputs = document.querySelectorAll(".reqAddress");
+
+  //console.log("checking");
+
+  addressInputs.forEach((addressInput) => {
+    if (addressInput.value == "") {
+      v++;
+      //console.log("empty address");
     }
+  });
+
+  if (selectAddress.value == "" && v >= 3) {
+    //console.log("no address entered");
+    document.getElementById("warningText").classList.remove("dont-show");
+    document.getElementById("warningText").classList.add("now-show");
+    valid = false;
+  } else {
+    document.getElementById("warningText").classList.add("dont-show");
+    document.getElementById("warningText").classList.remove("now-show");
+    valid = true;
+    //console.log("Address entered");
   }
-  // If the valid status is true, mark the step as finished and valid:
+
+  //console.log("done checking");
   if (valid) {
     //console.log("valid");
     document.getElementsByClassName("step")[currentTab].classList.add("finish");
   }
-  return valid; // return the valid status
+
+  return valid;
+}
+
+function validateSelectShopFor() {
+  let v = 0;
+  let valid;
+  let otherCategory = document.getElementById("others");
+  let checkboxes = document.querySelectorAll("input[type='checkbox']");
+
+  //console.log("checking");
+
+  checkboxes.forEach((checkbox) => {
+    if (!checkbox.checked) {
+      v++;
+      //console.log("empty address");
+    }
+  });
+
+  if (otherCategory.value == "" && v >= 3) {
+    //console.log("no address entered");
+    document.getElementById("chooseCategory").classList.remove("dont-show");
+    document.getElementById("chooseCategory").classList.add("now-show");
+    document.getElementById("mainHead").scrollIntoView();
+    valid = false;
+  } else {
+    document.getElementById("chooseCategory").classList.add("dont-show");
+    document.getElementById("chooseCategory").classList.remove("now-show");
+    valid = true;
+    //console.log("Address entered");
+  }
+
+  return valid;
+}
+
+function validateAddOrUploadList() {
+  let v = 0;
+  let valid;
+  let listOfItems = document.querySelectorAll(".select-list");
+
+  //console.log("checking");
+
+  listOfItems.forEach((eachItemOnList) => {
+    if (eachItemOnList.value == "") {
+      v++;
+      //console.log("empty address");
+    }
+  });
+
+  if (showOutput.classList.contains("hide-image") && v >= listOfItems.length) {
+    //console.log("no address entered");
+    document.getElementById("addOrUploadList").classList.remove("dont-show");
+    document.getElementById("addOrUploadList").classList.add("now-show");
+    document.querySelector(".tab").scrollIntoView();
+    valid = false;
+  } else {
+    document.getElementById("addOrUploadList").classList.add("dont-show");
+    document.getElementById("addOrUploadList").classList.remove("now-show");
+    valid = true;
+    //console.log("Address entered");
+  }
+
+  return valid;
+}
+
+function validateSelectShopper() {
+  let v = 0;
+  let valid;
+  let listOfShoppers = document.querySelectorAll(".shopper");
+
+  //console.log("checking");
+
+  listOfShoppers.forEach((eachShopperOnList) => {
+    if (!eachShopperOnList.checked) {
+      v++;
+      //console.log("empty address");
+    }
+  });
+
+  if (v >= listOfShoppers.length) {
+    //console.log("no address entered");
+    document.getElementById("clickShopper").classList.remove("text-muted");
+    document.getElementById("clickShopper").classList.add("text-warning");
+    document.getElementById("clickShopper").classList.remove("fa-xs");
+    document.getElementById("clickShopper").classList.add("fa-sm");
+    document.querySelector("#accordionList").scrollIntoView();
+    valid = false;
+  } else {
+    document.getElementById("clickShopper").classList.add("text-muted");
+    document.getElementById("clickShopper").classList.remove("text-warning");
+    document.getElementById("clickShopper").classList.add("fa-xs");
+    document.getElementById("clickShopper").classList.remove("fa-sm");
+    valid = true;
+    //console.log("Address entered");
+  }
+
+  return valid;
 }
 
 function fixStepIndicator(n) {
@@ -341,21 +486,40 @@ const remove = function (event) {
 };
 
 const loadShopList = function (event) {
-  let image = document.getElementById("output");
-  let text = document.getElementById("imageText");
-  image.classList.remove("hide-image");
-  image.classList.add("show-image");
+  showOutput.classList.remove("hide-image");
+  showOutput.classList.add("show-image");
   image.src = URL.createObjectURL(event.target.files[0]);
   text.innerHTML = "Change Image";
 
-  let summaryImage = document.getElementById("uploadedImage");
-  let summaryDetails = document.getElementById("allDetails");
-  let paymentDetails = document.querySelectorAll(".paymentDetails");
-
+  allDetails.classList.remove("bg-grey");
   //prettier-ignore
   paymentDetails.forEach((paymentDetails) => paymentDetails.classList.add("hide-image"));
-  summaryDetails.classList.add("hide-image");
+  //prettier-ignore
+  summaryDetails.forEach((summaryDetail) =>summaryDetail.classList.add("hide-image"));
   summaryImage.classList.remove("hide-image");
   summaryImage.classList.add("show-image");
+  quotation.classList.remove("hide-image");
+  quotation.classList.add("show-image");
   summaryImage.src = URL.createObjectURL(event.target.files[0]);
 };
+
+function deleteImage() {
+  document.querySelector("input[type='file']").value = "";
+  image.src = "";
+
+  showOutput.classList.remove("show-image");
+  showOutput.classList.add("hide-image");
+
+  text.innerHTML = "Add New Image";
+
+  allDetails.classList.add("bg-grey");
+  //prettier-ignore
+  paymentDetails.forEach((paymentDetails) => paymentDetails.classList.remove("hide-image"));
+  //prettier-ignore
+  summaryDetails.forEach((summaryDetail) =>summaryDetail.classList.remove("hide-image"));
+  summaryImage.classList.remove("show-image");
+  summaryImage.classList.add("hide-image");
+  quotation.classList.remove("show-image");
+  quotation.classList.add("hide-image");
+  summaryImage.src = "";
+}
