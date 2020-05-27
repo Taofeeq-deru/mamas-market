@@ -1,46 +1,54 @@
-const createMap = ({ lat, lng }) => {
-  return new google.maps.Map(document.getElementById("map"), {
-    center: { lat, lng },
+var map;
+var service;
+var infowindow;
+
+function setMapLocation() {
+  let address = document.getElementById("address").value;
+  let city = document.getElementById("city").value;
+  let state = document.getElementById("state").value;
+  //let lga = document.getElementById("lga").value;
+
+  let fullAddress = `${address}` + ` ${city}` + ` ${state}`;
+
+  initMap(fullAddress);
+}
+
+function initMap(sellerAddress) {
+  var warri = new google.maps.LatLng(5.5544, 5.7932);
+
+  infowindow = new google.maps.InfoWindow();
+
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: warri,
     zoom: 15,
   });
-};
 
-const createMarker = ({ map, position }) => {
-  return new google.maps.Marker({ map, position });
-};
+  var request = {
+    query: sellerAddress,
+    fields: ["name", "geometry"],
+  };
 
-const getCurrentPosition = ({ onSuccess, onError = () => {} }) => {
-  if ("geolocation" in navigator === false) {
-    return onError(new Error("Geolocation is not supported by your browser."));
-  }
+  service = new google.maps.places.PlacesService(map);
 
-  return navigator.geolocation.getCurrentPosition(onSuccess, onError);
-};
+  service.findPlaceFromQuery(request, function (results, status) {
+    if (status === google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
 
-const getPositionErrorMessage = (code) => {
-  switch (code) {
-    case 1:
-      return "Permission denied.";
-    case 2:
-      return "Position unavailable.";
-    case 3:
-      return "Timeout reached.";
-    default:
-      return null;
-  }
-};
+      map.setCenter(results[0].geometry.location);
+    }
+  });
+}
 
-function init() {
-  const initialPosition = { lat: 6.5244, lng: 3.3792 };
-  const map = createMap(initialPosition);
-  const marker = createMarker({ map, position: initialPosition });
+function createMarker(place) {
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+  });
 
-  getCurrentPosition({
-    onSuccess: ({ coords: { latitude: lat, longitude: lng } }) => {
-      marker.setPosition({ lat, lng });
-      map.panTo({ lat, lng });
-    },
-    onError: (err) =>
-      alert(`Error: ${getPositionErrorMessage(err.code) || err.message}`),
+  google.maps.event.addListener(marker, "click", function () {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
   });
 }

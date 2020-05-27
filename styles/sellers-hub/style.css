@@ -58,7 +58,7 @@
 /*handle multiple step form*/
 
 /* Mark input boxes that gets an error on validation: */
-input.invalid {
+.invalid {
   background-color: #ffdddd;
 }
 
@@ -91,6 +91,11 @@ input.invalid {
 /*map style*/
 #map {
   height: 300px;
+}
+
+/*email verification successful styles*/
+.mx-continue {
+  margin: 0 7em;
 }
 
 /*sign in styles*/

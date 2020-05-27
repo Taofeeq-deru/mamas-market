@@ -46,19 +46,57 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x,
     y,
+    z,
+    s,
     i,
     valid = true;
   x = document.getElementsByClassName("tab");
   y = x[currentTab].getElementsByTagName("input");
+  z = x[currentTab].getElementsByTagName("textarea");
+  s = x[currentTab].getElementsByTagName("select");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
     if (y[i].value == "" && y[i].classList.contains("required")) {
       // add an "invalid" class to the field:
       y[i].classList.add("invalid");
+      y[i].setAttribute("placeholder", "*Please fill");
       // and set the current valid status to false
       //console.log("invalid");
       valid = false;
+    } else {
+      y[i].classList.remove("invalid");
+      valid = true;
+    }
+  }
+  // A loop that checks every textarea field in the current tab:
+  for (i = 0; i < z.length; i++) {
+    // If a field is empty...
+    if (z[i].value == "") {
+      // add an "invalid" class to the field:
+      z[i].classList.add("invalid");
+      z[i].setAttribute("placeholder", "*Please fill");
+      // and set the current valid status to false
+      //console.log("invalid");
+      valid = false;
+    } else {
+      z[i].classList.remove("invalid");
+      valid = true;
+    }
+  }
+  // A loop that checks every select field in the current tab:
+  for (i = 0; i < s.length; i++) {
+    // If a field is empty...
+    if (s[i].value == "") {
+      // add an "invalid" class to the field:
+      s[i].classList.add("invalid");
+      //s[i].setAttribute("placeholder", "*Please fill");
+      // and set the current valid status to false
+      //console.log("invalid");
+      valid = false;
+    } else {
+      s[i].classList.remove("invalid");
+      valid = true;
     }
   }
   // If the valid status is true, mark the step as finished and valid:

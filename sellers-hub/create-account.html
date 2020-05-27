@@ -52,10 +52,10 @@
           <a class="nav-item nav-link text-mama" href="#">Drop-off Centres</a>
           <!--prettier-ignore-->
           <a href="signin.html" class="mx-3">
-                <button class="btn btn-login rounded px-5">
-                Log in
-              </button>
-            </a>
+            <button class="btn btn-login rounded px-5">
+              Log in
+            </button>
+          </a>
         </div>
         <!--second nav-->
         <div class="row col-12 second-nav mx-auto mb-n3">
@@ -77,6 +77,8 @@
             </p>
             <!-- Circles which indicates the steps of the form: -->
             <div class="text-center indicators">
+              <span class="step"></span>
+              <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
               <span class="step"></span>
@@ -209,34 +211,6 @@
                     placeholder="Enter your address" />
               </div>
               <div class="form-group my-3">
-                <div id="map" class="w-100"></div>
-                <p class="text-muted fa-xs text-uppercase mt-2">
-                  google map
-                </p>
-              </div>
-              <div class="form-row my-3">
-                <div class="form-group col-6">
-                  <!--prettier-ignore-->
-                  <label for="state" class="text-uppercase fa-xs">select state</label>
-                  <select name="state" id="state" class="form-control">
-                    <option value="" selected>Select one</option>
-                    <option value="">.</option>
-                    <option value="">..</option>
-                    <option value="">...</option>
-                  </select>
-                </div>
-                <div class="form-group col-6">
-                  <!--prettier-ignore-->
-                  <label for="lga" class="text-uppercase fa-xs">select lga</label>
-                  <select name="lga" id="lga" class="form-control">
-                    <option value="" selected>Select one</option>
-                    <option value="">.</option>
-                    <option value="">..</option>
-                    <option value="">...</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group my-3">
                 <!--prettier-ignore-->
                 <label for="city" class="text-uppercase fa-xs">city</label>
                 <!--prettier-ignore-->
@@ -247,6 +221,74 @@
                     class="form-control required"
                     placeholder="Enter your city/town" />
               </div>
+              <div class="form-row my-3">
+                <div class="form-group col-6">
+                  <!--prettier-ignore-->
+                  <label for="state" class="text-uppercase fa-xs">select state</label>
+                  <!--prettier-ignore-->
+                  <select
+                    name="state"
+                    id="state"
+                    class="form-control"
+                    onchange="toggleLGA(this)">
+                    <option value="" selected="selected">Select one</option>                    
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="AkwaIbom">AkwaIbom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">FCT</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamafara</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <!--prettier-ignore-->
+                  <label for="lga" class="text-uppercase fa-xs">select lga</label>
+                  <select
+                    name="lga"
+                    id="lga"
+                    class="form-control select-lga"
+                    onchange="setMapLocation()"
+                  >
+                  </select>
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <div id="map" class="w-100"></div>
+                <p class="text-muted fa-xs text-uppercase mt-2">
+                  google map
+                </p>
+              </div>
               <div class="form-group my-3">
                 <!--prettier-ignore-->
                 <label for="landmark" class="text-uppercase fa-xs">landmark</label>
@@ -255,23 +297,23 @@
                     type="text"
                     name="landmark"
                     id="landmark"
-                    class="form-control required"
+                    class="form-control"
                     placeholder="Closest landmark to your location" />
               </div>
               <div class="form-group my-3">
                 <!--prettier-ignore-->
                 <label for="how-you-heard" class="text-uppercase fa-xs">
-                      how did you hear about selling on mama's market
-                  </label>
+                  how did you hear about selling on mama's market
+                </label>
+                <!--prettier-ignore-->
                 <select
                   name="how-you-heard"
                   id="how-you-heard"
-                  class="form-control"
-                >
+                  class="form-control">
                   <option value="" selected>Select one</option>
-                  <option value="">.</option>
-                  <option value="">..</option>
-                  <option value="">...</option>
+                  <option value="social media">Social media</option>
+                  <option value="a friend">A friend</option>
+                  <option value="mama's market website">Mama's market website</option>
                 </select>
               </div>
               <div class="form-group my-3">
@@ -493,12 +535,9 @@
     </div>
 
     <!--prettier-ignore-->
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDVxlDxBMFkM37SKcxczPnUUuSNr7qwp4&callback=init">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDVxlDxBMFkM37SKcxczPnUUuSNr7qwp4&libraries=places&callback=initMap" async defer></script>
     <script src="../scripts/map.js"></script>
+    <script src="../scripts/lga.js"></script>
     <script src="../scripts/create-account.js"></script>
 
     <!--bootstrap scripts-->
