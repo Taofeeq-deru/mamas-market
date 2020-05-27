@@ -193,6 +193,10 @@ body {
   margin: 0 0 0 0.5em;
 }
 
+.pt-tab {
+  padding-top: 5em;
+}
+
 .tab-head {
   color: #ffffff;
   padding-bottom: 0;
