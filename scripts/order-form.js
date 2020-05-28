@@ -26,9 +26,13 @@ function showTab(n) {
   if (n == 0) {
     document.getElementById("nextBtn").innerHTML = "Continue";
     document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("deliveryMan").classList.remove("show-image");
+    document.getElementById("deliveryMan").classList.add("hide-image");
   } else if (n == 1) {
     document.getElementById("nextBtn").innerHTML = "Next";
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("deliveryMan").classList.remove("show-image");
+    document.getElementById("deliveryMan").classList.add("hide-image");
   } else if (n == 2) {
     if (summaryImage.classList.contains("show-image")) {
       document.getElementById("nextBtn").innerHTML = "Submit";
@@ -37,6 +41,8 @@ function showTab(n) {
     }
 
     document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("deliveryMan").classList.remove("show-image");
+    document.getElementById("deliveryMan").classList.add("hide-image");
     //show shopper details
     let selectedShopper = document.getElementById("selectedShopperDetails");
     //prettier-ignore
@@ -83,6 +89,10 @@ function nextPrev(n) {
     document.getElementsByClassName("step")[currentTab].classList.add("finish");
   }
 
+  if (currentTab == 2) {
+    document.getElementsByClassName("step")[currentTab].classList.add("finish");
+  }
+
   //get data
   if (currentTab == 0) {
     let shopperList = document.getElementById("selectShopperList");
@@ -93,7 +103,7 @@ function nextPrev(n) {
 
     //empty the itemList array so as to update
     itemList.splice(0, itemList.length);
-    //remove all products in prouct list so as to update
+    //remove all products in product list so as to update
     let theProducts = document.querySelectorAll(".each-product");
     theProducts.forEach((theProduct) => theProduct.remove());
 
@@ -277,6 +287,7 @@ function fixStepIndicator(n) {
 
 function saveItem(shopItem) {
   let item = {
+    id: "",
     unit: "",
     weight: "",
     selectList: "",
@@ -284,6 +295,7 @@ function saveItem(shopItem) {
     amount: "",
   };
 
+  item.id = `${shopItem.getAttribute("id")}`;
   item.unit = `${shopItem.querySelector(".unit").value}`;
   item.weight = shopItem.querySelector(".weight").value;
   item.selectList = `${shopItem.querySelector(".select-list").value}`;
@@ -360,7 +372,7 @@ function showProducts(value) {
   let productList = document.getElementById("allProductList");
   let eachProduct = document.createElement("li");
   eachProduct.setAttribute("class", "each-product");
-  eachProduct.innerHTML = `<li class="each-product">
+  eachProduct.innerHTML = `<li class="each-product" data-index="${value.id}">
   <div class="form-row pb-3 pt-3 border-bottom-grey">
     <div class="form-group col-5 text-dark">
       <!--name of product-->
@@ -441,6 +453,8 @@ function calculatePrice() {
 
 const decreaseQty = function (event) {
   //prettier-ignore
+  let eventIndex = event.currentTarget.parentElement.parentElement.parentElement.getAttribute("data-index");
+  //prettier-ignore
   let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
 
   if (qtty <= 1) return false;
@@ -455,12 +469,24 @@ const decreaseQty = function (event) {
   //prettier-ignore
   event.currentTarget.parentElement.parentElement.querySelector(".price").value = newPrice;
   //prettier-ignore
-  event.currentTarget.parentElement.querySelector(".quantity").value = qtty
+  event.currentTarget.parentElement.querySelector(".quantity").value = qtty;
+
+  let allItemsList = document.querySelectorAll(".each-li");
+
+  allItemsList.forEach((eachItemList) => {
+    let eachIndex = eachItemList.getAttribute("id");
+    if (eventIndex == eachIndex) {
+      eachItemList.querySelector(".weight").value = qtty;
+      eachItemList.querySelector(".product-amount").value = newPrice;
+    }
+  });
 
   calculatePrice();
 };
 
 const increaseQty = function (event) {
+  //prettier-ignore
+  let eventIndex = event.currentTarget.parentElement.parentElement.parentElement.getAttribute("data-index");
   //prettier-ignore
   let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
   //prettier-ignore
@@ -475,12 +501,31 @@ const increaseQty = function (event) {
   //prettier-ignore
   event.currentTarget.parentElement.querySelector(".quantity").value = qtty
 
+  let allItemsList = document.querySelectorAll(".each-li");
+
+  allItemsList.forEach((eachItemList) => {
+    let eachIndex = eachItemList.getAttribute("id");
+    if (eventIndex == eachIndex) {
+      eachItemList.querySelector(".weight").value = qtty;
+      eachItemList.querySelector(".product-amount").value = newPrice;
+    }
+  });
+
   calculatePrice();
 };
 
 const remove = function (event) {
   let product = event.currentTarget.parentElement.parentElement.parentElement;
+  let index = product.getAttribute("data-index");
+  let allItemsList = document.querySelectorAll(".each-li");
   product.remove();
+
+  allItemsList.forEach((eachItemList) => {
+    let eachIndex = eachItemList.getAttribute("id");
+    if (index == eachIndex) {
+      eachItemList.remove();
+    }
+  });
 
   calculatePrice();
 };
