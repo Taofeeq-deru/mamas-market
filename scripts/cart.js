@@ -102,7 +102,7 @@ function showPromoCode() {
 
 const removeCartProduct = function (event) {
   let product =
-    event.currentTarget.parentElement.parentElement.parentElement.parentElement;
+    event.target.parentElement.parentElement.parentElement.parentElement;
   product.remove();
 
   calculateTotalPriceAndCost();
@@ -110,38 +110,38 @@ const removeCartProduct = function (event) {
 
 const decreaseQtty = function (event) {
   //prettier-ignore
-  let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
+  let qtty = Number(event.target.parentElement.querySelector(".quantity").value);
 
   if (qtty <= 1) return false;
 
   //prettier-ignore
-  let perQtty = Number(event.currentTarget.parentElement.parentElement.parentElement.querySelector(".product-price").value);
+  let perQtty = Number(event.target.parentElement.parentElement.parentElement.querySelector(".product-price").value);
 
   qtty--;
   let productTotalPrice = qtty * perQtty;
 
   //prettier-ignore
-  event.currentTarget.parentElement.parentElement.parentElement.querySelector(".product-total").value = productTotalPrice;
+  event.target.parentElement.parentElement.parentElement.querySelector(".product-total").value = productTotalPrice;
   //prettier-ignore
-  event.currentTarget.parentElement.querySelector(".quantity").value = qtty
+  event.target.parentElement.querySelector(".quantity").value = qtty
 
   calculateTotalPriceAndCost();
 };
 
 const increaseQtty = function (event) {
   //prettier-ignore
-  let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
+  let qtty = Number(event.target.parentElement.querySelector(".quantity").value);
 
   //prettier-ignore
-  let perQtty = Number(event.currentTarget.parentElement.parentElement.parentElement.querySelector(".product-price").value);
+  let perQtty = Number(event.target.parentElement.parentElement.parentElement.querySelector(".product-price").value);
 
   qtty++;
   let productTotalPrice = qtty * perQtty;
 
   //prettier-ignore
-  event.currentTarget.parentElement.parentElement.parentElement.querySelector(".product-total").value = productTotalPrice;
+  event.target.parentElement.parentElement.parentElement.querySelector(".product-total").value = productTotalPrice;
   //prettier-ignore
-  event.currentTarget.parentElement.querySelector(".quantity").value = qtty
+  event.target.parentElement.querySelector(".quantity").value = qtty
 
   calculateTotalPriceAndCost();
 };

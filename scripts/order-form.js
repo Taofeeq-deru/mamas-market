@@ -362,7 +362,7 @@ function addMore() {
 
 const removeProduct = function (event) {
   console.log("removing");
-  let item = event.currentTarget.parentElement.parentElement.parentElement;
+  let item = event.target.parentElement.parentElement.parentElement;
   item.remove();
   console.log("removed");
 };
@@ -453,23 +453,23 @@ function calculatePrice() {
 
 const decreaseQty = function (event) {
   //prettier-ignore
-  let eventIndex = event.currentTarget.parentElement.parentElement.parentElement.getAttribute("data-index");
+  let eventIndex = event.target.parentElement.parentElement.parentElement.getAttribute("data-index");
   //prettier-ignore
-  let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
+  let qtty = Number(event.target.parentElement.querySelector(".quantity").value);
 
   if (qtty <= 1) return false;
 
   //prettier-ignore
-  let price = Number(event.currentTarget.parentElement.parentElement.querySelector(".price").value);
+  let price = Number(event.target.parentElement.parentElement.querySelector(".price").value);
 
   let perQtty = price / qtty;
   qtty--;
   let newPrice = qtty * perQtty;
 
   //prettier-ignore
-  event.currentTarget.parentElement.parentElement.querySelector(".price").value = newPrice;
+  event.target.parentElement.parentElement.querySelector(".price").value = newPrice;
   //prettier-ignore
-  event.currentTarget.parentElement.querySelector(".quantity").value = qtty;
+  event.target.parentElement.querySelector(".quantity").value = qtty;
 
   let allItemsList = document.querySelectorAll(".each-li");
 
@@ -486,20 +486,20 @@ const decreaseQty = function (event) {
 
 const increaseQty = function (event) {
   //prettier-ignore
-  let eventIndex = event.currentTarget.parentElement.parentElement.parentElement.getAttribute("data-index");
+  let eventIndex = event.target.parentElement.parentElement.parentElement.getAttribute("data-index");
   //prettier-ignore
-  let qtty = Number(event.currentTarget.parentElement.querySelector(".quantity").value);
+  let qtty = Number(event.target.parentElement.querySelector(".quantity").value);
   //prettier-ignore
-  let price = Number(event.currentTarget.parentElement.parentElement.querySelector(".price").value);
+  let price = Number(event.target.parentElement.parentElement.querySelector(".price").value);
 
   let perQtty = price / qtty;
   qtty++;
   let newPrice = qtty * perQtty;
 
   //prettier-ignore
-  event.currentTarget.parentElement.parentElement.querySelector(".price").value = newPrice;
+  event.target.parentElement.parentElement.querySelector(".price").value = newPrice;
   //prettier-ignore
-  event.currentTarget.parentElement.querySelector(".quantity").value = qtty
+  event.target.parentElement.querySelector(".quantity").value = qtty
 
   let allItemsList = document.querySelectorAll(".each-li");
 
@@ -515,7 +515,7 @@ const increaseQty = function (event) {
 };
 
 const remove = function (event) {
-  let product = event.currentTarget.parentElement.parentElement.parentElement;
+  let product = event.target.parentElement.parentElement.parentElement;
   let index = product.getAttribute("data-index");
   let allItemsList = document.querySelectorAll(".each-li");
   product.remove();

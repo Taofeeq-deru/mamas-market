@@ -1,3 +1,8 @@
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 .seller-logo {
   color: #005693;
 }
@@ -107,4 +112,112 @@
   color: #db2721;
   text-decoration: underline;
   text-decoration-color: #db2721;
+}
+
+/*dashboard styles*/
+.h-full {
+  height: 100vh;
+}
+
+.bg-nav {
+  background: #008dda;
+}
+
+.bg-nav .dashboard-nav .nav-tabs .nav-link:not(.active) {
+  color: #ffffff;
+  border: none;
+  background: none;
+  border-bottom-left-radius: none;
+  border-top-left-radius: none;
+}
+
+.bg-nav .dashboard-nav .nav-tabs .nav-link {
+  color: #343a40;
+  background: #ffffff;
+  border-bottom-left-radius: 28px;
+  border-top-left-radius: 28px;
+  border: none;
+}
+
+.bg-grey {
+  background: #eeeeee;
+}
+
+.blank {
+  height: 159px;
+}
+
+.border-grey {
+  border: 1px solid #eeeeee;
+}
+
+.btn-product {
+  background: #db2721;
+  color: #ffffff;
+}
+
+.btn-product:hover {
+  color: #ffffff;
+  cursor: auto;
+}
+
+.btn-white {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  color: #8b8b8b;
+  font-size: 0.8em;
+  height: 50px;
+}
+
+.btn-white:hover {
+  background: #8b8b8b;
+  color: #ffffff;
+}
+
+.btn-add {
+  background: #008dda;
+  color: #ffffff;
+  font-size: 0.8em;
+  height: 50px;
+}
+
+.btn-add:hover {
+  background: #0170ac;
+  color: #e7e7e7;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #8b8b8b;
+}
+
+.modal-dialog {
+  max-width: 73%;
+  margin-left: 26%;
+}
+
+.w-modal {
+  width: 70%;
+}
+
+.input-hide {
+  display: none;
+}
+
+.imageFile {
+  height: 30vh;
+  width: 30%;
+  display: none;
+}
+
+.imageLabel {
+  height: 30vh;
+  width: 30%;
+}
+
+.imageLabel:hover {
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background: #e56565;
 }
