@@ -207,21 +207,24 @@ table tbody tr {
   display: none;
 }
 
-.imageFile {
-  height: 30vh;
-  width: 30%;
+.hide {
   display: none;
 }
 
+#output {
+  width: fit-content;
+}
+
+.imageFile {
+  height: 25vh;
+  width: 13vw;
+}
+
 .imageLabel {
-  height: 30vh;
-  width: 30%;
+  height: 25vh;
+  width: 13vw;
 }
 
 .imageLabel:hover {
   cursor: pointer;
-}
-
-.checkbox input[type="checkbox"]:checked {
-  background: #e56565;
 }
