@@ -175,8 +175,7 @@
                                       </div>
                                       <div class="form-group">
                                         <p class="text-capitalize fa-sm">product image</p>
-                                        <div class="d-flex">
-                                          <img id="output" class="imageFile mr-3 rounded-lg border-grey" />
+                                        <div class="d-flex flex-wrap" id="output">
                                           <!--prettier-ignore-->
                                           <input 
                                             type="file" 
@@ -184,13 +183,14 @@
                                             name="image" 
                                             id="product-image"
                                             class="input-hide"
+                                            multiple
                                             onchange="loadImage(event)" />
                                           <!--prettier-ignore-->
-                                          <label 
+                                          <label
                                             for="product-image" 
-                                            class="imageLabel bg-grey d-flex flex-column justify-content-center align-items-center border-grey rounded-lg">
+                                            class="imageLabel bg-grey mr-2 d-flex flex-column justify-content-center align-items-center border-grey rounded-lg">
                                               <i class="far fa-file-image text-muted fa-lg"></i>
-                                              <span class="text-muted mt-2 fa-xs" id="imageText">Click to upload image</span>
+                                              <span class="text-muted mt-2 fa-xs" id="imageText">Click to upload images</span>
                                           </label>
                                         </div>
                                       </div>
