@@ -123,7 +123,7 @@
   background: #008dda;
 }
 
-.bg-nav .dashboard-nav .nav-tabs .nav-link:not(.active) {
+.bg-nav .dashboard-nav .nav .nav-link {
   color: #ffffff;
   border: none;
   background: none;
@@ -131,7 +131,11 @@
   border-top-left-radius: none;
 }
 
-.bg-nav .dashboard-nav .nav-tabs .nav-link {
+.bg-nav .dashboard-nav .nav .nav-link:hover {
+  color: #343a40;
+}
+
+.bg-nav .dashboard-nav .nav .active {
   color: #343a40;
   background: #ffffff;
   border-bottom-left-radius: 28px;

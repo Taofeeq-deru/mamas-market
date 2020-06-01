@@ -29,94 +29,42 @@
     <!--css link-->
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/sellers-hub/style.css" />
-    <title>Seller Dashboard</title>
+    <title>Seller Dashboard: Products</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
+        <!--side nav-->
         <div class="col-3 h-full bg-nav pl-4 pr-0 pt-5">
-          <!--side nav-->
           <nav class="dashboard-nav mt-5 pt-5">
             <!--prettier-ignore-->
-            <div
-              class="nav nav-tabs border-bottom-0 flex-column pt-3"
-              id="nav-tab"
-              role="tablist">
+            <div class="nav border-bottom-0 flex-column pt-3">
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-dashboard-tab"
-                data-toggle="tab"
-                href="#nav-dashboard"
-                role="tab"
-                aria-controls="nav-dashboard"
-                aria-selected="true">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-tachometer-alt"></i> &nbsp; dashboard
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-order-tab"
-                data-toggle="tab"
-                href="#nav-order"
-                role="tab"
-                aria-controls="nav-order"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-shopping-cart"></i> &nbsp; order
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize active fa-md py-3 pl-4"
-                id="nav-products-tab"
-                data-toggle="tab"
-                href="#nav-products"
-                role="tab"
-                aria-controls="nav-products"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4 active">
                 <i class="fas fa-qrcode"></i> &nbsp; products
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-customers-tab"
-                data-toggle="tab"
-                href="#nav-customers"
-                role="tab"
-                aria-controls="nav-customers"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-users"></i> &nbsp; customers
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-revenue-tab"
-                data-toggle="tab"
-                href="#nav-revenue"
-                role="tab"
-                aria-controls="nav-revenue"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-wallet"></i> &nbsp; revenue
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-report-tab"
-                data-toggle="tab"
-                href="#nav-report"
-                role="tab"
-                aria-controls="nav-report"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-file-alt"></i> &nbsp; report
               </a>
               <!--prettier-ignore-->
-              <a
-                class="nav-item nav-link text-capitalize fa-md py-3 pl-4"
-                id="nav-settings-tab"
-                data-toggle="tab"
-                href="#nav-settings"
-                role="tab"
-                aria-controls="nav-settings"
-                aria-selected="false">
+              <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
                 <i class="fas fa-cog"></i> &nbsp; settings
               </a>
             </div>
@@ -134,10 +82,10 @@
                     id="search"
                     class="form-control shadow-sm"
                     style="
-                      height: 3em;
-                      font-family: 'Lato', 'Font Awesome 5 Free' !important;
-                      font-weight: 900;
-                      "
+                    height: 3em;
+                    font-family: 'Lato', 'Font Awesome 5 Free' !important;
+                    font-weight: 900;
+                    "
                     placeholder="&#xf002; Search" />
                 </form>
                 <div class="user ml-auto d-flex flex-nowrap">
@@ -154,32 +102,10 @@
                 </div>
               </div>
             </div>
-            <div class="tab-content" id="nav-tabContent">
-              <!--dashboard-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade"
-                id="nav-dashboard"
-                role="tabpanel"
-                aria-labelledby="nav-dashboard-tab">
-                  dashboard
-              </div>
-              <!--order-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade px-3"
-                id="nav-order"
-                role="tabpanel"
-                aria-labelledby="nav-order-tab">
-                  order
-              </div>
+            <div class="content">
               <!--products-->
               <!--prettier-ignore-->
-              <div
-                class="tab-pane fade show active px-3"
-                id="nav-products"
-                role="tabpanel"
-                aria-labelledby="nav-products-tab">
+              <div class="products-content">
                 <div class="row">
                     <div class="col-12 bg-grey blank shadow-sm"></div>
                 </div>
@@ -364,42 +290,6 @@
                     </tbody>
                   </table>
                 </div>
-              </div>
-              <!--customers-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade px-3"
-                id="nav-customers"
-                role="tabpanel"
-                aria-labelledby="nav-customers-tab">
-                  customers
-              </div>
-              <!--revenue-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade px-3"
-                id="nav-revenue"
-                role="tabpanel"
-                aria-labelledby="nav-revenue-tab">
-                  revenue
-              </div>
-              <!--report-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade px-3"
-                id="nav-report"
-                role="tabpanel"
-                aria-labelledby="nav-report-tab">
-                  report
-              </div>
-              <!--settings-->
-              <!--prettier-ignore-->
-              <div
-                class="tab-pane fade px-3"
-                id="nav-settings"
-                role="tabpanel"
-                aria-labelledby="nav-settings-tab">
-                  settings
               </div>
             </div>
           </div>
