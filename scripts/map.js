@@ -10,6 +10,8 @@ function setMapLocation() {
 
   let fullAddress = `${address}` + ` ${city}` + ` ${state}`;
 
+  //getLocation("New York");
+
   initMap(fullAddress);
 }
 
@@ -39,6 +41,9 @@ function initMap(sellerAddress) {
       map.setCenter(results[0].geometry.location);
     }
   });
+  //console.log("map shown");
+
+  getLocation(sellerAddress);
 }
 
 function createMarker(place) {
@@ -50,5 +55,20 @@ function createMarker(place) {
   google.maps.event.addListener(marker, "click", function () {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
+  });
+}
+
+//Function to covert address to Latitude and Longitude
+function getLocation(address) {
+  //console.log("geolocation");
+  let geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ address: address }, function (results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      let latitude = results[0].geometry.location.lat();
+      let longitude = results[0].geometry.location.lng();
+      document.getElementById("lat").innerHTML = latitude;
+      document.getElementById("lng").innerHTML = longitude;
+      //console.log(latitude, longitude);
+    }
   });
 }
