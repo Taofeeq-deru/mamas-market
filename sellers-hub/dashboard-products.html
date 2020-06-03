@@ -174,13 +174,40 @@
                                         </textarea>
                                       </div>
                                       <div class="form-group">
-                                        <p class="text-capitalize fa-sm">product image</p>
+                                        <label for="product-category" class="fa-sm text-capitalize mb-0">product category</label>
+                                        <p class="fa-xs text-muted">Select product category (one or more)</p>
+                                        <!--prettier-ignore-->
+                                        <select 
+                                          name="product-category" 
+                                          id="product-category" 
+                                          class="form-control text-capitalize" 
+                                          multiple>
+                                          <option value="fresh farm produce" class="fa-xs py-1">fresh farm produce</option>
+                                          <option value="processed food products" class="fa-xs py-1">processed food products</option>
+                                          <option value="canned food products" class="fa-xs py-1">canned food products</option>
+                                          <option value="fresh food" class="fa-xs py-1">fresh food</option>
+                                          <option value="veggies/fruits" class="fa-xs py-1">veggies/fruits</option>
+                                          <option value="beverages" class="fa-xs py-1">beverages</option>
+                                          <option value="cleaning supplies" class="fa-xs py-1">cleaning supplies</option>
+                                          <option value="pet foods/care" class="fa-xs py-1">pet foods/care</option>
+                                          <option value="paper products" class="fa-xs py-1">paper products</option>
+                                          <option value="bread & bakery" class="fa-xs py-1">bread & bakery</option>
+                                          <option value="baby food/products" class="fa-xs py-1">baby food/products</option>
+                                          <option value="toileteries" class="fa-xs py-1">toileteries</option>
+                                          <option value="kitchen utensils/storage" class="fa-xs py-1">kitchen utensils/storage</option>
+                                          <option value="stationaries" class="fa-xs py-1">stationaries</option>
+                                          <option value="local food condiments" class="fa-xs py-1">local food condiments</option>
+                                        </select>
+                                      </div>
+                                      <div class="form-group">
+                                        <p class="text-capitalize fa-sm mb-0">product image</p>
+                                        <p class="fa-xs text-muted">Select image (one or more)</p>
                                         <div class="d-flex flex-wrap" id="output">
                                           <!--prettier-ignore-->
                                           <input 
                                             type="file" 
                                             accept="image/*" 
-                                            name="image" 
+                                            name="image[]" 
                                             id="product-image"
                                             class="input-hide"
                                             multiple
