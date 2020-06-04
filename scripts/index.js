@@ -9,6 +9,10 @@ const shopperList = document.querySelector(".shopper-overflow");
 
 let shoppers = document.querySelectorAll(".sh-list");
 
+let categories = document.getElementById("productCategories");
+let catLinks = categories.querySelectorAll(".nav-link");
+let merits = document.getElementById("merits");
+
 function handleRightButton() {
   if (shoppers.length > 3) {
     buttonRight.classList.remove("hide-slide-button");
@@ -36,5 +40,23 @@ function handleLogoDisplay() {
   }
 }
 
+function goToTop() {
+  merits.scrollIntoView();
+}
+
+function showAllTabContent() {
+  let allTab = document.querySelector("#pills-all");
+  let otherTabs = document.querySelectorAll(".pt-tab");
+  let tabContents = "";
+
+  otherTabs.forEach((otherTab) => {
+    tabContents += otherTab.innerHTML;
+  });
+
+  allTab.innerHTML = tabContents;
+}
+
 window.addEventListener("load", handleRightButton);
 window.addEventListener("scroll", handleLogoDisplay);
+window.addEventListener("load", showAllTabContent);
+catLinks.forEach((catLink) => catLink.addEventListener("click", goToTop));

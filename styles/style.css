@@ -193,9 +193,9 @@ body {
   margin: 0 0 0 0.5em;
 }
 
-.pt-tab {
+/* .pt-tab {
   padding-top: 5em;
-}
+} */
 
 .tab-head {
   color: #ffffff;
@@ -224,7 +224,7 @@ body {
   border-bottom: 1px solid #343a40;
   border-radius: 0;
   background-color: #ffffff;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .pcCategories .nav-pills .nav-link {
@@ -232,8 +232,12 @@ body {
   border-bottom: 1px solid #ffc107;
   border-radius: 0;
   background-color: #ffffff;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
+
+/* #productCategories .tab-content {
+  height: 150vh;
+} */
 
 .homeProductList {
   height: 60vh;
