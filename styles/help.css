@@ -1,0 +1,18 @@
+.help-heading {
+  width: 25vw;
+}
+
+.help-heading:hover {
+  -webkit-box-shadow: 0 3px 5px 6px rgb(231, 231, 231);
+  -moz-box-shadow: 0 3px 5px 6px rgb(231, 231, 231);
+  box-shadow: 0 3px 5px 6px rgb(231, 231, 231);
+  border-radius: 5px;
+}
+
+.help-heading svg {
+  fill: #007bff;
+}
+
+.fa-sd {
+  font-size: 1.3em;
+}
