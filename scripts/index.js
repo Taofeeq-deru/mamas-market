@@ -50,6 +50,10 @@ function showAllTabContent() {
   let tabContents = "";
 
   otherTabs.forEach((otherTab) => {
+    let tabProduce = otherTab.querySelectorAll(".produce");
+
+    if (tabProduce.length == 0) return false;
+
     tabContents += otherTab.innerHTML;
   });
 
