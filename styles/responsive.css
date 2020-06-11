@@ -119,11 +119,39 @@
   .searchForm {
     width: 65%;
   }
+
+  /*cart styles*/
+  .w-qtty {
+    width: 30%;
+  }
+
+  .btn-previous {
+    margin-right: 1em;
+  }
+
+  .w-cart {
+    width: 70%;
+  }
+
+  .w-promo {
+    width: 60%;
+  }
+
+  /*help styles*/
+  .help-heading {
+    width: 23vw;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .text-small {
     font-size: 0.75em;
+  }
+
+  .fa-pd {
+    font-size: 1.5em;
+    /* margin-top: 0.3em; */
   }
 
   .w-md-25 {
@@ -259,6 +287,41 @@
     width: 80%;
     margin: 0 auto;
   }
+
+  /*cart styles*/
+  .w-qtty {
+    width: 35%;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+
+  .btn-previous {
+    width: 100%;
+  }
+
+  .w-promo {
+    width: 100%;
+  }
+
+  .w-cart {
+    width: 100%;
+  }
+
+  /*help styles*/
+  .help-heading {
+    width: 30vw;
+    text-align: center;
+  }
+
+  .help-heading .fa-sd {
+    font-size: 1em;
+  }
+
+  .help-heading .fa-sm {
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -375,11 +438,27 @@
   .searchForm {
     width: 50%;
   }
+
+  /*cart styles*/
+  .w-qtty {
+    width: 37%;
+  }
+
+  /*help styles*/
+  .help-heading .fa-sm {
+    font-size: 0.7em;
+  }
 }
 
 @media screen and (max-width: 370px) {
   .mobile-nav-text .hide {
     display: none;
+  }
+
+  /*contact us styles*/
+  .contacts .fa-3x {
+    font-size: 2em;
+    margin-top: 0.2em;
   }
 }
 
@@ -450,5 +529,21 @@
 
   .searchForm {
     width: 45%;
+  }
+
+  /*cart styles*/
+  .w-qtty {
+    width: 44%;
+  }
+
+  /*help styles*/
+  .help-heading .fa-sm {
+    font-size: 0.6em;
+  }
+
+  /*contact us styles*/
+  .contacts .fa-3x {
+    font-size: 1.7em;
+    margin-top: 0.3em;
   }
 }

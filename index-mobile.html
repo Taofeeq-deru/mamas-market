@@ -51,92 +51,200 @@
         </div>
       </div>
     </div>
-    <!--nav bar-->
-    <nav class="navbar navbar-light bg-nav">
-      <div class="container">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
-            alt="logo"
-            width="100"
-            height="50"
-        /></a>
-        <form action="" class="w-65">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            style="
-              height: 3em;
-              font-family: 'Lato', 'Font Awesome 5 Free' !important;
-              font-weight: 900;
-            "
-            class="form-control form-control-sm rounded-pill border-0 bg-light"
-            placeholder="&#xf002; Search for product close to your location..."
-          />
-        </form>
-      </div>
-    </nav>
-    <div class="container-fluid">
-      <!--second nav-->
-      <div class="row bg-nav py-4 sticky-top">
-        <div class="col-12">
-          <div class="container">
-            <div class="row" id="second-nav">
-              <div class="col-12 d-flex justify-content-around">
-                <a
-                  href="#shopForMe"
-                  class="text-decoration-none text-dark text-small"
-                  >Shop for me</a
-                >
-                <a href="" class="text-decoration-none text-dark text-small"
-                  >Sell on Mama's Market</a
-                >
-                <a href="" class="text-decoration-none text-mama">
-                  <svg width="20" height="18" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M49.692 9.4179C49.543 9.2138 49.348 9.04775 49.1228 8.93327C48.8975 8.81878 48.6484 8.75909 48.3958 8.75906H17.3798C16.4936 8.75906 15.7756 9.47709 15.7756 10.3633C15.7756 11.2495 16.4936 11.9676 17.3798 11.9676H46.1972L45.0405 15.5772H20.9002C20.014 15.5772 19.2959 16.2953 19.2959 17.1815C19.2959 18.0677 20.014 18.7857 20.9002 18.7857H44.0116L42.6836 22.9301H22.7719C21.8857 22.9301 21.1676 23.6482 21.1676 24.5347C21.1676 25.4209 21.8857 26.139 22.7719 26.139H41.6554L40.5414 29.6149H19.3236L10.6071 4.49011C10.5312 4.27144 10.4089 4.07178 10.2486 3.90479C10.0883 3.73781 9.89375 3.60745 9.67836 3.52265L2.19162 0.581576C1.3665 0.258532 0.435407 0.66382 0.111356 1.48793C-0.212136 2.3125 0.19304 3.24414 1.01771 3.5682L7.81742 6.23938L16.1404 30.2298C15.773 30.3578 15.4617 30.6397 15.3199 31.034L12.9135 37.7186C12.8407 37.9204 12.8176 38.1368 12.8462 38.3494C12.8748 38.562 12.9542 38.7646 13.0778 38.94C13.2011 39.1155 13.3649 39.2587 13.5552 39.3576C13.7455 39.4565 13.9568 39.5082 14.1713 39.5082H15.4071C14.6413 40.3604 14.1713 41.4827 14.1713 42.7169C14.1713 45.3708 16.3307 47.5297 18.9842 47.5297C21.6377 47.5297 23.7971 45.3708 23.7971 42.7169C23.7971 41.4827 23.3271 40.3604 22.5613 39.5082H33.0545C32.2883 40.3604 31.8182 41.4827 31.8182 42.7169C31.8182 45.3708 33.9772 47.5297 36.6312 47.5297C39.2852 47.5297 41.4441 45.3708 41.4441 42.7169C41.4441 41.4827 40.9741 40.3604 40.2084 39.5082H41.7115C42.4499 39.5082 43.0484 38.9097 43.0484 38.1713C43.0484 37.4329 42.4498 36.8345 41.7115 36.8345H16.0736L17.5639 32.6948C17.7564 32.7758 17.9643 32.8237 18.1819 32.8237H41.7112C42.051 32.8237 42.3821 32.7158 42.6566 32.5155C42.9311 32.3153 43.1349 32.0329 43.2386 31.7093L49.9232 10.8533C50.0004 10.6128 50.0198 10.3573 49.9796 10.1079C49.9394 9.85845 49.8409 9.62203 49.692 9.4179ZM18.9842 44.8559C17.8045 44.8559 16.8452 43.8966 16.8452 42.7169C16.8452 41.5371 17.8045 40.5777 18.9842 40.5777C20.1639 40.5777 21.1232 41.5371 21.1232 42.7169C21.1232 43.8966 20.1639 44.8559 18.9842 44.8559ZM36.6311 44.8559C35.4514 44.8559 34.492 43.8966 34.492 42.7169C34.492 41.5371 35.4514 40.5777 36.6311 40.5777C37.8107 40.5777 38.7701 41.5371 38.7701 42.7169C38.7701 43.8966 37.8107 44.8559 36.6311 44.8559Z"/>
-                  </svg>
-                  <sup class="badge badge-mama rounded-circle p-x ml-n1">5</sup>
-                </a>
-              </div>
-            </div>
+    <!--navbar-->
+    <div class="sticky-top">
+      <nav class="navbar navbar-light bg-white shadow-sm">
+        <div class="row col-12 my-2 mx-auto">
+          <!--prettier-ignore-->
+          <i class="fas fa-bars fa-sd mr-3 mt-1 sidenav-button" onclick="openNav()"></i>
+          <a class="navbar-brand mt-n3 mr-auto" href="index-mobile.html">
+            <!--prettier-ignore-->
+            <img
+                src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+                alt="logo"
+                class="mama-logo"/>
+          </a>
+          <!--prettier-ignore-->
+          <a
+            href="login-mobile.html"
+            class="nav-link text-small px-0 mx-2">
+            Log in
+          </a>
+          <!--prettier-ignore-->
+          <a
+            href="cart-mobile.html"
+            class="nav-link text-small px-0 mx-2">
+            <svg width="20" height="18" viewBox="0 0 50 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M49.692 9.4179C49.543 9.2138 49.348 9.04775 49.1228 8.93327C48.8975 8.81878 48.6484 8.75909 48.3958 8.75906H17.3798C16.4936 8.75906 15.7756 9.47709 15.7756 10.3633C15.7756 11.2495 16.4936 11.9676 17.3798 11.9676H46.1972L45.0405 15.5772H20.9002C20.014 15.5772 19.2959 16.2953 19.2959 17.1815C19.2959 18.0677 20.014 18.7857 20.9002 18.7857H44.0116L42.6836 22.9301H22.7719C21.8857 22.9301 21.1676 23.6482 21.1676 24.5347C21.1676 25.4209 21.8857 26.139 22.7719 26.139H41.6554L40.5414 29.6149H19.3236L10.6071 4.49011C10.5312 4.27144 10.4089 4.07178 10.2486 3.90479C10.0883 3.73781 9.89375 3.60745 9.67836 3.52265L2.19162 0.581576C1.3665 0.258532 0.435407 0.66382 0.111356 1.48793C-0.212136 2.3125 0.19304 3.24414 1.01771 3.5682L7.81742 6.23938L16.1404 30.2298C15.773 30.3578 15.4617 30.6397 15.3199 31.034L12.9135 37.7186C12.8407 37.9204 12.8176 38.1368 12.8462 38.3494C12.8748 38.562 12.9542 38.7646 13.0778 38.94C13.2011 39.1155 13.3649 39.2587 13.5552 39.3576C13.7455 39.4565 13.9568 39.5082 14.1713 39.5082H15.4071C14.6413 40.3604 14.1713 41.4827 14.1713 42.7169C14.1713 45.3708 16.3307 47.5297 18.9842 47.5297C21.6377 47.5297 23.7971 45.3708 23.7971 42.7169C23.7971 41.4827 23.3271 40.3604 22.5613 39.5082H33.0545C32.2883 40.3604 31.8182 41.4827 31.8182 42.7169C31.8182 45.3708 33.9772 47.5297 36.6312 47.5297C39.2852 47.5297 41.4441 45.3708 41.4441 42.7169C41.4441 41.4827 40.9741 40.3604 40.2084 39.5082H41.7115C42.4499 39.5082 43.0484 38.9097 43.0484 38.1713C43.0484 37.4329 42.4498 36.8345 41.7115 36.8345H16.0736L17.5639 32.6948C17.7564 32.7758 17.9643 32.8237 18.1819 32.8237H41.7112C42.051 32.8237 42.3821 32.7158 42.6566 32.5155C42.9311 32.3153 43.1349 32.0329 43.2386 31.7093L49.9232 10.8533C50.0004 10.6128 50.0198 10.3573 49.9796 10.1079C49.9394 9.85845 49.8409 9.62203 49.692 9.4179ZM18.9842 44.8559C17.8045 44.8559 16.8452 43.8966 16.8452 42.7169C16.8452 41.5371 17.8045 40.5777 18.9842 40.5777C20.1639 40.5777 21.1232 41.5371 21.1232 42.7169C21.1232 43.8966 20.1639 44.8559 18.9842 44.8559ZM36.6311 44.8559C35.4514 44.8559 34.492 43.8966 34.492 42.7169C34.492 41.5371 35.4514 40.5777 36.6311 40.5777C37.8107 40.5777 38.7701 41.5371 38.7701 42.7169C38.7701 43.8966 37.8107 44.8559 36.6311 44.8559Z"/>
+            </svg>
+            <sup class="badge badge-mama rounded-circle p-x ml-n1">5</sup>
+          </a>
+        </div>
+        <!--second nav-->
+        <div class="row col-12 second-nav mx-auto">
+          <form action="" class="searchForm w-100">
+            <!--prettier-ignore-->
+            <input
+                type="search"
+                name="search"
+                id="search"
+                style="height: 3em;"
+                class="form-control form-control-sm rounded-lg border-0 bg-light"
+                placeholder="Search for product close to your location..."/>
+          </form>
+        </div>
+      </nav>
+      <!--search result-->
+      <div class="row hide col-12 mx-auto" id="theSearch" style="top: 110%;">
+        <!--prettier-ignore-->
+        <div class="search-result bg-white shadow-sm py-2 rounded-lg w-100">
+          <div class="px-3 py-0 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">categories</h4>
+            <ul class="categories-list p-0 mb-0">
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto result-figure">
+                  13 results
+                </p>
+              </li>
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto">
+                  13 results
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="px-3 pt-2 border-top-grey mt-n2 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">products</h4>
+            <ul class="products-list p-0 mb-0">
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center pt-2 border-top-grey mb-0">
+            <a 
+              href="" 
+              class="fa-xs text-mama text-decoration-none font-weight-bold text-uppercase">
+              see all results(20)
+            </a>
           </div>
         </div>
       </div>
-      <!--bottom navbar-->
-      <nav class="navbar mobile-view mobile-nav fixed-bottom pt-1 pb-3">
-        <div class="d-flex justify-content-around">
-          <a
-            href="index-mobile.html"
-            class="text-decoration-none nav-link active d-flex flex-column text-center"
-            ><i class="fas fa-home"></i
-            ><span class="mobile-nav-text">Home</span></a
-          >
-          <a
-            href="#"
-            class="text-decoration-none nav-link d-flex flex-column text-center"
-            ><i class="fas fa-comment-alt"></i
-            ><span class="mobile-nav-text"
-              >Chat <span class="hide">Support</span></span
-            ></a
-          >
-          <a
-            href="#shopForMe"
-            class="text-decoration-none nav-link d-flex flex-column text-center"
-            ><i class="fas fa-shopping-basket"></i
-            ><span class="mobile-nav-text"
-              >Shop <span class="hide">for me</span></span
-            ></a
-          >
-          <a
-            href="login.html"
-            class="text-decoration-none nav-link d-flex flex-column text-center"
-            ><i class="fas fa-user"></i
-            ><span class="mobile-nav-text">Account</span></a
-          >
-        </div>
-      </nav>
-
+    </div>
+    <!--bottom navbar-->
+    <nav class="navbar fixed-bottom navbar-light bg-white mobile-nav">
+      <div class="d-flex flex-row justify-content-around w-100">
+        <!--prettier-ignore-->
+        <a
+          href="index-mobile.html"
+          class="text-decoration-none nav-link active d-flex flex-column text-center">
+          <i class="fas fa-home"></i>
+          <span class="mobile-nav-text">Home</span>
+        </a>
+        <!--prettier-ignore-->
+        <a
+          href="#"
+          class="text-decoration-none nav-link d-flex flex-column text-center">
+          <i class="fas fa-comment-alt"></i>
+          <span class="mobile-nav-text">Chat <span class="hide">Support</span></span>
+        </a>
+        <!--prettier-ignore-->
+        <a
+          href="index-mobile.html#shopForMe"
+          class="text-decoration-none nav-link d-flex flex-column text-center">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="mobile-nav-text">Shop <span class="hide">for me</span></span>
+        </a>
+        <!--prettier-ignore-->
+        <a
+          href="login-mobile.html"
+          class="text-decoration-none nav-link d-flex flex-column text-center">
+          <i class="fas fa-user"></i>
+          <span class="mobile-nav-text">Account</span>
+        </a>
+      </div>
+    </nav>
+    <!--side-nav-->
+    <!--prettier-ignore-->
+    <div id="mySidenav" class="sidenav fa-xs d-flex flex-column bg-white text-capitalize">
+      <!--prettier-ignore-->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="nav-link text-mama" href="#">all categories</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">fresh farm produce</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">processed food products</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">canned food product</a>
+      <a class="nav-link text-mama" href="#">fresh food</a>
+      <a class="nav-link text-mama" href="#">veggie/fruits</a>
+      <a class="nav-link text-mama" href="#">beverages</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">home cleaning supplies</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">pet foods/care</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">paper products</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">bread & bakery</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">baby food/products</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">toileteries</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">kitchen utensils/storage</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">stationaries</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">local food condiments</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">shop for me</a>
+    </div>
+    <!--content-->
+    <div class="container-fluid" id="content">
       <!--slides-->
       <div
         id="carouselExampleIndicators"
@@ -429,514 +537,9 @@
               id="pills-all"
               role="tabpanel"
               aria-labelledby="pills-all-tab"
-            >
-              <!--all categories-->
-              <h5 class="font-weight-bold mb-3 category-head">
-                Fresh Farm Produce
-              </h5>
-              <ul
-                class="row col-12 d-flex flex-row justify-content-around mb-3"
-              >
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-              </ul>
-              <div class="row col-12 d-flex justify-content-around mb-3">
-                <a href="#" class="text-decoration-none"
-                  ><button class="btn btn-mama rounded-pill px-3">
-                    Load more products &nbsp;
-                    <i class="fas fa-chevron-right"></i></button
-                ></a>
-              </div>
-              <!--processed food in all categories-->
-              <h5 class="font-weight-bold mb-3 category-head">
-                Processed Food Products
-              </h5>
-              <ul
-                class="row col-12 d-flex flex-row justify-content-around mb-3"
-              >
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-              </ul>
-              <div class="row col-12 d-flex justify-content-around mb-3">
-                <a href="#" class="text-decoration-none"
-                  ><button class="btn btn-mama rounded-pill px-3">
-                    Load more products &nbsp;
-                    <i class="fas fa-chevron-right"></i></button
-                ></a>
-              </div>
-              <!--canned food in all categories-->
-              <h5 class="font-weight-bold mb-3 category-head">
-                Canned Food Products
-              </h5>
-              <ul
-                class="row col-12 d-flex flex-row justify-content-around mb-3"
-              >
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-                <li
-                  class="produce d-flex flex-column shadow bg-white text-decoration-none mb-4"
-                >
-                  <a
-                    href="product-mobile.html"
-                    class="d-flex flex-column text-decoration-none"
-                  >
-                    <img
-                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
-                      alt="tomato"
-                      class="picture w-100"
-                    />
-                    <span class="name-star-amount px-2 mt-2 d-flex flex-row">
-                      <span class="name-star d-flex flex-column">
-                        <span
-                          class="name text-decoration-none font-weight-bold text-dark text-capitalize"
-                          >Fresh Tomato</span
-                        >
-                        <span class="star">
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="fas fa-star fa-xs text-success"></i>
-                          <i class="far fa-star fa-xs text-success"></i>
-                        </span>
-                      </span>
-                      <span
-                        class="amount text-success ml-auto mt-2 font-weight-bold"
-                        ><i class="fa fa-naira text-success"></i>1200</span
-                      >
-                    </span>
-                  </a>
-                  <form action="" class="place-order d-flex px-2 my-2">
-                    <span class="amount d-flex">
-                      <input
-                        type="number"
-                        name="quantity"
-                        id="quantity"
-                        value="1"
-                        class="w-md-25 rounded px-1"
-                      />
-                    </span>
-                    <button
-                      type="submit"
-                      class="btn-mama-order rounded order-link ml-auto d-flex flex-column text-decoration-none align-items-center py-2"
-                    >
-                      <i class="fas fa-plus-square fa-xs"></i>
-                      <span class="click-order text-nowrap"> Place order</span>
-                    </button>
-                  </form>
-                </li>
-              </ul>
-              <div class="row col-12 d-flex justify-content-around mb-3">
-                <a href="#" class="text-decoration-none"
-                  ><button class="btn btn-mama rounded-pill px-3">
-                    Load more products &nbsp;
-                    <i class="fas fa-chevron-right"></i></button
-                ></a>
-              </div>
-            </div>
+            ></div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-farm"
               role="tabpanel"
               aria-labelledby="pills-farm-tab"
@@ -1111,7 +714,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-processed"
               role="tabpanel"
               aria-labelledby="pills-processed-tab"
@@ -1286,7 +889,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-canned"
               role="tabpanel"
               aria-labelledby="pills-canned-tab"
@@ -1461,7 +1064,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-fresh"
               role="tabpanel"
               aria-labelledby="pills-fresh-tab"
@@ -1636,7 +1239,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-veggies"
               role="tabpanel"
               aria-labelledby="pills-veggies-tab"
@@ -1811,7 +1414,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-beverages"
               role="tabpanel"
               aria-labelledby="pills-beverages-tab"
@@ -1884,7 +1487,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-cleaning"
               role="tabpanel"
               aria-labelledby="pills-cleaning-tab"
@@ -1957,7 +1560,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-pet"
               role="tabpanel"
               aria-labelledby="pills-pet-tab"
@@ -2030,7 +1633,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-paper"
               role="tabpanel"
               aria-labelledby="pills-paper-tab"
@@ -2103,7 +1706,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-bread"
               role="tabpanel"
               aria-labelledby="pills-bread-tab"
@@ -2176,7 +1779,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-baby"
               role="tabpanel"
               aria-labelledby="pills-baby-tab"
@@ -2249,7 +1852,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-toileteries"
               role="tabpanel"
               aria-labelledby="pills-toileteries-tab"
@@ -2322,7 +1925,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-kitchen"
               role="tabpanel"
               aria-labelledby="pills-kitchen-tab"
@@ -2395,7 +1998,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-stationaries"
               role="tabpanel"
               aria-labelledby="pills-stationaries-tab"
@@ -2468,7 +2071,7 @@
               </div>
             </div>
             <div
-              class="tab-pane fade"
+              class="tab-pane fade pt-tab"
               id="pills-local"
               role="tabpanel"
               aria-labelledby="pills-local-tab"
@@ -2572,7 +2175,7 @@
             >
               <div class="shopper-img">
                 <img
-                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg"
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1591835683/shoppers/oluchi_vkutxs.jpg"
                   alt="shopper"
                   class="shopper-avi w-100"
                 />
@@ -2589,7 +2192,7 @@
                   <span
                     class="fa-sh text-center text-muted font-weight-bold"
                     id="sh-story"
-                    >I am Clarion Elizabeth. A certified personal shopper on
+                    >I am Oluchi Chukwuani. A certified personal shopper on
                     mama's market. Looking forward to being your personal
                     shopper</span
                   >
@@ -2597,7 +2200,7 @@
                     class="d-flex flex-row justify-content-around mt-md-3 mt-1"
                   >
                     <a
-                      href="tel+"
+                      href="tel+2348082714728"
                       class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
                       id="fa-icon1"
                     >
@@ -2617,18 +2220,18 @@
                 class="shopper-name px-md-3 my-3 mx-4 pb-2 text-center border-bottom"
               >
                 <span class="sh-name font-weight-bold text-dark text-capitalize"
-                  >Elizabeth</span
+                  >Oluchi</span
                 >
               </span>
               <span class="sh-fa-xs text-center mx-2 text-muted">
                 Fresh food supply, Groceries, General food shopping are my
                 speciality
               </span>
-              <span class="my-3 mx-auto mx-2 w-75">
+              <a href="#" class="my-3 mx-auto mx-2 w-75">
                 <button class="btn btn-outline-mama w-100 py-auto">
                   Select Shopper
                 </button>
-              </span>
+              </a>
             </span>
           </li>
           <li class="mx-auto sh-list">
@@ -2637,7 +2240,7 @@
             >
               <div class="shopper-img">
                 <img
-                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg"
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1591835709/shoppers/nehemiah_e3bsty.jpg"
                   alt="shopper"
                   class="shopper-avi w-100"
                 />
@@ -2654,7 +2257,7 @@
                   <span
                     class="fa-sh text-center text-muted font-weight-bold"
                     id="sh-story"
-                    >I am Clarion Elizabeth. A certified personal shopper on
+                    >I am Nehemiah Imonina. A certified personal shopper on
                     mama's market. Looking forward to being your personal
                     shopper</span
                   >
@@ -2662,7 +2265,7 @@
                     class="d-flex flex-row justify-content-around mt-md-3 mt-1"
                   >
                     <a
-                      href="tel+"
+                      href="tel+2347037583808"
                       class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
                       id="fa-icon1"
                     >
@@ -2682,213 +2285,18 @@
                 class="shopper-name px-md-3 my-3 mx-4 pb-2 text-center border-bottom"
               >
                 <span class="sh-name font-weight-bold text-dark text-capitalize"
-                  >Elizabeth</span
+                  >Nehemiah</span
                 >
               </span>
               <span class="sh-fa-xs text-center mx-2 text-muted">
                 Fresh food supply, Groceries, General food shopping are my
                 speciality
               </span>
-              <span class="my-3 mx-auto mx-2 w-75">
+              <a href="#" class="my-3 mx-auto mx-2 w-75">
                 <button class="btn btn-outline-mama w-100 py-auto">
                   Select Shopper
                 </button>
-              </span>
-            </span>
-          </li>
-          <li class="mx-auto sh-list">
-            <span
-              class="shopper d-flex flex-column shadow bg-white text-decoration-none mb-4 mx-2"
-            >
-              <div class="shopper-img">
-                <img
-                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg"
-                  alt="shopper"
-                  class="shopper-avi w-100"
-                />
-                <span class="certified"
-                  ><i
-                    class="fas fa-check-circle text-warning sh-icon fa-sh-2x"
-                  ></i
-                  ><span
-                    class="bg-primary rounded text-light sh fa-sh py-1 pr-1"
-                    >Certified</span
-                  ></span
-                >
-                <span class="about-shopper text-center">
-                  <span
-                    class="fa-sh text-center text-muted font-weight-bold"
-                    id="sh-story"
-                    >I am Clarion Elizabeth. A certified personal shopper on
-                    mama's market. Looking forward to being your personal
-                    shopper</span
-                  >
-                  <span
-                    class="d-flex flex-row justify-content-around mt-md-3 mt-1"
-                  >
-                    <a
-                      href="tel+"
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon1"
-                    >
-                      <i class="fas fa-phone-alt text-light"></i>
-                    </a>
-                    <a
-                      href=""
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon2"
-                    >
-                      <i class="fas fa-comments text-light"></i>
-                    </a>
-                  </span>
-                </span>
-              </div>
-              <span
-                class="shopper-name px-md-3 my-3 mx-4 pb-2 text-center border-bottom"
-              >
-                <span class="sh-name font-weight-bold text-dark text-capitalize"
-                  >Elizabeth</span
-                >
-              </span>
-              <span class="sh-fa-xs text-center mx-2 text-muted">
-                Fresh food supply, Groceries, General food shopping are my
-                speciality
-              </span>
-              <span class="my-3 mx-auto mx-2 w-75">
-                <button class="btn btn-outline-mama w-100 py-auto">
-                  Select Shopper
-                </button>
-              </span>
-            </span>
-          </li>
-          <li class="mx-auto sh-list">
-            <span
-              class="shopper d-flex flex-column shadow bg-white text-decoration-none mb-4 mx-2"
-            >
-              <div class="shopper-img">
-                <img
-                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg"
-                  alt="shopper"
-                  class="shopper-avi w-100"
-                />
-                <span class="certified"
-                  ><i
-                    class="fas fa-check-circle text-warning sh-icon fa-sh-2x"
-                  ></i
-                  ><span
-                    class="bg-primary rounded text-light sh fa-sh py-1 pr-1"
-                    >Certified</span
-                  ></span
-                >
-                <span class="about-shopper text-center">
-                  <span
-                    class="fa-sh text-center text-muted font-weight-bold"
-                    id="sh-story"
-                    >I am Clarion Elizabeth. A certified personal shopper on
-                    mama's market. Looking forward to being your personal
-                    shopper</span
-                  >
-                  <span
-                    class="d-flex flex-row justify-content-around mt-md-3 mt-1"
-                  >
-                    <a
-                      href="tel+"
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon1"
-                    >
-                      <i class="fas fa-phone-alt text-light"></i>
-                    </a>
-                    <a
-                      href=""
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon2"
-                    >
-                      <i class="fas fa-comments text-light"></i>
-                    </a>
-                  </span>
-                </span>
-              </div>
-              <span
-                class="shopper-name px-md-3 my-3 mx-4 pb-2 text-center border-bottom"
-              >
-                <span class="sh-name font-weight-bold text-dark text-capitalize"
-                  >Elizabeth</span
-                >
-              </span>
-              <span class="sh-fa-xs text-center mx-2 text-muted">
-                Fresh food supply, Groceries, General food shopping are my
-                speciality
-              </span>
-              <span class="my-3 mx-auto mx-2 w-75">
-                <button class="btn btn-outline-mama w-100 py-auto">
-                  Select Shopper
-                </button>
-              </span>
-            </span>
-          </li>
-          <li class="mx-auto sh-list">
-            <span
-              class="shopper d-flex flex-column shadow bg-white text-decoration-none mb-4 mx-2"
-            >
-              <div class="shopper-img">
-                <img
-                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg"
-                  alt="shopper"
-                  class="shopper-avi w-100"
-                />
-                <span class="certified"
-                  ><i
-                    class="fas fa-check-circle text-warning sh-icon fa-sh-2x"
-                  ></i
-                  ><span
-                    class="bg-primary rounded text-light sh fa-sh py-1 pr-1"
-                    >Certified</span
-                  ></span
-                >
-                <span class="about-shopper text-center">
-                  <span
-                    class="fa-sh text-center text-muted font-weight-bold"
-                    id="sh-story"
-                    >I am Clarion Elizabeth. A certified personal shopper on
-                    mama's market. Looking forward to being your personal
-                    shopper</span
-                  >
-                  <span
-                    class="d-flex flex-row justify-content-around mt-md-3 mt-1"
-                  >
-                    <a
-                      href="tel+"
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon1"
-                    >
-                      <i class="fas fa-phone-alt text-light"></i>
-                    </a>
-                    <a
-                      href=""
-                      class="text-decoration-none bg-warning rounded-circle fa-sh-2x p-1"
-                      id="fa-icon2"
-                    >
-                      <i class="fas fa-comments text-light"></i>
-                    </a>
-                  </span>
-                </span>
-              </div>
-              <span
-                class="shopper-name px-md-3 my-3 mx-4 pb-2 text-center border-bottom"
-              >
-                <span class="sh-name font-weight-bold text-dark text-capitalize"
-                  >Elizabeth</span
-                >
-              </span>
-              <span class="sh-fa-xs text-center mx-2 text-muted">
-                Fresh food supply, Groceries, General food shopping are my
-                speciality
-              </span>
-              <span class="my-3 mx-auto mx-2 w-75">
-                <button class="btn btn-outline-mama w-100 py-auto">
-                  Select Shopper
-                </button>
-              </span>
+              </a>
             </span>
           </li>
         </ul>
@@ -3117,16 +2525,17 @@
       </div>
       <!--footer-->
       <div class="footer last bg-dark row">
-        <div class="container">
-          <div class="mobile-view mt-3 row">
+        <div class="container pt-3">
+          <div class="d-flex flex-column">
             <div class="row">
               <div class="col-12 text-center">
+                <!--prettier-ignore-->
                 <a
                   href="#top"
-                  class="text-light text-uppercase text-decoration-none pb-4"
-                  ><i class="fas fa-angle-up fa-2x"></i>
-                  <h6 class="font-weight-bold sh-fa-xs">back to the top</h6></a
-                >
+                  class="text-light text-uppercase text-decoration-none pb-4 mx-auto">
+                  <i class="fas fa-angle-up fa-2x"></i>
+                  <h6 class="font-weight-bold sh-fa-xs">back to the top</h6>
+                </a>
               </div>
             </div>
             <div class="row">
@@ -3135,31 +2544,35 @@
               </div>
             </div>
             <div class="row mt-5 col-12 d-flex flex-row justify-content-around">
-              <a href="" class="text-light text-uppercase text-decoration-none"
-                ><h6 class="font-weight-bold sh-fa-xs">help centre</h6></a
-              >
-              <a href="" class="text-light text-uppercase text-decoration-none"
-                ><h6 class="font-weight-bold sh-fa-xs">contact us</h6></a
-              >
-              <a href="" class="text-light text-uppercase text-decoration-none"
-                ><h6 class="font-weight-bold sh-fa-xs">
+              <!--prettier-ignore-->
+              <a href="help-mobile.html" class="text-light text-uppercase text-decoration-none">
+                <h6 class="font-weight-bold sh-fa-xs">help centre</h6>
+              </a>
+              <!--prettier-ignore-->
+              <a href="contact-us-mobile.html" class="text-light text-uppercase text-decoration-none">
+                <h6 class="font-weight-bold sh-fa-xs">contact us</h6>
+              </a>
+              <!--prettier-ignore-->
+              <a href="" class="text-light text-uppercase text-decoration-none">
+                <h6 class="font-weight-bold sh-fa-xs">
                   terms & conditions
-                </h6></a
-              >
+                </h6>
+              </a>
             </div>
             <div class="row mt-5">
               <div class="col-12 text-center">
+                <!--prettier-ignore-->
                 <a
                   href=""
-                  class="text-light text-uppercase text-decoration-none"
-                  ><h6 class="font-weight-bold sh-fa-xs">become a seller</h6></a
-                >
+                  class="text-light text-uppercase text-decoration-none mx-auto">
+                  <h6 class="font-weight-bold sh-fa-xs">become a seller</h6>
+                </a>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 text-center">
-              <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-4 pb-4">
                 All Rights Reserved
               </p>
             </div>
@@ -3169,6 +2582,7 @@
     </div>
 
     <script src="scripts/index-mobile.js"></script>
+    <script src="scripts/side-nav.js"></script>
     <!--bootstrap scripts-->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

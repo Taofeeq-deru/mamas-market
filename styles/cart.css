@@ -93,3 +93,16 @@ table .borderCol {
 .now-show {
   display: block;
 }
+
+.back-link {
+  border: 1px solid #f06d06;
+  text-decoration: none;
+  color: #f06d06;
+}
+
+.back-link:hover {
+  background-color: #f06d06;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+}
