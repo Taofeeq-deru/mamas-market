@@ -13,6 +13,16 @@
   fill: #007bff;
 }
 
-.fa-sd {
-  font-size: 1.3em;
+/*contact us styles*/
+.btn-submit {
+  background: #23b771;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-submit:hover {
+  background: rgb(28, 148, 92);
+  color: #e6e6e6;
 }

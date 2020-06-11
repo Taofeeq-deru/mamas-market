@@ -1,4 +1,4 @@
-let cartTable = document.getElementById("cartTable");
+let cartProducts = document.getElementById("cartProducts");
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -25,7 +25,7 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
   // Exit the function if any field in the current tab is invalid:
-  //if (n == 1 && !validateForm()) return false;
+
   if (n == 1 && currentTab == 1 && !validateAddress()) return false;
   //console.log("valid address");
   // Hide the current tab:
@@ -63,6 +63,7 @@ function validateAddress() {
     //console.log("no address entered");
     document.getElementById("warningText").classList.remove("dont-show");
     document.getElementById("warningText").classList.add("now-show");
+    document.getElementById("top").scrollIntoView();
     valid = false;
   } else {
     valid = true;
@@ -79,10 +80,9 @@ function calculateTotalPriceAndCost() {
   let totalPrice = document.querySelector(".total-price");
   let totalCost = document.querySelector(".total-cost");
   let totalPrice1 = document.querySelector("#total-price2");
-  let totalCost1 = document.querySelector("#total-cost2");
   let shippingFee = Number(document.querySelector(".shipping-fee").value);
 
-  let productPrices = cartTable.querySelectorAll(".product-total");
+  let productPrices = cartProducts.querySelectorAll(".product-total");
 
   productPrices.forEach((productPrice) => {
     let eachPrice = Number(productPrice.value);
@@ -93,7 +93,6 @@ function calculateTotalPriceAndCost() {
   totalPrice1.value = price;
 
   totalCost.value = price + shippingFee;
-  totalCost1.value = price + shippingFee;
 }
 
 function showPromoCode() {
@@ -102,8 +101,7 @@ function showPromoCode() {
 }
 
 const removeCartProduct = function (event) {
-  let product =
-    event.target.parentElement.parentElement.parentElement.parentElement;
+  let product = event.target.parentElement.parentElement.parentElement;
   product.remove();
 
   calculateTotalPriceAndCost();
