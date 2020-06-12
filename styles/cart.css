@@ -101,8 +101,18 @@ table .borderCol {
 }
 
 .back-link:hover {
+  cursor: pointer;
   background-color: #f06d06;
   text-decoration: none;
   border: none;
   color: #ffffff;
+}
+
+.go-back {
+  cursor: pointer;
+}
+
+.go-back:hover {
+  color: #03478f;
+  text-decoration-color: #03478f;
 }

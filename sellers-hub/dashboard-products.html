@@ -123,7 +123,8 @@
                         <button class="btn btn-white px-3 py-2">Download(.csv)</button>
                         </a>
                         <!--add product modal button-->
-                        <button class="btn btn-add px-3 py-2 ml-3" data-toggle="modal" data-target="#addForm">
+                        <!--prettier-ignore-->
+                        <button class="btn btn-add px-3 py-2 ml-3" id="addProduct" data-toggle="modal" data-target="#addForm">
                           Add New Product
                         </button>
                         <!--add product modal form-->
@@ -132,7 +133,7 @@
                                 <div class="modal-content">
                                   <form action="" class="px-3">
                                     <div class="modal-header">
-                                      <h5 class="modal-title" id="addFormLabel">Add New Product</h5>
+                                      <h5 class="modal-title text-capitalize" id="addFormLabel">add new product</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>
                                       </button>
@@ -224,7 +225,7 @@
                                         <label for="item-no" class="fa-sm">Number of items in stock</label>
                                         <!--prettier-ignore-->
                                         <input 
-                                          type="number" 
+                                          type="text" 
                                           name="item-no" 
                                           id="item-no"
                                           class="form-control" />
@@ -268,6 +269,8 @@
                         <th scope="col" class="text-dark py-4">Price(<i class="fas fa-naira"></i>)</th>
                         <th scope="col" class="text-dark py-4">Number of product sold/Number in stock</th>
                         <th scope="col" class="text-dark py-4">Date</th>
+                        <th scope="col" class="text-dark py-4">Edit</th>
+                        <th scope="col" class="text-dark py-4">Delete</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -280,10 +283,19 @@
                             height="40"
                             width="40" />
                         </td>
-                        <td class="text-capitalize">imported rice</td>
+                        <td class="text-capitalize">tomato</td>
                         <td class=""><i class="fas fa-naira"></i> 3000</td>
                         <td class="">5 tons</td>
                         <td class="">30/05/2020</td>
+                        <td class="">
+                          <!--prettier-ignore-->
+                          <i 
+                            class="fa fa-edit text-primary edit" 
+                            data-toggle="modal" 
+                            data-target="#addForm"
+                            data-product='{"name": "tomato", "price": "3000", "stock": "5 tons", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                        </td>
+                        <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>
                       <tr>
                         <td>
@@ -294,24 +306,19 @@
                             height="40"
                             width="40" />
                         </td>
-                        <td class="text-capitalize">imported rice</td>
-                        <td class=""><i class="fas fa-naira"></i> 3000</td>
+                        <td class="text-capitalize">tomato</td>
+                        <td class=""><i class="fas fa-naira"></i> 5000</td>
                         <td class="">5 tons</td>
                         <td class="">30/05/2020</td>
-                      </tr>
-                      <tr>
-                        <td>
+                        <td class="">
                           <!--prettier-ignore-->
-                          <img 
-                            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg" 
-                            alt="product"
-                            height="40"
-                            width="40" />
+                          <i 
+                            class="fa fa-edit text-primary edit" 
+                            data-toggle="modal" 
+                            data-target="#addForm"
+                            data-product='{"name": "tomato", "price": "5000", "stock": "5 tons", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
                         </td>
-                        <td class="text-capitalize">imported rice</td>
-                        <td class=""><i class="fas fa-naira"></i> 3000</td>
-                        <td class="">5 tons</td>
-                        <td class="">30/05/2020</td>
+                        <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>
                     </tbody>
                   </table>

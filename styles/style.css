@@ -689,3 +689,8 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
+
+/*categories styles*/
+.pt-space {
+  padding-top: 6em;
+}

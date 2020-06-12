@@ -144,3 +144,7 @@ const increaseQtty = function (event) {
 
   calculateTotalPriceAndCost();
 };
+
+function goBack() {
+  window.history.back();
+}

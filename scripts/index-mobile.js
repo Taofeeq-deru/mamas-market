@@ -3,7 +3,6 @@ const buttonLeft = document.getElementById("slideLeft");
 
 let categories = document.getElementById("productCategories");
 let catLinks = categories.querySelectorAll(".nav-link");
-let merits = document.getElementById("merits");
 
 buttonRight.onclick = function () {
   document.getElementById("pills-tab").scrollLeft += 200;
