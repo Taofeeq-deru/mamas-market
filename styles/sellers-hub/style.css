@@ -194,6 +194,12 @@ table tbody tr {
   border-bottom: 1px solid #8b8b8b;
 }
 
+.edit:hover,
+.delete:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
 .modal-dialog {
   max-width: 73%;
   margin-left: 26%;
