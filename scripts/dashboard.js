@@ -51,8 +51,24 @@ const loadImage = function (event) {
 // function populateModalForm() {
 // }
 
-function modalHead() {
+function emptyModalForm() {
   modalLabel.innerHTML = "add new product";
+  document.getElementById("product-name").value = "";
+  document.getElementById("price").value = "";
+  document.getElementById("product-description").value = "";
+  document.getElementById("item-no").value = "";
+  let categories = document
+    .getElementById("product-category")
+    .querySelectorAll("option");
+  categories.forEach((category) => {
+    category.removeAttribute("selected");
+  });
+
+  let imageArray = [];
+
+  editted = "yes";
+
+  loadImage(imageArray);
 }
 
 edits.forEach((edit) => {
@@ -86,4 +102,4 @@ edits.forEach((edit) => {
   });
 });
 
-addProduct.addEventListener("click", modalHead);
+addProduct.addEventListener("click", emptyModalForm);
