@@ -11,11 +11,21 @@ const loadImage = function (event) {
   let text = document.getElementById("imageText");
   if (editted === "no") {
     let files = event.target.files;
-    //console.log(files[0]);
-    let filesArr = Array.prototype.slice.call(files);
-    filesArr.forEach((file) => {
-      //file = files[i];
-      //console.log(file);
+
+    for (let i = 0; i < files.length; i++) {
+      let file = files[i];
+      let image_size = file.size;
+
+      let min = 1024 * 25;
+      let max = 1024 * 2014;
+
+      if (image_size < min || image_size > max) {
+        $(`#passport`).val("");
+        alert(`Each image must be between 25KB and 2MB`);
+        $(`.imageFile`).remove();
+        $(`#product-image`).val("");
+        break;
+      }
       let img = document.createElement("img");
       img.classList.add(
         "imageFile",
@@ -26,7 +36,7 @@ const loadImage = function (event) {
       );
       img.setAttribute("src", URL.createObjectURL(file));
       imageBlock.appendChild(img);
-    });
+    }
   } else {
     let files = event;
     //console.log(files);
@@ -71,11 +81,9 @@ function emptyModalForm() {
     category.removeAttribute("selected");
   });
 
-  let imageArray = [];
-
-  editted = "yes";
-
-  loadImage(imageArray);
+  let imageBlock = document.getElementById("output");
+  let images = imageBlock.querySelectorAll("img");
+  images.forEach((image) => image.remove());
 }
 
 edits.forEach((edit) => {
