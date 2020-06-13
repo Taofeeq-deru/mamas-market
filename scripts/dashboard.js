@@ -48,15 +48,22 @@ const loadImage = function (event) {
   editted = "no";
 };
 
-// function populateModalForm() {
-// }
-
 function emptyModalForm() {
   modalLabel.innerHTML = "add new product";
+
   document.getElementById("product-name").value = "";
+
   document.getElementById("price").value = "";
+
   document.getElementById("product-description").value = "";
+
   document.getElementById("item-no").value = "";
+
+  let units = document.getElementById("unit").querySelectorAll("option");
+  units.forEach((unit) => {
+    unit.removeAttribute("selected");
+  });
+
   let categories = document
     .getElementById("product-category")
     .querySelectorAll("option");
@@ -76,12 +83,23 @@ edits.forEach((edit) => {
     modalLabel.innerHTML = "edit product";
     let productDetails = edit.getAttribute("data-product");
     let productData = JSON.parse(productDetails);
-    //console.log(productData.name);
+
     document.getElementById("product-name").value = productData.name;
+
     document.getElementById("price").value = productData.price;
+
     document.getElementById("product-description").value =
       productData.description;
+
     document.getElementById("item-no").value = productData.stock;
+
+    let units = document.getElementById("unit").querySelectorAll("option");
+    units.forEach((unit) => {
+      if (unit.value == productData.unit) {
+        unit.setAttribute("selected", "true");
+      }
+    });
+
     let categories = document
       .getElementById("product-category")
       .querySelectorAll("option");

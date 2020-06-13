@@ -221,14 +221,24 @@
                                           </label>
                                         </div>
                                       </div>
-                                      <div class="form-group">
-                                        <label for="item-no" class="fa-sm">Number of items in stock</label>
-                                        <!--prettier-ignore-->
-                                        <input 
-                                          type="text" 
-                                          name="item-no" 
-                                          id="item-no"
-                                          class="form-control" />
+                                      <div class="form-row">
+                                        <div class="form-group col-8">
+                                          <label for="item-no" class="fa-sm">Number of items in stock</label>
+                                          <!--prettier-ignore-->
+                                          <input 
+                                            type="number" 
+                                            name="item-no" 
+                                            id="item-no"
+                                            class="form-control" />
+                                        </div>
+                                        <div class="form-group col-4">
+                                          <label for="unit" class="fa-sm">Unit</label>
+                                          <!--prettier-ignore-->
+                                          <select name="unit" id="unit" class="form-control fa-xs text-capitalize">
+                                            <option value="kg">kg</option>
+                                            <option value="tonne">tonne</option>
+                                          </select>
+                                        </div>
                                       </div>
                                       <div class="form-group">
                                         <div class="form-check">
@@ -285,7 +295,7 @@
                         </td>
                         <td class="text-capitalize">tomato</td>
                         <td class=""><i class="fas fa-naira"></i> 3000</td>
-                        <td class="">5 tons</td>
+                        <td class="">5 tonne</td>
                         <td class="">30/05/2020</td>
                         <td class="">
                           <!--prettier-ignore-->
@@ -293,7 +303,7 @@
                             class="fa fa-edit text-primary edit" 
                             data-toggle="modal" 
                             data-target="#addForm"
-                            data-product='{"name": "tomato", "price": "3000", "stock": "5 tons", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                            data-product='{"name": "tomato", "price": "3000", "stock": "5", "unit": "tonne", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
                         </td>
                         <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>
@@ -308,7 +318,7 @@
                         </td>
                         <td class="text-capitalize">tomato</td>
                         <td class=""><i class="fas fa-naira"></i> 5000</td>
-                        <td class="">5 tons</td>
+                        <td class="">5 kg</td>
                         <td class="">30/05/2020</td>
                         <td class="">
                           <!--prettier-ignore-->
@@ -316,7 +326,7 @@
                             class="fa fa-edit text-primary edit" 
                             data-toggle="modal" 
                             data-target="#addForm"
-                            data-product='{"name": "tomato", "price": "5000", "stock": "5 tons", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                            data-product='{"name": "tomato", "price": "5000", "stock": "5", "unit": "kg", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
                         </td>
                         <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>
