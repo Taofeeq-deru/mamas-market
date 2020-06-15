@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <!--prettier-ignore-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"/>
+    <!--Google fonts link for Montserrat font family-->
+    <!--prettier-ignore-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"/>
+    <!--Font awesome 5.13.0 link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <!--bootstrap link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <!--css link-->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/sellers-hub/style.css" />
+    <title>Seller Dashboard: Products</title>
+  </head>
+  <body>
+    <!--sidebar-->
+    <div id="sideBar" class="bg-nav h-full pt-md-5 pr-0 side-bar collapse">
+      <nav class="dashboard-nav mt-5 pt-md-5">
+        <!--prettier-ignore-->
+        <div class="nav border-bottom-0 flex-column pt-3 d-flex flex-column">
+          <!--prettier-ignore-->
+          <a href="#sideBar" class="openCloseBtn text-white text-decoration-none pl-3" data-toggle="collapse">&times;</a>
+          <!--prettier-ignore-->
+          <a href="javascript:void(0)" class="text-capitalize text-white text-decoration-none reduceExpandBtn pl-4" onclick="toggleReduce()">
+            <i class="fas fa-angle-left fa-2x reduceExpand"></i>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-tachometer-alt"></i> &nbsp; <span class="sidebar-text">dashboard</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-shopping-cart"></i> &nbsp; <span class="sidebar-text">order</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4 active">
+            <i class="fas fa-qrcode"></i> &nbsp; <span class="sidebar-text">products</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-users"></i> &nbsp; <span class="sidebar-text">customers</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-wallet"></i> &nbsp; <span class="sidebar-text">revenue</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-file-alt"></i> &nbsp; <span class="sidebar-text">report</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-cog"></i> &nbsp; <span class="sidebar-text">settings</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!--nav-->
+    <div class="sticky-top">
+      <nav class="navbar navbar-light bg-white" id="nav">
+        <div class="row col-12 my-2 mx-auto">
+          <!--prettier-ignore-->
+          <i class="fa fa-bars fa-2x mr-2 text-dark mt-2" data-toggle="collapse" data-target="#sideBar"></i>
+          <div class="user ml-auto d-flex flex-nowrap">
+            <p class="user-name text-capitalize fa-sm mx-3 my-auto">
+              brendan smile
+            </p>
+            <!--prettier-ignore-->
+            <img 
+              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg" 
+              alt="user avatar"
+              height="50"
+              width="50"
+              class="avatar rounded-circle" />
+          </div>
+        </div>
+        <!--second nav-->
+        <div class="row col-12 second-nav mx-auto">
+          <form action="" class="searchForm w-100">
+            <!--prettier-ignore-->
+            <input 
+              type="search" 
+              name="search" 
+              id="search"
+              class="form-control shadow-sm"
+              style="
+              height: 3em;
+              font-family: 'Lato', 'Font Awesome 5 Free' !important;
+              font-weight: 900;
+              "
+              placeholder="&#xf002; Search" />
+          </form>
+        </div>
+      </nav>
+      <!--search result-->
+      <div class="row hide col-12 mx-auto" id="theSearch" style="top: 110%;">
+        <!--prettier-ignore-->
+        <div class="search-result bg-white shadow-sm py-2 rounded-lg w-100">
+          <div class="px-3 py-0 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">categories</h4>
+            <ul class="categories-list p-0 mb-0">
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto result-figure">
+                  13 results
+                </p>
+              </li>
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto">
+                  13 results
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="px-3 pt-2 border-top-grey mt-n2 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">products</h4>
+            <ul class="products-list p-0 mb-0">
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center pt-2 border-top-grey mb-0">
+            <a 
+              href="" 
+              class="fa-xs text-mama text-decoration-none font-weight-bold text-uppercase">
+              see all results(20)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contentMobile" class="container-fluid px-5 my-5">
+      <!--products-->
+      <!--prettier-ignore-->
+      <div class="products-content">
+        <div class="row">
+            <div class="col-12 bg-grey blank shadow-sm"></div>
+        </div>
+        <div class="row my-4 rounded-sm shadow-sm border-grey">
+          <div class="container py-3">
+            <div class="row">
+              <div class="col-12 d-flex px-btns">
+                <!--displays total number of products-->
+                <button class="btn-product btn px-md-3 py-md-2 mr-md-auto mr-sm-2 mr-1">
+                  <span class="fa-md font-weight-bold product-amount">3</span>
+                  <span class="fa-xs">total products</span>
+                </button>
+                <!--download list-->
+                <a href="">
+                  <button class="btn btn-white px-md-3 py-md-2">Download(.csv)</button>
+                </a>
+                <!--add product modal button-->
+                <!--prettier-ignore-->
+                <button class="btn btn-add px-md-3 py-md-2 ml-md-3 ml-sm-2 ml-1" id="addProduct" data-toggle="modal" data-target="#addFormMobile">
+                  Add New Product
+                </button>
+                <!--add product modal form-->
+                <div class="modal fade" id="addFormMobile" tabindex="-1" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <form action="" class="px-3">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-capitalize" id="addFormLabel">add new product</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="product-name" class="text-capitalize fa-sm">product name</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text" 
+                              name="product-name" 
+                              id="product-name"
+                              class="form-control" />
+                          </div>
+                          <div class="form-group">
+                            <label for="price" class="fa-sm text-capitalize">price</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                  <span class="fa-xs">NGN</span>
+                                </div>
+                              </div>
+                              <!--prettier-ignore-->
+                              <input
+                                type="number"
+                                name="price"
+                                id="price"
+                                class="form-control"/>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="product-description" class="text-capitalize fa-sm">product description</label>
+                            <!--prettier-ignore-->
+                            <textarea 
+                              name="product-description" 
+                              id="product-description" 
+                              rows="3"
+                              class="form-control"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="product-category" class="fa-sm text-capitalize mb-0">product category</label>
+                            <p class="fa-xs text-muted">Select product category (one or more)</p>
+                            <!--prettier-ignore-->
+                            <select 
+                              name="product-category" 
+                              id="product-category" 
+                              class="form-control text-capitalize" 
+                              multiple>
+                              <option value="fresh farm produce" class="fa-xs py-1">fresh farm produce</option>
+                              <option value="processed food products" class="fa-xs py-1">processed food products</option>
+                              <option value="canned food products" class="fa-xs py-1">canned food products</option>
+                              <option value="fresh food" class="fa-xs py-1">fresh food</option>
+                              <option value="veggies/fruits" class="fa-xs py-1">veggies/fruits</option>
+                              <option value="beverages" class="fa-xs py-1">beverages</option>
+                              <option value="cleaning supplies" class="fa-xs py-1">cleaning supplies</option>
+                              <option value="pet foods/care" class="fa-xs py-1">pet foods/care</option>
+                              <option value="paper products" class="fa-xs py-1">paper products</option>
+                              <option value="bread & bakery" class="fa-xs py-1">bread & bakery</option>
+                              <option value="baby food/products" class="fa-xs py-1">baby food/products</option>
+                              <option value="toileteries" class="fa-xs py-1">toileteries</option>
+                              <option value="kitchen utensils/storage" class="fa-xs py-1">kitchen utensils/storage</option>
+                              <option value="stationaries" class="fa-xs py-1">stationaries</option>
+                              <option value="local food condiments" class="fa-xs py-1">local food condiments</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <p class="text-capitalize fa-sm mb-0">product image</p>
+                            <p class="fa-xs text-muted">Select image (one or more)</p>
+                            <div class="d-flex flex-wrap" id="output">
+                              <!--prettier-ignore-->
+                              <input 
+                                type="file" 
+                                accept="image/*" 
+                                name="image[]" 
+                                id="product-image"
+                                class="input-hide"
+                                multiple
+                                onchange="loadImage(event)" />
+                              <!--prettier-ignore-->
+                              <label
+                                for="product-image" 
+                                class="imageLabel bg-grey mr-2 d-flex flex-column justify-content-center align-items-center border-grey rounded-lg">
+                                  <i class="far fa-file-image text-muted fa-lg"></i>
+                                  <span class="text-muted mt-2 fa-xs text-center" id="imageText">Click to upload images</span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-8">
+                              <label for="item-no" class="fa-sm">Number of items in stock</label>
+                              <!--prettier-ignore-->
+                              <input 
+                                type="number" 
+                                name="item-no" 
+                                id="item-no"
+                                class="form-control" />
+                            </div>
+                            <div class="form-group col-4">
+                              <label for="unit" class="fa-sm">Unit</label>
+                              <!--prettier-ignore-->
+                              <select name="unit" id="unit" class="form-control fa-xs text-capitalize">
+                                <option value="kg">kg</option>
+                                <option value="tonne">tonne</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="form-check">
+                              <!--prettier-ignore-->
+                              <input
+                                type="checkbox"
+                                name="display"
+                                id="display"
+                                class="form-check-input"
+                                value="display"
+                                checked />
+                              <!--prettier-ignore-->
+                              <label
+                                for="display"
+                                class="form-check-label fa-xs text-muted check-label">
+                                  Display this item on the listing page
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer border-top-0">
+                          <button type="button" class="btn btn-white px-4" data-dismiss="modal">Cancel</button>
+                          <button type="submit" class="btn btn-add px-4">Add Product</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--list of products-->
+          <div class="table-responsive" id="tableMobile">
+            <table class="table table-borderless table-sm fa-sm mb-4">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" class="text-dark py-4">Product Image</th>
+                  <th scope="col" class="text-dark py-4">Product name</th>
+                  <!--prettier-ignore-->
+                  <th scope="col" class="text-dark py-4 w-price">Price (<i class="fas fa-naira"></i>)</th>
+                  <th scope="col" class="text-dark py-4">Number of product sold/Number in stock</th>
+                  <th scope="col" class="text-dark py-4">Date</th>
+                  <th scope="col" class="text-dark py-4">Edit/Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <!--prettier-ignore-->
+                    <img 
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg" 
+                      alt="product"
+                      height="40"
+                      width="40" />
+                  </td>
+                  <td class="text-capitalize">tomato</td>
+                  <td class="w-price"><i class="fas fa-naira"></i>3000</td>
+                  <td class="">5 tonne</td>
+                  <td class="">30/05/2020</td>
+                  <td class="d-flex flex-row flex-nowrap justify-content-around">
+                    <!--prettier-ignore-->
+                    <i 
+                      class="fa fa-edit text-primary edit" 
+                      data-toggle="modal" 
+                      data-target="#addFormMobile"
+                      data-product='{"name": "tomato", "price": "3000", "stock": "5", "unit": "tonne", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                    <i class="fa fa-trash text-danger delete"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <!--prettier-ignore-->
+                    <img 
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg" 
+                      alt="product"
+                      height="40"
+                      width="40" />
+                  </td>
+                  <td class="text-capitalize">tomato</td>
+                  <td class="w-price"><i class="fas fa-naira"></i>5000</td>
+                  <td class="">5 kg</td>
+                  <td class="">30/05/2020</td>
+                  <td class="d-flex flex-row flex-nowrap justify-content-around">
+                    <!--prettier-ignore-->
+                    <i 
+                      class="fa fa-edit text-primary edit" 
+                      data-toggle="modal" 
+                      data-target="#addFormMobile"
+                      data-product='{"name": "tomato", "price": "5000", "stock": "5", "unit": "kg", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                    <i class="fa fa-trash text-danger delete"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <!--bootstrap scripts-->
+    <!--prettier-ignore-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

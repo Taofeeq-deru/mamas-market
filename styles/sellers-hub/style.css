@@ -119,6 +119,11 @@
   height: 100vh;
 }
 
+.px-btns {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
 .bg-nav {
   background: #008dda;
 }
@@ -200,12 +205,12 @@ table tbody tr {
   transform: scale(1.2);
 }
 
-.modal-dialog {
+#addForm .modal-dialog {
   max-width: 73%;
   margin-left: 26%;
 }
 
-.w-modal {
+#addForm .w-modal {
   width: 70%;
 }
 
@@ -233,4 +238,61 @@ table tbody tr {
 
 .imageLabel:hover {
   cursor: pointer;
+}
+
+/*dashboard mobile*/
+.side-bar {
+  width: 15em;
+  padding-left: 0.5em;
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.reduce {
+  width: 5em;
+}
+
+#sideBar .openCloseBtn {
+  font-size: 3em;
+}
+
+.w-price {
+  width: 13%;
+}
+
+#addFormMobile .imageFile {
+  height: 25vh;
+  width: 30vw;
+}
+
+#addFormMobile .imageLabel {
+  height: 25vh;
+  width: 30vw;
+}
+
+/*others in responsive.css*/
+@media screen and (min-width: 420px) {
+  .px-btns {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #addFormMobile .imageFile {
+    height: 25vh;
+    width: 28vw;
+  }
+
+  #addFormMobile .imageLabel {
+    height: 25vh;
+    width: 28vw;
+  }
+
+  #addFormMobile .modal-dialog .modal-content {
+    width: 600px;
+  }
 }

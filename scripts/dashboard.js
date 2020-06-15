@@ -84,6 +84,9 @@ function emptyModalForm() {
   let imageBlock = document.getElementById("output");
   let images = imageBlock.querySelectorAll("img");
   images.forEach((image) => image.remove());
+
+  let text = document.getElementById("imageText");
+  text.innerHTML = "Click to upload images";
 }
 
 edits.forEach((edit) => {
