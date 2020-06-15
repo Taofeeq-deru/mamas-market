@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <!--prettier-ignore-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"/>
+    <!--Google fonts link for Montserrat font family-->
+    <!--prettier-ignore-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"/>
+    <!--Font awesome 5.13.0 link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <!--bootstrap link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <!--css link-->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/sellers-hub/style.css" />
+    <title>Sell on Mama's Market: Create Account</title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-light bg-white shadow-sm bg-nav sticky-top">
+      <div class="row col-12 mt-2 mx-auto d-flex">
+        <!--prettier-ignore-->
+        <i class="fas fa-angle-left fa-2x mr-3 back text-dark" onclick="goBack()"></i>
+        <a class="navbar-brand mt-n3 mr-auto" href="">
+          <!--prettier-ignore-->
+          <img
+            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+            alt="logo"
+            class="mama-logo"/>
+        </a>
+        <!--prettier-ignore-->
+        <a href="signin-mobile.html" class="">
+          <button class="btn btn-login rounded px-md-5 px-4">
+            Log in
+          </button>
+          </a>
+      </div>
+      <!--second nav-->
+      <div class="row col-12 second-nav mx-auto mb-n3">
+        <p class="text-uppercase fa-sm font-weight-bold seller-logo ml-4">
+          sellers hub
+        </p>
+      </div>
+    </nav>
+    <!--content-->
+    <div class="container-fluid" id="content">
+      <div class="row py-3 mb-5">
+        <div class="col-md-6 offset-md-3 py-5">
+          <form action="" id="sellerRegForm">
+            <h3 class="text-uppercase text-dark text-center">
+              create a seller account
+            </h3>
+            <p class="fa-xs text-muted text-center mb-5">
+              Start selling on Mama's Market today
+            </p>
+            <!-- Circles which indicates the steps of the form: -->
+            <div class="text-center indicators">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+            <div class="tab">
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="store-name" class="text-uppercase fa-xs">store name</label>
+                <!--prettier-ignore-->
+                <input
+                      type="text"
+                      name="store-name"
+                      id="store-name"
+                      class="form-control required"
+                      placeholder="Your online store name" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="store-url" class="text-uppercase fa-xs">store url</label>
+                <div class="input-group fa-xs">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="fa-xs">www.mamasmarket.ng.com/</span>
+                    </div>
+                  </div>
+                  <!--prettier-ignore-->
+                  <input
+                        type="text"
+                        name="store-url"
+                        id="store-url"
+                        class="form-control required"
+                        placeholder="Enter your store url here" />
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="description" class="text-uppercase fa-xs">description</label>
+                <!--prettier-ignore-->
+                <textarea
+                      id="description"
+                      class="form-control required"
+                      rows="3"
+                      placeholder="Enter store description here"></textarea>
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="seller-email" class="text-uppercase fa-xs">email address</label>
+                <!--prettier-ignore-->
+                <input
+                      type="email"
+                      name="email"
+                      id="seller-email"
+                      class="form-control required"
+                      placeholder="Email Address" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="password" class="text-uppercase fa-xs">password</label>
+                <!--prettier-ignore-->
+                <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control required"
+                      placeholder="Choose a password" />
+              </div>
+              <p class="text-muted fa-xs text-center my-3">
+                By signing up, you accept our
+                <a href="" class="text-muted">terms and conditions</a>
+              </p>
+            </div>
+            <div class="tab">
+              <p class="fa-xs text-muted text-center my-4">
+                Personal details
+              </p>
+
+              <div class="form-row my-3">
+                <div class="form-group col-6">
+                  <label for="title" class="text-uppercase fa-xs">title</label>
+                  <select name="title" id="title" class="form-control">
+                    <option value="" selected>Select one</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                  </select>
+                </div>
+                <div class="form-group col-6">
+                  <!--prettier-ignore-->
+                  <label for="first-name" class="text-uppercase fa-xs">first name</label>
+                  <!--prettier-ignore-->
+                  <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        class="form-control required"
+                        placeholder="First Name" />
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="last-name" class="text-uppercase fa-xs">last name</label>
+                <!--prettier-ignore-->
+                <input
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        class="form-control required"
+                        placeholder="Last Name" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="phone-number" class="text-uppercase fa-xs">phone number</label>
+                <!--prettier-ignore-->
+                <input
+                      type="tel"
+                      name="phone-number"
+                      id="phone-number"
+                      class="form-control required"
+                      placeholder="We'll send verification code to this number" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="address" class="text-uppercase fa-xs">street address</label>
+                <!--prettier-ignore-->
+                <input
+                      type="text"
+                      name="address"
+                      id="address"
+                      class="form-control required"
+                      placeholder="Enter your address" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="city" class="text-uppercase fa-xs">city</label>
+                <!--prettier-ignore-->
+                <input
+                      type="text"
+                      name="city"
+                      id="city"
+                      class="form-control required"
+                      placeholder="Enter your city/town" />
+              </div>
+              <div class="form-row my-3">
+                <div class="form-group col-6">
+                  <!--prettier-ignore-->
+                  <label for="state" class="text-uppercase fa-xs">select state</label>
+                  <!--prettier-ignore-->
+                  <select
+                      name="state"
+                      id="state"
+                      class="form-control"
+                      onchange="toggleLGA(this)">
+                      <option value="" selected="selected">Select one</option>                    
+                      <option value="Abia">Abia</option>
+                      <option value="Adamawa">Adamawa</option>
+                      <option value="AkwaIbom">AkwaIbom</option>
+                      <option value="Anambra">Anambra</option>
+                      <option value="Bauchi">Bauchi</option>
+                      <option value="Bayelsa">Bayelsa</option>
+                      <option value="Benue">Benue</option>
+                      <option value="Borno">Borno</option>
+                      <option value="Cross River">Cross River</option>
+                      <option value="Delta">Delta</option>
+                      <option value="Ebonyi">Ebonyi</option>
+                      <option value="Edo">Edo</option>
+                      <option value="Ekiti">Ekiti</option>
+                      <option value="Enugu">Enugu</option>
+                      <option value="FCT">FCT</option>
+                      <option value="Gombe">Gombe</option>
+                      <option value="Imo">Imo</option>
+                      <option value="Jigawa">Jigawa</option>
+                      <option value="Kaduna">Kaduna</option>
+                      <option value="Kano">Kano</option>
+                      <option value="Katsina">Katsina</option>
+                      <option value="Kebbi">Kebbi</option>
+                      <option value="Kogi">Kogi</option>
+                      <option value="Kwara">Kwara</option>
+                      <option value="Lagos">Lagos</option>
+                      <option value="Nasarawa">Nasarawa</option>
+                      <option value="Niger">Niger</option>
+                      <option value="Ogun">Ogun</option>
+                      <option value="Ondo">Ondo</option>
+                      <option value="Osun">Osun</option>
+                      <option value="Oyo">Oyo</option>
+                      <option value="Plateau">Plateau</option>
+                      <option value="Rivers">Rivers</option>
+                      <option value="Sokoto">Sokoto</option>
+                      <option value="Taraba">Taraba</option>
+                      <option value="Yobe">Yobe</option>
+                      <option value="Zamfara">Zamafara</option>
+                    </select>
+                </div>
+                <div class="form-group col-6">
+                  <!--prettier-ignore-->
+                  <label for="lga" class="text-uppercase fa-xs">select lga</label>
+                  <select
+                    name="lga"
+                    id="lga"
+                    class="form-control select-lga"
+                    onchange="setMapLocation()"
+                  >
+                  </select>
+                </div>
+              </div>
+              <div class="form-group my-3">
+                <div id="map" class="w-100"></div>
+                <div id="lat" class="hide"></div>
+                <div id="lng" class="hide"></div>
+                <p class="text-muted fa-xs text-uppercase mt-2">
+                  google map
+                </p>
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="landmark" class="text-uppercase fa-xs">landmark</label>
+                <!--prettier-ignore-->
+                <input
+                      type="text"
+                      name="landmark"
+                      id="landmark"
+                      class="form-control"
+                      placeholder="Closest landmark to your location" />
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="how-you-heard" class="text-uppercase fa-xs">
+                    how did you hear about selling on mama's market
+                  </label>
+                <!--prettier-ignore-->
+                <select
+                    name="how-you-heard"
+                    id="how-you-heard"
+                    class="form-control">
+                    <option value="" selected>Select one</option>
+                    <option value="social media">Social media</option>
+                    <option value="a friend">A friend</option>
+                    <option value="mama's market website">Mama's market website</option>
+                  </select>
+              </div>
+              <div class="form-group my-3">
+                <!--prettier-ignore-->
+                <label for="referral" class="text-uppercase fa-xs">referral code</label>
+                <!--prettier-ignore-->
+                <input
+                      type="text"
+                      name="referral"
+                      id="referral"
+                      class="form-control"
+                      placeholder="Please enter referral code if you were referred by someone   " />
+              </div>
+              <p class="text-muted fa-xs text-center my-3">
+                You're almost done setting up your seller account
+              </p>
+            </div>
+            <div class="tab">
+              <!--load veriify-email.html after submission-->
+            </div>
+            <div class="form-group my-3">
+              <!--prettier-ignore-->
+              <button type="button" class="btn btn-previous form-control my-3" id="prevBtn" onclick="nextPrev(-1)">
+                  Previous
+                </button>
+              <!--prettier-ignore-->
+              <button
+                  class="form-control btn btn-seller"
+                  type="button"
+                  id="nextBtn"
+                  onclick="nextPrev(1)" >
+                  Continue
+                </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--footer-->
+      <div class="footer bg-dark row">
+        <div class="container pt-3">
+          <div class="d-flex flex-column">
+            <div class="row">
+              <div class="col-12 text-center">
+                <!--prettier-ignore-->
+                <a
+                    href="#top"
+                    class="text-light text-uppercase text-decoration-none pb-4 mx-auto">
+                    <i class="fas fa-angle-up fa-2x"></i>
+                    <h6 class="font-weight-bold sh-fa-xs">back to the top</h6>
+                  </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center mt-3">
+                <div class="footer-rights mx-2"></div>
+              </div>
+            </div>
+            <div class="row mt-5 col-12 d-flex flex-row justify-content-around">
+              <!--prettier-ignore-->
+              <a href="../help-mobile.html" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">help centre</h6>
+                </a>
+              <!--prettier-ignore-->
+              <a href="../contact-us-mobile.html" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">contact us</h6>
+                </a>
+              <!--prettier-ignore-->
+              <a href="" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">
+                    terms & conditions
+                  </h6>
+                </a>
+            </div>
+            <div class="row mt-5">
+              <div class="col-12 text-center">
+                <!--prettier-ignore-->
+                <a
+                    href=""
+                    class="text-light text-uppercase text-decoration-none mx-auto">
+                    <h6 class="font-weight-bold sh-fa-xs">become a seller</h6>
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-4 pb-4">
+                All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+
+    <!--prettier-ignore-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDVxlDxBMFkM37SKcxczPnUUuSNr7qwp4&libraries=places&callback=initMap" async defer></script>
+    <script src="../scripts/map.js"></script>
+    <script src="../scripts/lga.js"></script>
+    <script src="../scripts/create-account.js"></script>
+
+    <!--bootstrap scripts-->
+    <!--prettier-ignore-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -651,11 +651,6 @@ body {
   z-index: 2;
 }
 
-/*sticky bar in mobile-screen*/
-.sticky-top-nav {
-  padding-top: 1em;
-}
-
 /*side nav styles*/
 .sidenav-button:hover {
   cursor: pointer;
