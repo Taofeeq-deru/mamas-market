@@ -1,0 +1,209 @@
+@media screen and (min-width: 320px) {
+  #content #mainHead {
+    font-size: 1em;
+  }
+
+  #content .back {
+    font-size: 2em;
+  }
+
+  #content .step {
+    font-size: 0.5em;
+    padding: 0;
+  }
+
+  #content .step .extra {
+    display: none;
+  }
+
+  #content #item-list {
+    width: 720px;
+    overflow-x: scroll;
+  }
+
+  #content .w-kg {
+    /* width: 100%; */
+    font-size: 1em;
+    padding: 0.3em 0 0 0.2em;
+  }
+
+  #content #uploadedImage {
+    width: 90%;
+    height: 50vh;
+  }
+
+  #content .w-shopper {
+    width: 50vw;
+  }
+
+  #content .each-shopper-avi {
+    position: relative;
+    height: 28vh;
+  }
+
+  #content .fileLabel,
+  #content .showDelete {
+    width: 70%;
+    margin-bottom: 1em;
+  }
+
+  #content .deleteBtn {
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    display: none;
+  }
+
+  #content .showDelete:hover .deleteBtn {
+    display: block;
+  }
+
+  #content #allDetails .fa-sm {
+    font-size: 0.6em;
+  }
+
+  #content #allDetails .fa-xs {
+    font-size: 0.5em;
+  }
+
+  #content #allDetails .fa-order-xs {
+    font-size: 0.4em;
+  }
+
+  #content #allDetails .fa-lg {
+    font-size: 0.8em;
+  }
+
+  #content #paymentDetails .fa-sm {
+    font-size: 0.6em;
+  }
+
+  #content #paymentDetails .fa-xs {
+    font-size: 0.5em;
+  }
+
+  #content #paymentDetails .fa-lg {
+    font-size: 0.8em;
+  }
+
+  #content .fa-form-md {
+    font-size: 0.8em;
+  }
+
+  #content .fa-show-md {
+    font-size: 0.4em;
+  }
+
+  #content .mt-small {
+    margin-top: 0.7em;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  #content .fa-show-md {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  #content #mainHead {
+    font-size: 1.5em;
+  }
+
+  #content .step {
+    width: 23%;
+    font-size: 0.45em;
+  }
+
+  #content .step .extra {
+    display: inline;
+  }
+
+  #content .fileLabel,
+  #content .showDelete {
+    width: 47%;
+    margin-bottom: 1em;
+  }
+
+  #content .deleteBtn {
+    left: 12%;
+  }
+
+  #content #uploadedImage {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #content .deleteBtn {
+    left: 18%;
+  }
+
+  #content #uploadedImage {
+    height: 90vh;
+  }
+
+  #content #allDetails .fa-sm {
+    font-size: 0.8em;
+  }
+
+  #content #allDetails .fa-xs {
+    font-size: 0.65em;
+  }
+
+  #content #allDetails .fa-order-xs {
+    font-size: 0.6em;
+  }
+
+  #content #allDetails .fa-lg {
+    font-size: 1.3em;
+  }
+
+  #content #paymentDetails .fa-sm {
+    font-size: 0.8em;
+  }
+
+  #content #paymentDetails .fa-xs {
+    font-size: 0.65em;
+  }
+
+  #content #paymentDetails .fa-lg {
+    font-size: 1.3em;
+  }
+
+  #content .fa-form-md {
+    font-size: 1.3em;
+  }
+
+  #content .fa-show-md {
+    font-size: 1.3em;
+  }
+
+  #content .mt-small {
+    margin-top: 0.7em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #content #mainHead {
+    font-size: 2em;
+  }
+
+  #content .back {
+    font-size: 2.5em;
+  }
+
+  #content .step {
+    width: 20%;
+    font-size: 0.7em;
+  }
+
+  #content .fileLabel,
+  #content .showDelete {
+    width: 40%;
+  }
+
+  #content .deleteBtn {
+    left: 25%;
+  }
+}

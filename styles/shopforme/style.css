@@ -93,16 +93,6 @@
   color: #f06d06;
 }
 
-/* #formContent {
-  height: 140vh;
-} */
-
-/* .shop-order .nav-pills .nav-item {
-  color: #343a40;
-  background-color: #eeeeee;
-  border-radius: 5px;
-} */
-
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
@@ -165,7 +155,6 @@ input.invalid {
   background: #f1f1f1;
   border-radius: 10px;
   border: 1px solid #6c757d;
-  /* width: 5px; */
 }
 
 #collapseOne::-webkit-scrollbar-thumb:hover {
