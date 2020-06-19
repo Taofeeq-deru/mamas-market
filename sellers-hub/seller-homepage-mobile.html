@@ -28,81 +28,91 @@
       crossorigin="anonymous"/>
     <!--css link-->
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
     <link rel="stylesheet" href="../styles/sellers-hub/style.css" />
+    <link rel="stylesheet" href="../styles/sellers-hub/responsive.css" />
     <title>Sell on Mama's Market: Homepage</title>
   </head>
   <body>
-    <!--nav bar-->
+    <!--navbar-->
     <nav class="navbar navbar-light bg-white shadow-sm bg-nav sticky-top">
-      <div class="container-fluid pl-5">
-        <div class="row col-12 mt-2 mx-auto d-flex">
-          <a class="navbar-brand mt-n3 mr-auto" href="seller-homepage.html">
-            <!--prettier-ignore-->
-            <img
-              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
-              alt="logo"
-              class="mama-logo"/>
+      <div class="row col-12 mt-2 mx-auto d-flex">
+        <!--prettier-ignore-->
+        <i class="fas fa-bars fa-sd mr-3 mt-1 mt-md-2 sidenav-button" onclick="openNav()"></i>
+        <a class="navbar-brand mt-n3 mr-auto" href="#">
+          <!--prettier-ignore-->
+          <img
+            src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+            alt="logo"
+            class="mama-logo"/>
+        </a>
+        <!--prettier-ignore-->
+        <a href="signin-mobile.html" class="">
+          <button class="btn btn-login rounded px-md-5 px-4">
+            Log in
+          </button>
           </a>
-          <a class="nav-item nav-link text-mama" href="#">Payment Gateway</a>
-          <!--prettier-ignore-->
-          <a class="nav-item nav-link text-mama" href="#">Sellers Academy</a>
-          <!--prettier-ignore-->
-          <a class="nav-item nav-link text-mama" href="#">How it works</a>
-          <!--prettier-ignore-->
-          <a class="nav-item nav-link text-mama" href="#">Drop-off Centres</a>
-          <!--prettier-ignore-->
-          <a href="signin.html" class="mx-3">
-            <button class="btn btn-login rounded px-5">
-              Log in
-            </button>
-          </a>
-        </div>
-        <!--second nav-->
-        <div class="row col-12 second-nav mx-auto mb-n3">
-          <p class="text-uppercase fa-sm font-weight-bold seller-logo">
-            sellers hub
-          </p>
-        </div>
+      </div>
+      <!--second nav-->
+      <div class="row col-12 second-nav mx-auto mb-n3">
+        <p class="text-uppercase fa-sm font-weight-bold seller-logo ml-4">
+          sellers hub
+        </p>
       </div>
     </nav>
-    <div class="container-fluid">
+    <!--side-nav-->
+    <!--prettier-ignore-->
+    <div id="mySidenav" class="sidenav fa-md d-flex flex-column bg-white text-capitalize">
+      <!--prettier-ignore-->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">Payment Gateway</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">Sellers Academy</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="#">how it Works</a>
+      <!--prettier-ignore-->
+      <a class="nav-link text-mama" href="">Drop-off Centres</a>
+    </div>
+    <!--content-->
+    <div class="container-fluid" id="content">
       <!--banner-->
-      <div class="row bg-banner py-5">
+      <div class="row bg-banner py-3">
         <!--prettier-ignore-->
-        <div class="col-6 offset-3 py-5 my-5 align-items-center justify-content-center d-flex flex-column">
-          <div class="text-center">
-            <h1 class="text-banner">
-              You can make extra money selling on Mamas Market.
-            </h1>
-            <p class="fa-sm text-sell">
-              Looking to sell to huge customer and make good money?
-            </p>
-            <a href="create-account.html">
-              <button class="btn btn-start px-5 py-3 text-uppercase rounded-sm">
-                start selling now
-              </button>
-            </a>
-          </div>
+        <div class="col-12 col-sm-8 offset-sm-2 py-3 my-3 align-items-center-sm justify-content-center d-flex flex-column">
+            <div class="text-center">
+              <h1 class="text-banner">
+                You can make extra money selling on Mamas Market.
+              </h1>
+              <p class="fa-sm text-sell">
+                Looking to sell to huge customer and make good money?
+              </p>
+              <a href="create-account-mobile.html">
+                <button class="btn btn-start px-sm-5 py-sm-3 text-uppercase rounded-sm">
+                  start selling now
+                </button>
+              </a>
+            </div>
         </div>
       </div>
       <!--reason to join-->
-      <div class="row bg-white py-5">
+      <div class="row bg-white py-3">
         <!--prettier-ignore-->
-        <div class="col-12 py-5 d-flex flex-column align-items-center justify-content-center">
-          <h2 class="text-black font-weight-bold fa-md w-50 text-center">
+        <div class="col-12 py-3 d-flex flex-column align-items-center justify-content-center">
+          <h2 class="text-black font-weight-bold fa-md w-75 text-center">
             Mamas Market is an emerging online marketplace. Join the train!
           </h2>
-          <p class="text-black fa-sm w-25 text-center">
+          <p class="text-black fa-sm w-75 text-center">
             You want to reach millions of customer. Do you want them to see what you're selling? You're in the right place.
           </p>
         </div>
         <div class="container">
           <!--prettier-ignore-->
-          <div class="row col-12 d-flex flex-row justify-content-around my-3">
-            <div class="d-flex flex-column align-items-center text-center w-25">
+          <div class="row col-12 d-flex flex-row flex-wrap justify-content-around my-3">
+            <div class="d-flex flex-column align-items-center text-center w-icon">
               <!--prettier-ignore-->
-              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center">
-                <svg width="70" height="100" viewBox="0 0 101 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center shadow">
+                <svg viewBox="0 0 101 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M50.375 96.5061C58.4522 96.5061 65 86.8313 65 74.8969C65 62.9624 58.4522 53.2876 50.375 53.2876C42.2978 53.2876 35.75 62.9624 35.75 74.8969C35.75 86.8313 42.2978 96.5061 50.375 96.5061Z" fill="#F0BC5E"/>
                   <path d="M85.1419 89.3027H80.6097C75.5869 89.3027 71.5 95.3413 71.5 102.761C71.5 105.426 72.0298 108.009 73.0291 110.225L75.5056 115.714H76.375V109.078C76.375 107.258 77.0705 105.596 78.1722 104.782L82.875 101.308L87.5778 104.782C88.6795 105.596 89.375 107.26 89.375 109.078V115.714H90.2444L92.7192 110.228C93.7202 108.009 94.25 105.428 94.25 102.761C94.25 95.3413 90.1631 89.3027 85.1419 89.3027Z" fill="#F0BC5E"/>
                   <path d="M35.75 116.384L31.759 114.42L33.6408 108.861L27.3878 99.6224L23.6275 102.4L22.2966 96.5059H13.4534L12.1225 102.4L8.36225 99.6224L2.10925 108.861L3.991 114.42L0 116.384V129.448L3.991 131.412L2.10925 136.97L8.36225 146.209L12.1225 143.431L13.4534 149.328H22.295L23.6259 143.434L27.3861 146.212L33.6391 136.973L31.7574 131.414L35.75 129.45V116.384ZM17.875 132.521C14.2854 132.521 11.375 128.221 11.375 122.917C11.375 117.613 14.2854 113.313 17.875 113.313C21.4646 113.313 24.375 117.613 24.375 122.917C24.375 128.221 21.4646 132.521 17.875 132.521Z" fill="#F0BC5E"/>
@@ -127,10 +137,10 @@
               </p>
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
-            <div class="d-flex flex-column align-items-center text-center w-25">
+            <div class="d-flex flex-column align-items-center text-center w-icon">
               <!--prettier-ignore-->
-              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center">
-                <svg width="70" height="100" viewBox="0 0 100 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center shadow">
+                <svg viewBox="0 0 100 149" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M100 93.1533V56.4863L92.5194 52.3444C92.0177 50.2711 91.45 48.2406 90.8242 46.2864L94.129 35.5456L76.5806 9.61702L69.3113 14.5001C67.9887 13.5754 66.6145 12.7366 65.2113 11.9954L62.4081 0.942383H37.5919L34.7887 11.9954C33.3855 12.7366 32.0113 13.5754 30.6887 14.5001L23.4194 9.61702L5.87097 35.5456L9.17581 46.2864C8.55 48.2406 7.98226 50.2711 7.48065 52.3444L0 56.4863V93.1557L7.48065 97.2976C7.98226 99.371 8.55 101.401 9.17581 103.356L5.87097 114.094L23.4194 140.023L30.6887 135.14C32.0129 136.064 33.3871 136.903 34.7887 137.644L37.5919 148.697H62.4097L65.2129 137.644C66.6145 136.903 67.9887 136.064 69.3129 135.14L76.5823 140.023L94.1306 114.094L90.8258 103.353C91.4516 101.399 92.0194 99.3686 92.521 97.2952L100 93.1533ZM50 122.483C32.1839 122.483 17.7419 101.144 17.7419 74.8198C17.7419 48.4956 32.1839 27.157 50 27.157C67.8161 27.157 82.2581 48.4956 82.2581 74.8198C82.2581 101.144 67.8161 122.483 50 122.483Z" fill="#F0BC5E"/>
                   <path d="M49.9992 22.3906C41.767 22.3906 33.746 26.6517 27.4121 34.385L29.4653 38.0598C35.225 31.0295 42.5153 27.1569 49.9992 27.1569C67.7863 27.1569 82.2573 48.5385 82.2573 74.8198C82.2573 85.8752 79.6363 96.6494 74.8783 105.157L77.3637 108.193C82.5992 98.8347 85.4831 86.981 85.4831 74.8198C85.4831 45.9099 69.5653 22.3906 49.9992 22.3906Z" fill="black"/>
                   <path d="M49.9995 122.482C32.2124 122.482 17.7414 101.1 17.7414 74.819C17.7414 63.7635 20.3624 52.9893 25.1205 44.4814L22.635 41.4453C17.3995 50.8039 14.5156 62.6577 14.5156 74.819C14.5156 103.729 30.4334 127.248 49.9995 127.248C58.2317 127.248 66.2527 122.987 72.5865 115.254L70.5333 111.579C64.7736 118.609 57.4833 122.482 49.9995 122.482Z" fill="black"/>
@@ -153,10 +163,10 @@
               </p>
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
-            <div class="d-flex flex-column align-items-center text-center w-25">
+            <div class="d-flex flex-column align-items-center text-center w-icon">
               <!--prettier-ignore-->
-              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center">
-                <svg width="70" height="100" viewBox="0 0 100 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="rounded-circle p-icon d-flex justify-content-center align-items-center shadow">
+                <svg viewBox="0 0 100 149" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M72.581 72.4368C84.1611 72.4368 93.5487 58.5662 93.5487 41.4559C93.5487 24.3457 84.1611 10.4751 72.581 10.4751C61.0008 10.4751 51.6133 24.3457 51.6133 41.4559C51.6133 58.5662 61.0008 72.4368 72.581 72.4368Z" fill="#F0BC5E"/>
                   <path d="M50.0007 134.398H11.291V77.2031H50.0007V134.398Z" fill="#F0BC5E"/>
                   <path d="M58.0645 92.7887V75.785C62.3952 79.7791 67.4387 81.9693 72.5806 81.9693C87.7 81.9693 100 63.7954 100 41.4558C100 19.1162 87.7 0.942383 72.5806 0.942383C58.7258 0.942383 47.2677 16.2183 45.4435 35.9627C42.479 33.1434 39.1113 31.1702 35.4839 30.2145V17.6244C35.4839 13.6827 33.3129 10.475 30.6452 10.475H11.2903C8.62258 10.475 6.45161 13.6827 6.45161 17.6244V36.6895C6.45161 39.9449 7.94032 42.6665 9.95806 43.5292C5.65968 50.8526 3.22581 60.2469 3.22581 70.0535V92.7887C1.25161 95.4102 0 99.197 0 103.418C0 111.303 4.34032 117.716 9.67742 117.716V136.782C9.67742 143.352 13.2952 148.697 17.7419 148.697H43.5484C47.9952 148.697 51.6129 143.352 51.6129 136.782V117.716C56.95 117.716 61.2903 111.303 61.2903 103.418C61.2903 99.197 60.0387 95.4102 58.0645 92.7887ZM72.5806 5.70867C76.1806 5.70867 79.4419 11.3972 81.5258 20.0075H63.6355C65.7194 11.3972 68.9806 5.70867 72.5806 5.70867ZM82.5145 24.7738C83.2597 29.1135 83.7177 33.968 83.8306 39.0727H61.329C61.4419 33.968 61.9 29.1135 62.6452 24.7738H82.5145ZM96.6919 39.0727H87.0548C86.9532 33.9751 86.5355 29.1588 85.8419 24.7738H93.9613C95.5113 29.0921 96.4613 33.937 96.6919 39.0727ZM72.5806 77.203C68.9806 77.203 65.7194 71.5144 63.6355 62.9041H81.5258C79.4419 71.5144 76.1806 77.203 72.5806 77.203ZM57.6258 62.9041H60.2194C61.2887 67.7633 62.7048 71.9386 64.3968 75.1106C62.1435 73.9142 60.021 72.196 58.0645 70.0154C58.0613 67.5941 57.9065 65.2181 57.6258 62.9041ZM62.6468 58.1378C61.9016 53.7981 61.4436 48.9437 61.3306 43.839H83.8323C83.7194 48.9437 83.2613 53.7981 82.5161 58.1378H62.6468ZM87.0548 43.839H96.6919C96.4613 48.9746 95.5113 53.8196 93.9613 58.1378H85.8419C86.5355 53.7528 86.9532 48.9365 87.0548 43.839ZM58.1065 39.0727H48.4694C48.7 33.937 49.65 29.0921 51.2 24.7738H59.3194C58.6258 29.1588 58.2081 33.9751 58.1065 39.0727ZM58.1065 43.839C58.2081 48.9365 58.6258 53.7528 59.3194 58.1378H56.8306C55.7242 52.8401 53.9032 47.988 51.5177 43.839H58.1065ZM80.8032 75.0319C82.4774 71.8695 83.8806 67.7252 84.9419 62.9041H91.8903C89.0887 68.3949 85.2532 72.644 80.8032 75.0319ZM91.8903 20.0075H84.9419C83.8806 15.1864 82.4774 11.0421 80.8032 7.87971C85.2532 10.2676 89.0887 14.5168 91.8903 20.0075ZM64.3581 7.87971C62.6839 11.0421 61.2806 15.1864 60.2194 20.0075H53.271C56.0726 14.5168 59.9081 10.2676 64.3581 7.87971ZM9.67742 17.6244C9.67742 16.3089 10.4 15.2412 11.2903 15.2412H30.6452C31.5355 15.2412 32.2581 16.3089 32.2581 17.6244V36.6895C32.2581 38.005 31.5355 39.0727 30.6452 39.0727H19.3548V48.0428C19.3548 48.5671 18.7903 48.7602 18.6339 48.2931L15.5129 39.0727H11.2903C10.4 39.0727 9.67742 38.005 9.67742 36.6895V17.6244ZM3.22581 103.418C3.22581 98.1603 6.11935 93.885 9.67742 93.885V112.95C6.11935 112.95 3.22581 108.675 3.22581 103.418ZM48.3871 136.782C48.3871 140.723 46.2161 143.931 43.5484 143.931H17.7419C15.0742 143.931 12.9032 140.723 12.9032 136.782V70.0535C12.9032 66.1118 15.0742 62.9041 17.7419 62.9041H43.5484C46.2161 62.9041 48.3871 66.1118 48.3871 70.0535V136.782ZM43.5484 58.1378H17.7419C13.2952 58.1378 9.67742 63.4832 9.67742 70.0535V89.1187C8.54516 89.1187 7.4629 89.4237 6.45161 89.9528V70.0535C6.45161 60.4185 9.11613 51.241 13.7548 44.5348L15.75 50.4283C16.3645 52.2419 17.6 53.3715 18.9742 53.3715C20.9629 53.3715 22.5806 50.9812 22.5806 48.0428V43.839H30.6452C33.3129 43.839 35.4839 40.6312 35.4839 36.6895V35.0452C46.6355 38.3887 54.8387 52.9735 54.8387 70.0535V89.9528C53.8274 89.4237 52.7452 89.1187 51.6129 89.1187V70.0535C51.6129 63.4832 47.9952 58.1378 43.5484 58.1378ZM51.6129 112.95V93.885C55.171 93.885 58.0645 98.1603 58.0645 103.418C58.0645 108.675 55.171 112.95 51.6129 112.95Z" fill="black"/>
@@ -179,13 +189,13 @@
           </div>
           <div class="row col-12 d-flex flex-row justify-content-around my-5">
             <!--prettier-ignore-->
-            <div class="border border-secondary w-50 py-5 d-flex flex-column align-items-center justify-content-center">
-              <p class="fa-sm text-black font-weight-bold">
+            <div class="border border-secondary w-75 py-3 py-sm-4 d-flex flex-column align-items-center justify-content-center">
+              <p class="fa-sm text-black font-weight-bold text-center">
                 Ready to kick-start your onine store?
               </p>
-              <a href="create-account.html">
+              <a href="create-account-mobile.html">
                 <!--prettier-ignore-->
-                <button class="btn btn-black px-5 py-3 text-uppercase rounded-sm">
+                <button class="btn btn-black px-sm-5 py-sm-3 text-uppercase rounded-sm">
                   start selling now
                 </button>
               </a>
@@ -195,63 +205,67 @@
       </div>
       <!--benefits-->
       <div class="row bg-simple">
-        <div class="container mt-5">
-          <div class="col-12 py-5">
+        <div class="container mt-3">
+          <div class="col-12 py-3">
             <h3 class="text-center text-black fa-md font-weight-bold">
               Simple, transparent, secure & faster.
             </h3>
             <!--prettier-ignore-->
-            <div class="d-flex flex-row my-5 mx-auto justify-content-center">
-              <div class="bg-warning bullet rounded-lg mr-1">
-                <!--prettier-ignore-->
-                <svg width="40" height="41" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d)">
-                    <rect width="40" height="41" rx="10" transform="matrix(-1 0 0 1 58 14)" fill="#DB2721"/>
-                  </g>
-                  <defs>
+            <div class="d-flex flex-row flex-wrap my-3 mx-auto justify-content-center">
+              <div class="d-flex flex-row">
+                <div class="bg-warning bullet rounded-lg mr-1">
                   <!--prettier-ignore-->
-                  <filter id="filter0_d" x="0" y="0" width="76" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="9"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                  </filter>
-                  </defs>
-                </svg>
-              </div>
-              <!--prettier-ignore-->
-              <p class="bg-warning rounded-lg benefit text-black fa-sm text-center mr-2">
-                No monthly payment
-              </p>
-              <div class="bg-warning bullet rounded-lg mr-1">
+                  <svg width="40" height="41" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d)">
+                      <rect width="40" height="41" rx="10" transform="matrix(-1 0 0 1 58 14)" fill="#DB2721"/>
+                    </g>
+                    <defs>
+                    <!--prettier-ignore-->
+                    <filter id="filter0_d" x="0" y="0" width="76" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="9"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    </defs>
+                  </svg>
+                </div>
                 <!--prettier-ignore-->
-                <svg width="40" height="41" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d)">
-                    <rect width="40" height="41" rx="10" transform="matrix(-1 0 0 1 58 14)" fill="#DB2721"/>
-                  </g>
-                  <defs>
-                  <!--prettier-ignore-->
-                  <filter id="filter0_d" x="0" y="0" width="76" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-                    <feOffset dy="4"/>
-                    <feGaussianBlur stdDeviation="9"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-                  </filter>
-                  </defs>
-                </svg>
+                <p class="bg-warning rounded-lg benefit text-black fa-sm text-center mr-2">
+                  No monthly payment
+                </p>
               </div>
-              <!--prettier-ignore-->
-              <p class="bg-warning rounded-lg benefit text-black fa-sm text-center mr-2">
-                Automatic deposit
-              </p>
+              <div class="d-flex flex-row">
+                <div class="bg-warning bullet rounded-lg mr-1">
+                  <!--prettier-ignore-->
+                  <svg width="40" height="41" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_d)">
+                      <rect width="40" height="41" rx="10" transform="matrix(-1 0 0 1 58 14)" fill="#DB2721"/>
+                    </g>
+                    <defs>
+                    <!--prettier-ignore-->
+                    <filter id="filter0_d" x="0" y="0" width="76" height="77" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                      <feOffset dy="4"/>
+                      <feGaussianBlur stdDeviation="9"/>
+                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                    </filter>
+                    </defs>
+                  </svg>
+                </div>
+                <!--prettier-ignore-->
+                <p class="bg-warning rounded-lg benefit text-black fa-sm text-center mr-2">
+                  Automatic deposit
+                </p>
+              </div>  
             </div>
-            <div class="container px-5 my-5 pt-3">
+            <div class="container px-md-5 my-3 pt-3">
               <div class="d-flex flex-column align-items-start">
                 <div class="d-flex flex-row">
                   <span class="border border-white box mr-2"></span>
@@ -296,25 +310,25 @@
               </div>
             </div>
             <!--prettier-ignore-->
-            <div class="mx-auto w-75 text-center pl-5 mt-5 pt-3">
+            <div class="mx-auto w-75 text-center pl-md-5 mt-3 pt-3">
               <div class="d-flex flex-row">
                 <span class="circle bg-white rounded-circle mr-2"></span>
                 <span class="circle bg-white rounded-circle"></span>
               </div>
             </div>
             <!--prettier-ignore-->
-            <h3 class="text-center text-black fa-md font-weight-bold w-75 mx-auto">
+            <h3 class="text-center text-black fa-md font-weight-bold w-circle mx-auto">
               We process payment with paystack, an external payments platform
               that allows you to process transactions with variety of payment
               methods.
             </h3>
             <!--prettier-ignore-->
-            <div class="mb-5 mt-3 bg-white rounded-lg w-pay mx-auto text-center p-2">
+            <div class="mb-3 mt-3 bg-white rounded-lg w-pay mx-auto text-center p-2">
               <p class="fa-sm text-pay mb-0">
                 Secured by <span class="font-weight-bold fa-lg">paystack</span>
               </p>
             </div>
-            <ul class="mx-auto w-75 my-5 pt-3 list fa-xs">
+            <ul class="mx-auto w-circle my-3 pt-3 list fa-xs">
               <li class="my-4">
                 Listing fees are billed NGN 100, Its the same for all the states
                 in Nigeria. But, this might differ in another country with
@@ -329,10 +343,10 @@
                 for more details on Offsite Ads fees.
               </li>
             </ul>
-            <div class="my-5 pt-5 mx-auto text-center">
-              <a href="create-account.html">
+            <div class="my-3 pt-3 mx-auto text-center">
+              <a href="create-account-mobile.html">
                 <!--prettier-ignore-->
-                <button class="btn btn-today py-3 px-5 font-weight-bold rounded-sm">
+                <button class="btn btn-today py-sm-3 px-sm-5 font-weight-bold rounded-sm">
                   Start selling today!
                 </button>
               </a>
@@ -342,10 +356,10 @@
       </div>
       <!--ease of use-->
       <div class="row bg-white">
-        <div class="container py-5">
-          <div class="row mt-5 mb-3 col-12">
+        <div class="container py-3">
+          <div class="row mb-3 col-12">
             <div class="col-6 d-flex flex-column justify-content-center">
-              <h4 class="fa-md text-black font-weight-bold text-left mt-5">
+              <h4 class="fa-md text-black font-weight-bold text-left">
                 Ease of use, Powerful tools
               </h4>
               <p class="fa-sm text-dark text-left">
@@ -456,7 +470,7 @@
           <!--prettier-ignore-->
           <div class="row col-12 d-flex flex-row flex-wrap justify-content-around mb-5">
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M43.5484 23.2778C50.4965 23.2778 56.1291 18.9546 56.1291 13.6216C56.1291 8.28858 50.4965 3.96533 43.5484 3.96533C36.6003 3.96533 30.9678 8.28858 30.9678 13.6216C30.9678 18.9546 36.6003 23.2778 43.5484 23.2778Z" fill="#4D4D4D" fill-opacity="0.83"/>
@@ -479,7 +493,7 @@
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M22.5 45V24.375C22.5 23.3391 23.3391 22.5 24.375 22.5V21.5625H6.5625C5.52656 21.5625 4.6875 22.4016 4.6875 23.4375V45.9375C4.6875 46.9734 5.52656 47.8125 6.5625 47.8125H24.375V46.875C23.3391 46.875 22.5 46.0359 22.5 45Z" fill="#4D4D4D" fill-opacity="0.83"/>
@@ -508,7 +522,7 @@
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M39.6776 20.3223H35.8066V22.2577H39.6776V20.3223Z" fill="#333333"/>
@@ -531,7 +545,7 @@
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 47" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M25.9234 14.7422H33.8715V9.54248H23.5302C23.4566 9.57962 23.3802 9.61305 23.3047 9.64722L23.3086 9.65093C23.3095 9.65167 25.2789 12.1765 25.9234 14.7422Z" fill="#4D4D4D" fill-opacity="0.83"/>
@@ -555,7 +569,7 @@
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.6875 48.75H55.3125C56.8659 48.75 58.125 47.4909 58.125 45.9375V40.3125H1.875V45.9375C1.875 47.4909 3.13406 48.75 4.6875 48.75Z" fill="#4D4D4D" fill-opacity="0.83"/>
@@ -584,7 +598,7 @@
               <a href="#" class="fa-link-xs text-underline">Learn more</a>
             </div>
             <!--prettier-ignore-->
-            <div class="d-flex flex-column bg-white align-items-center p-4 text-center w-tools my-4">
+            <div class="d-flex flex-column bg-white align-items-center p-2 p-md-4 shadow text-center w-tools my-4">
               <span class="bg-tools p-3">
                 <svg width="50" height="50" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M17.8128 44.0625L16.8753 44.9362V46.875V48.2803C16.8753 49.575 15.8263 50.625 14.5306 50.625C13.5434 50.625 12.7025 50.0128 12.3566 49.1494L6.56281 54.5512V55.7822C6.56281 57.0769 5.51375 58.1259 4.21906 58.1259C4.05312 58.1259 3.89094 58.1072 3.73438 58.0744V59.0625H59.0628V44.0625H17.8128Z" fill="#4D4D4D" fill-opacity="0.83"/>
@@ -606,10 +620,10 @@
             </div>
           </div>
           <!--prettier-ignore-->
-          <h4 class="fa-2x text-black text-center font-weight-bold w-50 mx-auto">
+          <h4 class="fa-2x text-black text-center font-weight-bold w-circle mx-auto">
             Customise your store to suit your style.
           </h4>
-          <p class="text-dark fa-sm text-center w-50 mx-auto mt-3">
+          <p class="text-dark fa-sm text-center w-circle mx-auto mt-3">
             Mamas Market has tools designed for every stage of your business’s
             growth—no matter how big your ambitions. Access more advanced tools
             with an optional monthly subscription package.
@@ -618,54 +632,57 @@
       </div>
       <!--standard-->
       <div class="row bg-standard pt-5">
-        <div class="col-12 d-flex justify-content-around mt-5 mb-0">
-          <div class="d-flex">
+        <!--prettier-ignore-->
+        <div class="col-12 d-flex flex-column flex-md-row justify-content-around-md mt-5 mb-0">
+          <div class="d-flex my-2 my-md-0">
+            <!--prettier-ignore-->
             <span class="bg-tools stdBox mr-3"></span>
             <div class="d-flex flex-column">
               <p class="fa-md font-weight-bold mb-0">
                 Standard
               </p>
-              <p class="fa-tiny-xs mb-0">
+              <p class="fa-link-xs mb-0">
                 Everything you need to start, manage, and grow a creative
                 business
               </p>
-              <p class="fa-tiny-xs mb-0 font-weight-bold">
+              <p class="fa-link-xs mb-0 font-weight-bold">
                 No additionally monthly charge
               </p>
             </div>
           </div>
-          <div class="d-flex">
+          <div class="d-flex my-2 my-md-0">
+            <!--prettier-ignore-->
             <span class="bg-tools stdBox mr-3"></span>
             <div class="d-flex flex-column">
               <p class="fa-md font-weight-bold mb-0">
                 Mamify
               </p>
-              <p class="fa-tiny-xs mb-0">
+              <p class="fa-link-xs mb-0">
                 An expanded set of tools to help jump-start growth and express
                 your brand
               </p>
-              <p class="fa-tiny-xs mb-0 font-weight-bold">
+              <p class="fa-link-xs mb-0 font-weight-bold">
                 NGN 10,000 monthly charges
               </p>
             </div>
           </div>
         </div>
-        <p class="fa-xs mt-0 mx-auto">
+        <p class="fa-xs mt-0 mx-auto text-center w-circle">
           Standard fees apply to all packages, including listing fees and the
           updated transaction fee.
         </p>
       </div>
       <!--subscribe-->
       <div class="row bg-white subscribe">
-        <div class="col-12 my-5 pt-5">
+        <div class="col-12 my-5 pt-2 pt-sm-3">
           <p class="fa-xs mx-auto text-center">
             You can subscribe to Mamify package after you open your Mamas Market
             shop.
           </p>
-          <div class="my-4 mx-auto text-center">
-            <a href="create-account.html">
+          <div class="my-3 mx-auto text-center">
+            <a href="create-account-mobile.html">
               <!--prettier-ignore-->
-              <button class="btn btn-now py-3 px-5 font-weight-bold rounded-sm text-uppercase">
+              <button class="btn btn-now py-sm-3 px-sm-5 font-weight-bold rounded-sm text-uppercase">
                 start selling now
               </button>
             </a>
@@ -673,7 +690,7 @@
         </div>
       </div>
       <!--faq-->
-      <div class="row bg-faq py-5">
+      <div class="row bg-faq py-3">
         <div class="container">
           <div class="col-12 my-3">
             <!--prettier-ignore-->
@@ -682,12 +699,12 @@
             </h4>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <div class="my-4">
-                <p class="fa-sm mb-2 font-weight-bold">
+                <p class="fa-sm mb-2 font-weight-bold mx-auto w-circle">
                   What can I sell on Mamas Market?
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify mx-auto w-circle">
                   Mamas Market provides a marketplace for crafters, artists and
                   collectors to sell their handmade creations, vintage goods (at
                   least 20 years old), and both handmade and non-handmade
@@ -695,20 +712,20 @@
                 </p>
               </div>
               <div class="my-4">
-                <p class="fa-sm mb-2 font-weight-bold">
+                <p class="fa-sm mb-2 font-weight-bold mx-auto w-circle">
                   How do fees work on Mamas Market?
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify w-circle mx-auto">
                   Joining and starting a store on Mamas Market is free. There
                   are three basic selling fees: a listing fee, a transaction
                   fee, and a payment processing fee.
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify w-circle mx-auto">
                   Listing fees are billed NGN 100, Its the same for all the
                   states in Nigeria. But, this might differ in another country
                   with another currency.
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify w-circle mx-auto">
                   Offsite advertising is optional for most sellers, but may be
                   required based on how much you make in sales on Mamas Market
                   in a 12 month period. Visit our Help Center for more details
@@ -716,12 +733,12 @@
                 </p>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <div class="my-4">
-                <p class="fa-sm mb-2 font-weight-bold">
+                <p class="fa-sm mb-2 font-weight-bold w-circle mx-auto">
                   How do I get paid?
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify w-circle mx-auto">
                   Receive your money automatically in your registered
                   bank/paypal account within 24 hours after daily or weekly
                   sales end. Payment is made upon choosing which option suits
@@ -729,10 +746,10 @@
                 </p>
               </div>
               <div class="my-4">
-                <p class="fa-sm mb-2 font-weight-bold">
+                <p class="fa-sm mb-2 font-weight-bold w-circle mx-auto">
                   Do I need a debit or credit card to create a store?
                 </p>
-                <p class="fa-xs mb-2 text-justify w-75">
+                <p class="fa-xs mb-2 text-justify w-circle mx-auto">
                   No, a credit or debit card is not required to create a store.
                   To be verified as a seller you have the choice to use either a
                   credit card or to register via PayPal. You will not incur any
@@ -744,26 +761,26 @@
         </div>
       </div>
       <!--seller stories-->
-      <div class="row bg-white">
-        <div class="container py-5">
+      <div class="row bg-white mb-4">
+        <div class="container py-3">
           <div class="col-12">
             <!--prettier-ignore-->
             <h4 class="fa-2x text-capitalize text-center mx-auto text-black font-weight-bold">seller stories</h4>
           </div>
-          <div class="row my-5">
-            <div class="col-6">
+          <div class="row my-3">
+            <div class="col-md-6">
               <!--prettier-ignore-->
               <img 
                 src="https://res.cloudinary.com/mama-s-market/image/upload/v1592532161/sellers/seller-1_y7knwk.png" 
                 alt="seller" 
                 class="w-100 d-block" />
             </div>
-            <div class="col-6 pt-5 px-5 bg-ellipse">
-              <div class="d-flex flex-row mt-4">
+            <div class="col-md-6 px-5 px-md-4 bg-ellipse">
+              <div class="d-flex flex-row my-2">
                 <span class="circle bg-warning rounded-circle mr-2"></span>
                 <span class="circle bg-warning rounded-circle"></span>
               </div>
-              <p class="fa-sm text-dark font-weight-bold my-5 w-75">
+              <p class="fa-sm text-dark font-weight-bold my-5 my-md-3 w-circle">
                 Mamas Market has been an integral part of my growth from
                 hobbyist to full-time farmer and store owner. My produce would
                 not have fallen into so many hands without Mamas Market’s wide
@@ -775,13 +792,13 @@
               </p>
             </div>
           </div>
-          <div class="row my-5">
-            <div class="col-6 pt-5 px-5 bg-ellipse">
-              <div class="d-flex flex-row mt-4">
+          <div class="row my-3">
+            <div class="col-md-6 px-5 px-md-4 bg-ellipse">
+              <div class="d-flex flex-row my-2">
                 <span class="circle bg-warning rounded-circle mr-2"></span>
                 <span class="circle bg-warning rounded-circle"></span>
               </div>
-              <p class="fa-sm text-dark font-weight-bold my-5 w-75">
+              <p class="fa-sm text-dark font-weight-bold my-5 my-md-3 w-circle">
                 Mamas Market has been an integral part of my growth from
                 hobbyist to full-time farmer and store owner. My produce would
                 not have fallen into so many hands without Mamas Market’s wide
@@ -792,7 +809,7 @@
                 <span class="text-underline">Chuka Farm & Produce</span>
               </p>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
               <!--prettier-ignore-->
               <img 
                 src="https://res.cloudinary.com/mama-s-market/image/upload/v1592532152/sellers/seller-2_qrbwkw.png" 
@@ -800,20 +817,20 @@
                 class="w-100 d-block" />
             </div>
           </div>
-          <div class="row my-5">
-            <div class="col-6">
+          <div class="row my-3">
+            <div class="col-md-6">
               <!--prettier-ignore-->
               <img 
                 src="https://res.cloudinary.com/mama-s-market/image/upload/v1592532152/sellers/seller-2_qrbwkw.png" 
                 alt="seller" 
                 class="w-100 d-block" />
             </div>
-            <div class="col-6 pt-5 px-5 bg-ellipse">
-              <div class="d-flex flex-row mt-4">
+            <div class="col-md-6 px-5 px-md-4 bg-ellipse">
+              <div class="d-flex flex-row my-2">
                 <span class="circle bg-warning rounded-circle mr-2"></span>
                 <span class="circle bg-warning rounded-circle"></span>
               </div>
-              <p class="fa-sm text-dark font-weight-bold my-5 w-75">
+              <p class="fa-sm text-dark font-weight-bold my-5 my-md-3 w-circle">
                 Mamas Market has been an integral part of my growth from
                 hobbyist to full-time farmer and store owner. My produce would
                 not have fallen into so many hands without Mamas Market’s wide
@@ -829,179 +846,54 @@
       </div>
       <!--footer-->
       <div class="footer bg-dark row">
-        <div class="container">
-          <div class="mt-3 pt-5 pb-2 row">
-            <div class="col-3 d-flex flex-column">
-              <h6 class="font-weight-bold text-uppercase text-light">
-                mama's market
-              </h6>
-              <p class="fa-xs text-mama">Your No. 1 online fresh food store</p>
-              <!--prettier-ignore-->
-              <a
-                  href="../help.html"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Help Centre
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="../index.html"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Home
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="../contact-us.html"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Contact us
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Delivery options and timelines
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  How to make an order
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="../shop-for-me/homepage.html"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Gettings started with personal shopper
-                </a>
-            </div>
-            <div class="col-3 d-flex flex-column">
-              <h6 class="font-weight-bold text-uppercase text-light">
-                about mama's market
-              </h6>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  About us
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Mama's Market Careers
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Mama's market niche
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Terms & Conditions
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Privacy Policy
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Package Delivery
-                </a>
-            </div>
-            <div class="col-3 d-flex flex-column">
-              <h6 class="font-weight-bold text-uppercase text-light">
-                sell on mama's market
-              </h6>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Sell on Mama's Market
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Become a certified Personal Shopper
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Become a Logistics Service Partner
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="../categories.html"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Product Categories
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Trade by barter
-                </a>
-              <!--prettier-ignore-->
-              <a
-                  href="#"
-                  class="footer-link text-decoration-none text-light fa-xs">
-                  Blogs & Reviews
-                </a>
-            </div>
-            <div class="col-3">
-              <h6 class="font-weight-bold text-uppercase text-light">
-                newsletter
-              </h6>
-              <form action="">
-                <!--prettier-ignore-->
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="bg-darker form-control text-light border-0 rounded-0 footer-input"
-                    placeholder="Enter email address"/>
-                <button type="submit" class="btn btn-mama form-control my-2">
-                  Subscribe
-                </button>
-              </form>
-              <span class="d-flex justify-content-around mt-3">
+        <div class="container pt-3">
+          <div class="d-flex flex-column">
+            <div class="row">
+              <div class="col-12 text-center">
                 <!--prettier-ignore-->
                 <a
-                    href="https://twitter.com/MamasmarketN?s=08"
-                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
-                    <i class="fab fa-twitter text-dark"></i>
+                    href="#top"
+                    class="text-light text-uppercase text-decoration-none pb-4 mx-auto">
+                    <i class="fas fa-angle-up fa-2x"></i>
+                    <h6 class="font-weight-bold sh-fa-xs">back to the top</h6>
                   </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center mt-3">
+                <div class="footer-rights mx-2"></div>
+              </div>
+            </div>
+            <div class="row mt-5 col-12 d-flex flex-row justify-content-around">
+              <!--prettier-ignore-->
+              <a href="../help-mobile.html" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">help centre</h6>
+                </a>
+              <!--prettier-ignore-->
+              <a href="../contact-us-mobile.html" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">contact us</h6>
+                </a>
+              <!--prettier-ignore-->
+              <a href="" class="text-light text-uppercase text-decoration-none">
+                  <h6 class="font-weight-bold sh-fa-xs">
+                    terms & conditions
+                  </h6>
+                </a>
+            </div>
+            <div class="row mt-5">
+              <div class="col-12 text-center">
                 <!--prettier-ignore-->
                 <a
                     href=""
-                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
-                    <i class="fab fa-google-plus-g text-dark"></i>
+                    class="text-light text-uppercase text-decoration-none mx-auto">
+                    <h6 class="font-weight-bold sh-fa-xs">become a seller</h6>
                   </a>
-                <!--prettier-ignore-->
-                <a
-                    href="https://www.facebook.com/Mamas-Market-Online-Store-111442090546702/"
-                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
-                    <i class="fab fa-facebook-f text-dark"></i>
-                  </a>
-                <!--prettier-ignore-->
-                <a
-                    href="https://www.instagram.com/mamasmarket_ng/"
-                    class="text-decoration-none rounded-circle bg-warning p-1 px-2 footer-icon">
-                    <i class="fab fa-instagram text-dark"></i>
-                  </a>
-              </span>
+              </div>
             </div>
           </div>
           <div class="row">
             <div class="col-12 text-center">
-              <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
+              <p class="fa-xs text-muted footer-rights mt-5 pt-4 pb-4">
                 All Rights Reserved
               </p>
             </div>
@@ -1010,6 +902,7 @@
       </div>
     </div>
 
+    <script src="../scripts/side-nav.js"></script>
     <!--bootstrap scripts-->
     <!--prettier-ignore-->
     <script

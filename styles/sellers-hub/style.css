@@ -115,6 +115,214 @@
 }
 
 /*homepage styles*/
+.bg-banner {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221920%22%20height%3D%22612%22%20viewBox%3D%220%200%201920%20612%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%221920%22%20height%3D%22600%22%20fill%3D%22url(%23paint0_linear)%22%2F%3E%0A%3Cpath%20d%3D%22M3.5%20280L185.798%20595.75H-178.798L3.5%20280Z%22%20fill%3D%22%23008DDA%22%2F%3E%0A%3Cpath%20d%3D%22M115%20300L205.933%20457.5H24.0673L115%20300Z%22%20fill%3D%22%23008DDA%22%2F%3E%0A%3Ccircle%20cx%3D%221939%22%20cy%3D%22416%22%20r%3D%22196%22%20fill%3D%22%23FFCC00%22%2F%3E%0A%3Ccircle%20r%3D%2296.5%22%20transform%3D%22matrix(-1%200%200%201%201788.5%20239.5)%22%20fill%3D%22%23FFCC00%22%2F%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%221.43329e-05%22%20y1%3D%22347.5%22%20x2%3D%222158%22%20y2%3D%22372%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22%23F3F3F3%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23C9C9C9%22%20stop-opacity%3D%220%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-banner {
+  color: #707070;
+}
+
+.text-sell {
+  color: #8b8b8b;
+}
+
+.btn-start {
+  background: #168f57;
+  border: 1px solid #8b8b8b;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-start:hover {
+  background: #2b9161;
+  color: #c7c7c7;
+}
+
+.btn-black {
+  background: #191919;
+  border: 1px solid #8b8b8b;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-black:hover {
+  background: #575757;
+  color: #c7c7c7;
+}
+
+.btn-today {
+  background: #008dda;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.18);
+  color: #ffcc00;
+  font-size: 0.8em;
+}
+
+.btn-today:hover {
+  background: #3ba3db;
+  color: #f8dd6e;
+}
+
+.btn-now {
+  background: #e8b900;
+  border: 1px solid #ffcb57;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.btn-now:hover {
+  background: #e7c023;
+  color: #e0dfdf;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.p-icon {
+  width: 150px;
+  height: 150px;
+  background: #ffffff;
+  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.09);
+}
+
+.fa-link-xs {
+  font-size: 0.7em;
+}
+
+.bg-simple {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221920%22%20height%3D%222191%22%20viewBox%3D%220%200%201920%202191%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%221920%22%20height%3D%222191%22%20fill%3D%22%23FFCC00%22%2F%3E%0A%3Cpath%20d%3D%22M2211%20831C2211%201003.87%201979.87%201208%201807%201208C1634.13%201208%201405%20804.865%201405%20632C1405%20371.999%201572.13%20704%201745%20704C1917.87%20704%202211%20658.135%202211%20831Z%22%20fill%3D%22%23FFD942%22%2F%3E%0A%3Cpath%20d%3D%22M2295%20775.448C2295%20948.313%202063.87%201152.45%201891%201152.45C1718.13%201152.45%201489%20749.313%201489%20576.447C1489%20316.447%201656.13%20648.448%201829%20648.448C2001.87%20648.448%202295%20602.583%202295%20775.448Z%22%20fill%3D%22%23FDE37D%22%2F%3E%0A%3Cpath%20d%3D%22M-139.768%201932.91C-139.768%201823.36%206.70346%201694%20116.249%201694C225.795%201694%20371%201949.47%20371%202059.02C371%202223.78%20265.085%202013.39%20155.539%202013.39C45.9933%202013.39%20-139.768%202042.45%20-139.768%201932.91Z%22%20fill%3D%22%23FFD942%22%2F%3E%0A%3Cpath%20d%3D%22M-193%201968.11C-193%201858.57%20-46.528%201729.2%2063.018%201729.2C172.564%201729.2%20317.769%201984.67%20317.769%202094.22C317.769%202258.98%20211.854%202048.59%20102.308%202048.59C-7.2381%202048.59%20-193%202077.66%20-193%201968.11Z%22%20fill%3D%22%23FDE37D%22%2F%3E%0A%3Cpath%20d%3D%22M1047.65%201981.13C1047.65%201928.34%201118.24%201866%201171.03%201866C1223.82%201866%201293.8%201989.11%201293.8%202041.9C1293.8%202121.31%201242.76%202019.92%201189.96%202019.92C1137.17%202019.92%201047.65%202033.92%201047.65%201981.13Z%22%20fill%3D%22%23FFD942%22%2F%3E%0A%3Cpath%20d%3D%22M1022%201998.1C1022%201945.31%201092.59%201882.97%201145.38%201882.97C1198.17%201882.97%201268.14%202006.08%201268.14%202058.87C1268.14%202138.27%201217.1%202036.88%201164.31%202036.88C1111.52%202036.88%201022%202050.89%201022%201998.1Z%22%20fill%3D%22%23FDE37D%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #ffcc00;
+}
+
+.bullet {
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  width: 40px;
+  height: 40px;
+}
+
+.benefit {
+  height: 40px;
+  width: 200px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+  padding: 0.6em;
+}
+
+.box {
+  height: 40px;
+  width: 55px;
+}
+
+.circle {
+  height: 30px;
+  width: 30px;
+}
+
+.w-pay {
+  width: 20%;
+}
+
+.text-pay {
+  color: #0c1920;
+}
+
+ul.list {
+  list-style-image: url("data:image/svg+xml,%3Csvg%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2041%2041%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M18.9844%2030.0078H22.9844V18.0078H18.9844V30.0078ZM20.9844%200.0078125C9.94437%200.0078125%200.984375%208.96781%200.984375%2020.0078C0.984375%2031.0478%209.94437%2040.0078%2020.9844%2040.0078C32.0244%2040.0078%2040.9844%2031.0478%2040.9844%2020.0078C40.9844%208.96781%2032.0244%200.0078125%2020.9844%200.0078125ZM20.9844%2036.0078C12.1644%2036.0078%204.98437%2028.8278%204.98437%2020.0078C4.98437%2011.1878%2012.1644%204.00781%2020.9844%204.00781C29.8044%204.00781%2036.9844%2011.1878%2036.9844%2020.0078C36.9844%2028.8278%2029.8044%2036.0078%2020.9844%2036.0078ZM18.9844%2014.0078H22.9844V10.0078H18.9844V14.0078Z%22%20fill%3D%22%23DB2721%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+
+svg#ease {
+  width: 90%;
+  height: 500px;
+}
+
+.bg-tools {
+  background: #ffcb57;
+}
+
+.w-tools {
+  width: 21vw;
+  box-shadow: 0px 4px 34px rgba(174, 159, 150, 0.13);
+}
+
+.bg-standard {
+  background: #008dda;
+  color: #ffffff;
+  position: relative;
+  height: 400px;
+}
+
+.subscribe {
+  position: relative;
+}
+
+.subscribe::before {
+  content: "";
+  width: 25.1%;
+  height: 100px;
+  position: absolute;
+  top: -48px;
+  left: 0.05%;
+  background-color: #ffffff;
+  transform: skewY(-8deg);
+}
+
+.subscribe .col-12::before {
+  content: "";
+  width: 25%;
+  height: 100px;
+  position: absolute;
+  top: -96px;
+  left: 25.05%;
+  background-color: #ffffff;
+  transform: skewY(8deg);
+}
+
+.subscribe::after {
+  content: "";
+  width: 25.1%;
+  height: 100px;
+  position: absolute;
+  top: -48px;
+  right: 0.05%;
+  background-color: #ffffff;
+  transform: skewY(8deg);
+}
+
+.subscribe .col-12::after {
+  content: "";
+  width: 25%;
+  height: 100px;
+  position: absolute;
+  top: -96px;
+  right: 25.05%;
+  background-color: #ffffff;
+  transform: skewY(-8deg);
+}
+
+.stdBox {
+  width: 40px;
+  height: 40px;
+}
+
+.fa-tiny-xs {
+  font-size: 0.6em;
+}
+
+.bg-faq {
+  background: #4d4d4d;
+  color: #ffffff;
+}
+
+.bg-ellipse {
+  background-image: url("https://res.cloudinary.com/mama-s-market/image/upload/v1592533652/ellipse_mrwock.png");
+  background-repeat: no-repeat;
+  background-size: 30% 40%;
+  background-position: bottom;
+}
 
 /*dashboard styles*/
 .h-full {
