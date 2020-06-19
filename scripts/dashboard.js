@@ -3,6 +3,7 @@ let modalLabel = document.getElementById("addFormLabel");
 let addProduct = document.getElementById("addProduct");
 
 let editted = "no";
+let productSubmitURL;
 
 const loadImage = function (event) {
   let imageBlock = document.getElementById("output");
@@ -58,6 +59,43 @@ const loadImage = function (event) {
   editted = "no";
 };
 
+const manageProduct = (event) => {
+  event.preventDefault();
+
+  let form = new FormData(event.target);
+
+  let submitBtn = document.getElementById("submit-add-product-form");
+  let originalBtnText = submitBtn.innerHTML;
+
+  $(submitBtn).html(Spinner).attr("disabled", true);
+  $(`#form-errors`).html("").addClass("d-none");
+
+  if (productSubmitURL.trim() != "") {
+    form.append("_method", "patch");
+  }
+
+  axios
+    .post(productSubmitURL, form)
+    .then((res) => {
+      window.location.reload(true);
+    })
+    .catch((err) => {
+      $(submitBtn).html(originalBtnText).attr("disabled", false);
+      let error;
+      if (err.response.status === 422) {
+        error = "<ul>";
+        $.each(err.response.data.errors, (i, v) => {
+          error += `<li> ${v[0]} </li>`;
+        });
+      } else {
+        error = err.response.data.message || err.toString();
+      }
+      $(`#form-errors`).html(error).removeClass("d-none");
+      let errorPlaceholder = document.getElementById("form-errors");
+      errorPlaceholder.scrollIntoView();
+    });
+};
+
 function emptyModalForm() {
   modalLabel.innerHTML = "add new product";
 
@@ -71,14 +109,14 @@ function emptyModalForm() {
 
   let units = document.getElementById("unit").querySelectorAll("option");
   units.forEach((unit) => {
-    unit.removeAttribute("selected");
+    unit.selected = false;
   });
 
   let categories = document
     .getElementById("product-category")
     .querySelectorAll("option");
   categories.forEach((category) => {
-    category.removeAttribute("selected");
+    category.selected = false;
   });
 
   let imageBlock = document.getElementById("output");
@@ -95,6 +133,8 @@ edits.forEach((edit) => {
     let productDetails = edit.getAttribute("data-product");
     let productData = JSON.parse(productDetails);
 
+    //productSubmitURL = ProductBaseURL + "/" + productData.slug;
+
     document.getElementById("product-name").value = productData.name;
 
     document.getElementById("price").value = productData.price;
@@ -102,23 +142,32 @@ edits.forEach((edit) => {
     document.getElementById("product-description").value =
       productData.description;
 
-    document.getElementById("item-no").value = productData.stock;
+    document.getElementById("item-no").value = productData.in_stock;
 
     let units = document.getElementById("unit").querySelectorAll("option");
     units.forEach((unit) => {
-      if (unit.value == productData.unit) {
-        unit.setAttribute("selected", "true");
+      if (unit.value == productData.stock_unit) {
+        unit.selected = true;
+      } else {
+        unit.selected = false;
       }
     });
+
+    document.getElementById("display").checked = productData.should_display;
 
     let categories = document
       .getElementById("product-category")
       .querySelectorAll("option");
     let dataCategories = productData.categories;
+
+    categories.forEach((category) => {
+      category.selected = false;
+    });
+
     dataCategories.forEach((dataCategory) => {
       categories.forEach((category) => {
-        if (category.value == dataCategory) {
-          category.setAttribute("selected", "true");
+        if (category.value == dataCategory.id) {
+          category.selected = true;
         }
       });
     });
@@ -131,4 +180,22 @@ edits.forEach((edit) => {
   });
 });
 
-addProduct.addEventListener("click", emptyModalForm);
+addProduct.addEventListener("click", () => {
+  productSubmitURL = "";
+  emptyModalForm();
+});
+
+function deleteProduct(id) {
+  let c = confirm("Please confirm that you want to delete this product");
+  if (!c) return;
+
+  axios
+    .delete(ProductBaseURL + "/" + id)
+    .then(() => {
+      window.location.reload(true);
+    })
+    .catch((err) => {
+      alert("An error was encountered.");
+      console.error(err);
+    });
+}

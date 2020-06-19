@@ -182,21 +182,21 @@
                                           id="product-category" 
                                           class="form-control text-capitalize" 
                                           multiple>
-                                          <option value="fresh farm produce" class="fa-xs py-1">fresh farm produce</option>
-                                          <option value="processed food products" class="fa-xs py-1">processed food products</option>
-                                          <option value="canned food products" class="fa-xs py-1">canned food products</option>
-                                          <option value="fresh food" class="fa-xs py-1">fresh food</option>
-                                          <option value="veggies/fruits" class="fa-xs py-1">veggies/fruits</option>
-                                          <option value="beverages" class="fa-xs py-1">beverages</option>
-                                          <option value="cleaning supplies" class="fa-xs py-1">cleaning supplies</option>
-                                          <option value="pet foods/care" class="fa-xs py-1">pet foods/care</option>
-                                          <option value="paper products" class="fa-xs py-1">paper products</option>
-                                          <option value="bread & bakery" class="fa-xs py-1">bread & bakery</option>
-                                          <option value="baby food/products" class="fa-xs py-1">baby food/products</option>
-                                          <option value="toileteries" class="fa-xs py-1">toileteries</option>
-                                          <option value="kitchen utensils/storage" class="fa-xs py-1">kitchen utensils/storage</option>
-                                          <option value="stationaries" class="fa-xs py-1">stationaries</option>
-                                          <option value="local food condiments" class="fa-xs py-1">local food condiments</option>
+                                          <option value="1" class="fa-xs py-1">fresh farm produce</option>
+                                          <option value="2" class="fa-xs py-1">processed food products</option>
+                                          <option value="3" class="fa-xs py-1">packaged food products</option>
+                                          <option value="4" class="fa-xs py-1">fresh food</option>
+                                          <option value="5" class="fa-xs py-1">veggies/fruits</option>
+                                          <option value="6" class="fa-xs py-1">beverages</option>
+                                          <option value="7" class="fa-xs py-1">cleaning supplies</option>
+                                          <option value="8" class="fa-xs py-1">pet foods/care</option>
+                                          <option value="9" class="fa-xs py-1">paper products</option>
+                                          <option value="10" class="fa-xs py-1">bread & bakery</option>
+                                          <option value="11" class="fa-xs py-1">baby food/products</option>
+                                          <option value="12" class="fa-xs py-1">toileteries</option>
+                                          <option value="13" class="fa-xs py-1">kitchen utensils/storage</option>
+                                          <option value="14" class="fa-xs py-1">stationaries</option>
+                                          <option value="15" class="fa-xs py-1">local food condiments</option>
                                         </select>
                                       </div>
                                       <div class="form-group">
@@ -248,8 +248,8 @@
                                             name="display"
                                             id="display"
                                             class="form-check-input"
-                                            value="display"
-                                            checked />
+                                            value="display" 
+                                            checked/>
                                           <!--prettier-ignore-->
                                           <label
                                             for="display"
@@ -303,7 +303,7 @@
                             class="fa fa-edit text-primary edit" 
                             data-toggle="modal" 
                             data-target="#addForm"
-                            data-product='{"name": "tomato", "price": "3000", "stock": "5", "unit": "tonne", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                            data-product='{"name": "tomato", "price": 3000, "in_stock": 5, "stock_unit": "tonne", "description": "fresh tomatoes", "categories": [{"id": 3}, {"id": 4}, {"id": 5}], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"], "should_display": false}'></i>
                         </td>
                         <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>
@@ -326,7 +326,7 @@
                             class="fa fa-edit text-primary edit" 
                             data-toggle="modal" 
                             data-target="#addForm"
-                            data-product='{"name": "tomato", "price": "5000", "stock": "5", "unit": "kg", "description": "fresh tomatoes", "categories": ["processed food products", "fresh farm produce"], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"]}'></i>
+                            data-product='{"name": "tomato", "price": 5000, "in_stock": 5, "stock_unit": "kg", "description": "fresh tomatoes", "categories": [{"id": 1}, {"id": 2}], "images": ["https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369538/products/tomatoes3_l3kftz.jpg", "https://res.cloudinary.com/mama-s-market/image/upload/v1589369811/products/tomato4_nk2v2j.jpg"], "should_display": true}'></i>
                         </td>
                         <td class=""><i class="fa fa-trash text-danger delete"></i></td>
                       </tr>

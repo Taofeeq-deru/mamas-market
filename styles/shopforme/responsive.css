@@ -32,14 +32,15 @@
     height: 50vh;
   }
 
-  #content .w-shopper {
-    width: 50vw;
+  /* #content .w-shopper {
+    width: 250px;
   }
 
   #content .each-shopper-avi {
     position: relative;
     height: 28vh;
-  }
+    width: 100%;
+  } */
 
   #content .fileLabel,
   #content .showDelete {

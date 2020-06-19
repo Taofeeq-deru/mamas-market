@@ -409,13 +409,13 @@ input.invalid {
   opacity: 1;
 }
 
-.w-shopper {
-  width: 30vw;
+.w-shopper .form-check-label {
+  width: 200px;
 }
 
 .each-shopper-avi {
-  position: relative;
   height: 28vh;
+  width: 100%;
 }
 
 .the-shopper-words {

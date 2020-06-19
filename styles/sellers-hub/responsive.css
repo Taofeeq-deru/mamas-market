@@ -1,0 +1,222 @@
+@media screen and (min-width: 320px) {
+  .bg-banner {
+    background-size: 100%;
+    background-position: bottom;
+    background-color: rgb(226, 225, 225);
+  }
+
+  h1.text-banner,
+  .fa-2x {
+    font-size: 1.5em;
+  }
+
+  .btn-start,
+  .btn-black,
+  .btn-today,
+  .btn-now {
+    font-size: 0.6em;
+  }
+
+  .fa-sm {
+    font-size: 0.6em;
+  }
+
+  .fa-md {
+    font-size: 1em;
+  }
+
+  .fa-xs {
+    font-size: 0.5em;
+  }
+
+  .fa-link-xs {
+    font-size: 0.45em;
+  }
+
+  .w-icon {
+    width: 50vw;
+    margin: 10px 0;
+  }
+
+  .p-icon {
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+  }
+
+  .p-icon svg {
+    width: 30px;
+    height: 31px;
+  }
+
+  .benefit {
+    padding: 1.2em;
+  }
+
+  .circle {
+    height: 15px;
+    width: 15px;
+  }
+
+  .w-circle {
+    width: 100%;
+  }
+
+  .w-pay {
+    width: 50%;
+  }
+
+  svg#ease {
+    width: 150px;
+    height: 250px;
+  }
+
+  .w-tools {
+    width: 40vw;
+    box-shadow: none;
+  }
+}
+
+@media screen and (min-width: 370px) {
+  .fa-md {
+    font-size: 1.1em;
+  }
+
+  .fa-sm {
+    font-size: 0.65em;
+  }
+
+  .fa-xs {
+    font-size: 0.57em;
+  }
+
+  .fa-link-xs {
+    font-size: 0.5em;
+  }
+
+  .w-icon {
+    width: 40vw;
+  }
+
+  .p-icon {
+    width: 55px;
+    height: 55px;
+    box-shadow: none;
+  }
+
+  .p-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  svg#ease {
+    width: 180px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .btn-start,
+  .btn-black,
+  .btn-today,
+  .btn-now {
+    font-size: 0.7em;
+  }
+
+  .fa-md {
+    font-size: 1.3em;
+  }
+
+  .fa-sm {
+    font-size: 0.7em;
+  }
+
+  .fa-xs {
+    font-size: 0.55em;
+  }
+
+  .fa-link-xs {
+    font-size: 0.5em;
+  }
+
+  .p-icon {
+    width: 60px;
+    height: 60px;
+    box-shadow: none;
+  }
+
+  .p-icon svg {
+    width: 40px;
+    height: 41px;
+  }
+
+  .benefit {
+    padding: 1em;
+  }
+
+  .circle {
+    height: 20px;
+    width: 20px;
+  }
+
+  .w-pay {
+    width: 45%;
+  }
+
+  svg#ease {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1.text-banner,
+  .fa-2x {
+    font-size: 2em;
+  }
+
+  .btn-start,
+  .btn-black,
+  .btn-today,
+  .btn-now {
+    font-size: 0.8em;
+  }
+
+  .fa-sm {
+    font-size: 0.8em;
+  }
+
+  .fa-xs {
+    font-size: 0.7em;
+  }
+
+  .fa-link-xs {
+    font-size: 0.6em;
+  }
+
+  .w-icon {
+    width: 25vw;
+  }
+
+  .benefit {
+    padding: 0.6em;
+  }
+
+  .circle {
+    height: 30px;
+    width: 30px;
+  }
+
+  .w-circle {
+    width: 75%;
+  }
+
+  .w-pay {
+    width: 30%;
+  }
+
+  svg#ease {
+    width: 90%;
+    height: 500px;
+  }
+}
