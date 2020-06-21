@@ -333,6 +333,10 @@ svg#ease {
   height: 100vh;
 }
 
+.h-table {
+  max-height: 60vh;
+}
+
 .px-btns {
   padding-left: 0.5em;
   padding-right: 0.5em;
