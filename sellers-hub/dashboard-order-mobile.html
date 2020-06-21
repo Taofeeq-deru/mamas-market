@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--link that displays icon in title-->
+    <!--prettier-ignore-->
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+      type="image/x-icon"/>
+    <!--Google fonts link for Montserrat font family-->
+    <!--prettier-ignore-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"/>
+    <!--Font awesome 5.13.0 link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <!--bootstrap link-->
+    <!--prettier-ignore-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <!--css link-->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/responsive.css" />
+    <link rel="stylesheet" href="../styles/sellers-hub/style.css" />
+    <link rel="stylesheet" href="../styles/sellers-hub/responsive.css" />
+    <title>Seller Dashboard: Order</title>
+  </head>
+  <body>
+    <!--sidebar-->
+    <div id="sideBar" class="bg-nav h-full pt-md-5 pr-0 side-bar collapse">
+      <nav class="dashboard-nav mt-5 pt-md-5">
+        <!--prettier-ignore-->
+        <div class="nav border-bottom-0 flex-column pt-3 d-flex flex-column">
+          <!--prettier-ignore-->
+          <a href="#sideBar" class="openCloseBtn text-white text-decoration-none pl-3" data-toggle="collapse">&times;</a>
+          <!--prettier-ignore-->
+          <a href="javascript:void(0)" class="text-capitalize text-white text-decoration-none reduceExpandBtn pl-4" onclick="toggleReduce()">
+            <i class="fas fa-angle-left fa-2x reduceExpand"></i>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-tachometer-alt"></i> &nbsp; <span class="sidebar-text">dashboard</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4 active">
+            <i class="fas fa-shopping-cart"></i> &nbsp; <span class="sidebar-text">order</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="dashboard-products-mobile.html" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-qrcode"></i> &nbsp; <span class="sidebar-text">products</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-users"></i> &nbsp; <span class="sidebar-text">customers</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-wallet"></i> &nbsp; <span class="sidebar-text">revenue</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-file-alt"></i> &nbsp; <span class="sidebar-text">report</span>
+          </a>
+          <!--prettier-ignore-->
+          <a href="#" class="nav-item nav-link text-capitalize fa-md py-3 pl-4">
+            <i class="fas fa-cog"></i> &nbsp; <span class="sidebar-text">settings</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+    <!--nav-->
+    <div class="sticky-top">
+      <nav class="navbar navbar-light bg-white" id="nav">
+        <div class="row col-12 my-2 mx-auto">
+          <!--prettier-ignore-->
+          <i class="fa fa-bars fa-2x mr-2 text-dark mt-2" data-toggle="collapse" data-target="#sideBar"></i>
+          <div class="user ml-auto d-flex flex-nowrap">
+            <p class="user-name text-capitalize mx-2 mx-md-3 my-auto">
+              brendan smile
+            </p>
+            <!--prettier-ignore-->
+            <img 
+              src="https://res.cloudinary.com/mama-s-market/image/upload/v1588914746/shopper_c5ltuo.jpg" 
+              alt="user avatar"
+              height="50"
+              width="50"
+              class="avatar rounded-circle" />
+            <a href="#" class="mx-2 mx-md-3 my-auto text-signout">
+              <i class="fas fa-sign-out-alt fa-2x"></i>
+            </a>
+          </div>
+        </div>
+        <!--second nav-->
+        <div class="row col-12 second-nav mx-auto">
+          <form action="" class="searchForm w-100">
+            <!--prettier-ignore-->
+            <input 
+              type="search" 
+              name="search" 
+              id="search"
+              class="form-control shadow-sm"
+              style="
+              height: 3em;
+              font-family: 'Lato', 'Font Awesome 5 Free' !important;
+              font-weight: 900;
+              "
+              placeholder="&#xf002; Search" />
+          </form>
+        </div>
+      </nav>
+      <!--search result-->
+      <div class="row hide col-12 mx-auto" id="theSearch" style="top: 110%;">
+        <!--prettier-ignore-->
+        <div class="search-result bg-white shadow-sm py-2 rounded-lg w-100">
+          <div class="px-3 py-0 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">categories</h4>
+            <ul class="categories-list p-0 mb-0">
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto result-figure">
+                  13 results
+                </p>
+              </li>
+              <li class="category d-flex">
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 search-suggestion">pepper</p>
+                  <p class="fa-xs text-muted">
+                    in
+                    <!--prettier-ignore-->
+                    <span class="cateogry-name text-capitalize">fresh food</span>
+                  </p>
+                </span>
+                <p class="text-info fa-sm ml-auto">
+                  13 results
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="px-3 pt-2 border-top-grey mt-n2 mb-0">
+            <h4 class="fa-xs text-muted font-weight-bold text-uppercase">products</h4>
+            <ul class="products-list p-0 mb-0">
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+              <li class="product d-flex">
+                <!--prettier-ignore-->
+                <img 
+                  src="https://res.cloudinary.com/mama-s-market/image/upload/v1588514176/products/tomato_zpm8q7.jpg"
+                  alt="tomato"
+                  class="searched-product-image mr-3"
+                  height="35"
+                  width="40" />
+                <span class="d-flex flex-column">
+                  <p class="fa-sm mb-0 searched-product-name">Fresh Pepper</p>
+                  <p class="fa-xs text-muted searched-product-price">
+                    <i class="fa fa-naira"></i> 5000
+                  </p>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="text-center pt-2 border-top-grey mb-0">
+            <a 
+              href="" 
+              class="fa-xs text-mama text-decoration-none font-weight-bold text-uppercase">
+              see all results(20)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content" class="container-fluid my-5">
+      <!--total summary-->
+      <div class="row">
+        <div class="col-12 d-flex justify-content-around">
+          <!--total number of products-->
+          <!--prettier-ignore-->
+          <button class="btn btn-total order-btns px-md-5 py-md-3 text-uppercase rounded-sm">
+              total: 3
+            </button>
+          <!--number of products sent-->
+          <!--prettier-ignore-->
+          <button class="btn btn-sent order-btns px-md-5 py-md-3 text-uppercase rounded-sm">
+              sent: 2
+            </button>
+          <!--number of products delivered-->
+          <!--prettier-ignore-->
+          <button class="btn btn-delivered order-btns px-md-5 py-md-3 text-uppercase rounded-sm">
+              delivered: 1
+            </button>
+          <!--prettier-ignore-->
+          <button class="btn btn-enroute order-btns px-md-5 py-md-3 text-uppercase rounded-sm">
+              enroute: 1
+            </button>
+        </div>
+      </div>
+      <div class="content px-3 px-md-5 my-4">
+        <!--orders table-->
+        <!--prettier-ignore-->
+        <div class="row border border-grey rounded overflow-auto">
+            <div class="col-12">
+              <!--list of products-->
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th scope="col" class="text-dark py-4">Product</th>
+                        <th scope="col" class="text-dark py-4">Date (yyyy-mm-dd)</th>
+                        <th scope="col" class="text-dark py-4">Sent</th>
+                        <th scope="col" class="text-dark py-4">Delivered</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <!--date value: yyyy/mm/dd-->
+                        <!--prettier-ignore-->
+                        <td 
+                        class="text-capitalize font-weight-bold view-order" 
+                        data-toggle="modal" data-target="#productDetails"
+                        data-details='{"product": "tomato", "order_date": "2020-06-12", "quantity": 5, "unit": "kg", "price": 5000,"buyer_name": "dimeji sun", "buyer_no": "+234804533323", "delivery_address": "15, Okenla Street, Ikeja, Lagos", "order_sent": true, "sent_date": "2020-06-12", "order_delivered": true, "delivery_date": "2020-06-12"}'>
+                        tomato
+                        </td>
+                        <td class="table-date"></td>
+                        <td class="table-sent-status"></td>
+                        <td class="table-delivery-status"></td>
+                    </tr>
+                    <tr>
+                        <!--date value: yyyy/mm/dd-->
+                        <!--prettier-ignore-->
+                        <td 
+                        class="text-capitalize font-weight-bold view-order" 
+                        data-toggle="modal" data-target="#productDetails"
+                        data-details='{"product": "tomato", "order_date": "2020-06-13", "quantity": 6, "unit": "kg", "price": 6000,"buyer_name": "brendan moon", "buyer_no": "+234804533323", "delivery_address": "16, Okenla Street, Ikeja, Lagos", "order_sent": true, "sent_date": "2020-06-13", "order_delivered": false, "delivery_date": ""}'>
+                        tomato
+                        </td>
+                        <td class="table-date"></td>
+                        <td class="table-sent-status"></td>
+                        <td class="table-delivery-status"></td>
+                    </tr>
+                    <tr>
+                        <!--date value: yyyy/mm/dd-->
+                        <!--prettier-ignore-->
+                        <td 
+                        class="text-capitalize font-weight-bold view-order" 
+                        data-toggle="modal" data-target="#productDetails"
+                        data-details='{"product": "tomato", "order_date": "2020-06-14", "quantity": 7, "unit": "kg", "price": 7000,"buyer_name": "enis star", "buyer_no": "+234804533323", "delivery_address": "17, Okenla Street, Ikeja, Lagos", "order_sent": false, "sent_date": "", "order_delivered": false, "delivery_date": ""}'>
+                        tomato
+                        </td>
+                        <td class="table-date"></td>
+                        <td class="table-sent-status"></td>
+                        <td class="table-delivery-status"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--order details modal-->
+              <div class="modal fade" id="productDetails" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <form action="">
+                      <div class="modal-header">
+                        <h5 class="modal-title text-capitalize">order details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-row">
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="product" class="text-uppercase text-muted fa-sm">product</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text"
+                              name="product"
+                              id="product"
+                              class="form-control-plaintext product text-capitalize fa-input"
+                              disabled />
+                          </div>
+                          <div class="form-group col-6">
+                            <label for="order-date" class="text-uppercase text-muted fa-sm">
+                              order date (mm/dd/yyyy)
+                            </label>
+                            <!--input date value: yyyy/mm/dd-->
+                            <!--prettier-ignore-->
+                            <input
+                              type="date"
+                              name="order-date" 
+                              id="order-date"
+                              class="form-control-plaintext order-date fa-input"
+                              disabled />
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="quantity" class="text-uppercase text-muted fa-sm">quantity</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text"
+                              name="quantity"
+                              id="quantity"
+                              class="form-control-plaintext quantity text-capitalize fa-input"
+                              disabled />
+                          </div>
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="price" class="text-uppercase text-muted fa-sm">price</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text"
+                              name="price"
+                              id="price"
+                              class="form-control-plaintext price text-capitalize fa-input"
+                              disabled />
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="buyer-no" class="text-uppercase text-muted fa-sm">buyer's phone number</label>
+                            <!--prettier-ignore-->
+                            <a href="" class="text-decoration-none" id="call-no">
+                              <input 
+                                type="text"
+                                name="buyer-no"
+                                id="buyer-no"
+                                class="form-control-plaintext buyer-no text-capitalize fa-input"
+                                disabled />
+                            </a>
+                          </div>
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="buyer-name" class="text-uppercase text-muted fa-sm">buyer's name</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text"
+                              name="buyer-name"
+                              id="buyer-name"
+                              class="form-control-plaintext buyer-name text-capitalize fa-input"
+                              disabled />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <!--prettier-ignore-->
+                          <label for="address" class="text-uppercase text-muted fa-sm">delivery address</label>
+                          <!--prettier-ignore-->
+                          <textarea name="address" id="address" cols="30" class="form-control-plaintext address text-capitalize fa-input" disabled></textarea>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-6">
+                            <label class="text-uppercase text-muted fa-sm">order status</label>
+                            <div class="form-check fa-input">
+                              <!--prettier-ignore-->
+                              <input
+                                type="checkbox"
+                                name="sent"
+                                id="sent"
+                                class="form-check-input sent" />
+                              <!--prettier-ignore-->
+                              <label for="sent" class="form-check-label text-uppercase" id="sent-label"></label>
+                            </div>
+                          </div>
+                          <div class="form-group col-6" id="date-order-sent">
+                            <label for="sent-date" class="text-uppercase text-muted fa-sm">
+                              sent date (mm/dd/yyyy)
+                            </label>
+                            <!--input date value: yyyy/mm/dd-->
+                            <!--prettier-ignore-->
+                            <input
+                              type="date"
+                              name="sent-date" 
+                              id="sent-date"
+                              class="form-control-plaintext sent-date fa-input"
+                              disabled />
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-6">
+                            <!--prettier-ignore-->
+                            <label for="delivery-status" class="text-uppercase text-muted fa-sm">delivery status</label>
+                            <!--prettier-ignore-->
+                            <input 
+                              type="text"
+                              name="delivery-status"
+                              id="delivery-status"
+                              class="form-control-plaintext delivery-status text-capitalize fa-input"
+                              disabled />
+                          </div>
+                          <div class="form-group col-6" id="date-delivered">
+                            <label for="delivery-date" class="text-uppercase text-muted fa-sm">
+                              delivery date (mm/dd/yyyy)
+                            </label>
+                            <!--input date value: yyyy/mm/dd-->
+                            <!--prettier-ignore-->
+                            <input
+                              type="date"
+                              name="delivery-date" 
+                              id="delivery-date"
+                              class="form-control-plaintext delivery-date fa-input"
+                              disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer border-top-0" id="buttons">
+                        <button type="button" class="btn btn-enroute px-5 py-3 text-uppercase w-btn" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-sent px-5 py-3 text-uppercase w-btn">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../scripts/dashboard-order.js"></script>
+    <script src="../scripts/sidebar.js"></script>
+    <!--bootstrap scripts-->
+    <!--prettier-ignore-->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <!--prettier-ignore-->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
