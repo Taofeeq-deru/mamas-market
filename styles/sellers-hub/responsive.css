@@ -17,6 +17,14 @@
     font-size: 0.6em;
   }
 
+  .order-btns {
+    font-size: 0.45em;
+  }
+
+  .fa-input {
+    font-size: 0.8em;
+  }
+
   .fa-sm {
     font-size: 0.6em;
   }
@@ -75,11 +83,19 @@
     width: 40vw;
     box-shadow: none;
   }
+
+  .w-btn {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 370px) {
   .fa-md {
     font-size: 1.1em;
+  }
+
+  .fa-input {
+    font-size: 1em;
   }
 
   .fa-sm {
@@ -106,7 +122,7 @@
 
   .p-icon svg {
     width: 35px;
-    height: 35px;
+    height: 36px;
   }
 
   svg#ease {
@@ -115,12 +131,18 @@
   }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 420px) {
+  /*homepage*/
   .btn-start,
   .btn-black,
   .btn-today,
-  .btn-now {
+  .btn-now,
+  .order-btns {
     font-size: 0.7em;
+  }
+
+  .fa-input {
+    font-size: 1.1em;
   }
 
   .fa-md {
@@ -178,8 +200,13 @@
   .btn-start,
   .btn-black,
   .btn-today,
-  .btn-now {
+  .btn-now,
+  .order-btns {
     font-size: 0.8em;
+  }
+
+  .fa-input {
+    font-size: 1.3em;
   }
 
   .fa-sm {
@@ -218,5 +245,9 @@
   svg#ease {
     width: 90%;
     height: 500px;
+  }
+
+  .w-btn {
+    width: auto;
   }
 }
