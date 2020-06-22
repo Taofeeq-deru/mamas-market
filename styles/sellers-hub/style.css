@@ -500,6 +500,14 @@ table tbody tr {
   cursor: pointer;
 }
 
+#productDetails .modal-dialog .modal-content {
+  width: 750px;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #c2c1c1;
+}
+
 /*dashboard mobile*/
 .side-bar {
   width: 15em;
@@ -554,5 +562,12 @@ table tbody tr {
 
   #addFormMobile .modal-dialog .modal-content {
     width: 600px;
+  }
+}
+
+/*still part of dashboard order*/
+@media screen and (min-width: 1220px) {
+  #productDetails .modal-dialog .modal-content {
+    width: 850px;
   }
 }
