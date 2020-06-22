@@ -250,4 +250,8 @@
   .w-btn {
     width: auto;
   }
+
+  #productDetailsMobile .modal-dialog .modal-content {
+    width: 600px;
+  }
 }
