@@ -356,10 +356,15 @@ body {
   transform: scale(1.01);
 }
 
-.produce img {
+/* .border-leftRight-radius {
+  height: fit-content;
+} */
+
+.picture-dimensions {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: fit-content;
+  width: 250px;
+  height: 200px;
 }
 
 .name {
