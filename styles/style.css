@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+.point {
+  cursor: pointer;
+}
+
 .hide {
   display: none;
 }
@@ -154,6 +158,17 @@ body {
 }
 
 .btn-mama:hover {
+  background-color: #a84d08;
+  color: #ebe9e9;
+}
+
+.btn-market {
+  background-color: #f06d06;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-market:hover {
   background-color: #a84d08;
   color: #ebe9e9;
 }

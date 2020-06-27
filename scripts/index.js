@@ -30,6 +30,10 @@ document.querySelectorAll(".picture").forEach(function (image) {
   image.style.display = "none";
 });
 
+function showPopUp() {
+  $("#popUpModal").modal("show");
+}
+
 function handleRightButton() {
   if (shoppers.length > 3) {
     buttonRight.classList.remove("hide-slide-button");
@@ -80,4 +84,5 @@ function showAllTabContent() {
 window.addEventListener("load", handleRightButton);
 window.addEventListener("scroll", handleLogoDisplay);
 window.addEventListener("load", showAllTabContent);
+window.addEventListener("load", showPopUp);
 catLinks.forEach((catLink) => catLink.addEventListener("click", goToTop));
