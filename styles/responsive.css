@@ -361,6 +361,10 @@
 }
 
 @media screen and (max-width: 375px) {
+  .btn-pop {
+    font-size: 0.8em;
+  }
+
   .w-65 {
     width: 60%;
   }
@@ -510,6 +514,10 @@
 }
 
 @media screen and (max-width: 320px) {
+  .btn-pop {
+    font-size: 0.65em;
+  }
+
   .mobile-nav-text {
     font-size: 0.6em;
   }

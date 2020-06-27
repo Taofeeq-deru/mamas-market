@@ -31,6 +31,59 @@
     <title>Mama's Market</title>
   </head>
   <body>
+    <!--pop up-->
+    <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="text-dark text-center">
+                  Welcome to Mama's Market
+                  <!--prettier-ignore-->
+                  <img
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
+                    alt="logo"
+                    width="100"
+                    height="50"
+                    class="mx-auto" />
+                </h3>
+                <div class="d-flex flex-row justify-content-between">
+                  <a href="shop-for-me/homepage.html" id="forMe">
+                    <button type="button" class="btn btn-market py-3 px-3">
+                      Use the Shop for me
+                    </button>
+                  </a>
+                  <p class="fa-md text-uppercase my-auto">or</p>
+                  <!--prettier-ignore-->
+                  <button type="button" class="btn btn-primary py-3 px-3" id="yourself" data-dismiss="modal" aria-label="Close">
+                    Shop for yourself
+                  </button>
+                </div>
+                <h5 class="text-dark text-center my-4" id="navigate">
+                  What would you like to do? <br />
+                </h5>
+                <div class="d-flex flex-row justify-content-between">
+                  <a href="sellers-hub/seller-homepage.html" id="sell">
+                    <button type="button" class="btn btn-success py-3 px-3">
+                      Become a seller
+                    </button>
+                  </a>
+                  <!--prettier-ignore-->
+                  <button type="button" class="btn btn-secondary py-3 px-3" id="tour" data-dismiss="modal" aria-label="Close">
+                    Take a tour
+                  </button>
+                </div>
+                <!--prettier-ignore-->
+                <h6 class="text-mama text-center my-4 point font-weight-bold" data-dismiss="modal" aria-label="Close">
+                  Continue...
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--contact navbar-->
     <div class="container-fluid">
       <div class="row" id="top">
@@ -2719,7 +2772,7 @@
           <div class="row">
             <div class="col-12 text-center">
               <p class="fa-xs text-muted footer-rights mt-5 pt-lg-2 pt-4 pb-4">
-                &copy; Mamasmarket 2020
+                Copyright &copy; Mamasmarket 2020. All Rights Reserved
               </p>
             </div>
           </div>

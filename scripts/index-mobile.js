@@ -31,6 +31,10 @@ buttonLeft.onclick = function () {
   document.getElementById("pills-tab").scrollLeft -= 200;
 };
 
+function showPopUp() {
+  $("#popUpModal").modal("show");
+}
+
 function goToTop() {
   let categoryTop = document.querySelector(".homeProductList");
   categoryTop.scrollTop = 0;
@@ -53,4 +57,5 @@ function showAllTabContent() {
 }
 
 window.addEventListener("load", showAllTabContent);
+window.addEventListener("load", showPopUp);
 catLinks.forEach((catLink) => catLink.addEventListener("click", goToTop));
