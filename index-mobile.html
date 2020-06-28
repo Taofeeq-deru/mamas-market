@@ -11,7 +11,7 @@
     />
     <!--Google fonts link for Montserrat font family-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <!--Font awesome 5.13.0 link-->
@@ -34,53 +34,73 @@
   <body>
     <!--pop up-->
     <div class="modal fade" id="popUpModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-brown">
           <div class="modal-body">
             <div class="row">
-              <div class="col-12">
-                <h3 class="text-dark text-center">
-                  Welcome to Mama's Market <br />
+              <!--prettier-ignore-->
+              <div class="col-12 d-flex py-3 justify-content-center" id="contentModal">
+                <!--prettier-ignore-->
+                <div class="left-arrow">
                   <!--prettier-ignore-->
-                  <img
-                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1588513671/logo_rnb59o.png"
-                    alt="logo"
-                    width="100"
-                    height="50"
-                    class="mx-auto" />
-                </h3>
-                <div class="d-flex flex-row justify-content-between">
-                  <a href="shop-for-me/order-mobile.html">
-                    <!--prettier-ignore-->
-                    <button type="button" class="btn btn-market btn-pop py-2 py-md-3 px-2 px-md-3">
-                      Use the Shop for me
-                    </button>
-                  </a>
-                  <p class="fa-md text-uppercase my-auto">or</p>
-                  <!--prettier-ignore-->
-                  <button type="button" class="btn btn-primary btn-pop py-2 py-md-3 px-2 px-md-3"  data-dismiss="modal" aria-label="Close">
-                    Shop for yourself
-                  </button>
+                  <img 
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1593334031/DOODE_ARROW_VECTOR_2_gws0fq.png" 
+                    alt="doodle arrow"
+                    class="left-doodle" />
                 </div>
-                <h5 class="text-dark text-center my-3 my-md-4">
-                  What would you like to do?
-                </h5>
-                <div class="d-flex flex-row justify-content-between">
-                  <a href="sellers-hub/seller-homepage-mobile.html">
-                    <!--prettier-ignore-->
-                    <button type="button" class="btn btn-success btn-pop py-2 py-md-3 px-2 px-md-3">
-                      Become a seller
-                    </button>
-                  </a>
+                <div class="center">
                   <!--prettier-ignore-->
-                  <button type="button" class="btn btn-secondary btn-pop py-2 py-md-3 px-2 px-md-3" data-dismiss="modal" aria-label="Close">
-                    Take a tour
-                  </button>
+                  <h3 class="text-warning text-center fa-welcome d-flex flex-column align-items-center">
+                    Welcome to mama's MARKET
+                    <!--prettier-ignore-->
+                    <img
+                      src="https://res.cloudinary.com/mama-s-market/image/upload/v1593334060/mamas_yellow_logo_small_m2vhdk.png"
+                      alt="logo"
+                      height="150"
+                      class="mx-auto mt-n3 mb-n2" />
+                  </h3>
+                  <div class="d-flex flex-row justify-content-between px-md-3">
+                    <a href="shop-for-me/order-mobile.html">
+                      <!--prettier-ignore-->
+                      <button type="button" class="btn btn-pop text-warning text-uppercase">
+                        shop for me
+                      </button>
+                    </a>
+                    <!--prettier-ignore-->
+                    <button type="button" class="btn btn-pop text-warning text-uppercase" data-dismiss="modal" aria-label="Close">
+                        buy online
+                      </button>
+                  </div>
+                  <!--prettier-ignore-->
+                  <h5 class="text-warning text-center text-nowrap my-4 fa-do">
+                    what would you like to do?
+                  </h5>
+                  <!--prettier-ignore-->
+                  <div class="d-flex flex-row justify-content-between my-4 px-md-3">
+                    <a href="sellers-hub/seller-homepage-mobile.html">
+                      <!--prettier-ignore-->
+                      <button type="button" class="btn btn-pop text-warning text-uppercase">
+                        Become a seller
+                      </button>
+                    </a>
+                    <!--prettier-ignore-->
+                    <button type="button" class="btn btn-pop text-warning text-uppercase" data-dismiss="modal" aria-label="Close">
+                      Take a tour
+                    </button>
+                  </div>
+                  <!--prettier-ignore-->
+                  <h6 class="fa-md text-center mt-5 point font-weight-bold" data-dismiss="modal" aria-label="Close">
+                    Continue...
+                  </h6>
                 </div>
                 <!--prettier-ignore-->
-                <h6 class="text-mama text-center my-4 point font-weight-bold" data-dismiss="modal" aria-label="Close">
-                  Continue...
-                </h6>
+                <div class="right-arrow">
+                  <!--prettier-ignore-->
+                  <img 
+                    src="https://res.cloudinary.com/mama-s-market/image/upload/v1593334032/DOODE_ARROW_VECTOR_1_rpe224.png" 
+                    alt="doodle arrow"
+                    class="right-doodle" />
+                </div>
               </div>
             </div>
           </div>

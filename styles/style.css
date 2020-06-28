@@ -3,8 +3,49 @@ body {
   margin: 0;
 }
 
+#popUpModal {
+  font-family: "Chilanka", cursive;
+}
+
+.bg-brown {
+  background-color: #343a40;
+}
+
 .point {
   cursor: pointer;
+  color: #ffc107;
+}
+
+.point:hover {
+  color: #b38706;
+}
+
+.btn-pop {
+  font-size: 0.85em;
+  width: 160px;
+  background-color: #232425;
+}
+
+.btn-pop:hover {
+  background-color: #050607;
+}
+
+.left-arrow {
+  position: relative;
+}
+
+.right-arrow {
+  position: relative;
+}
+
+.left-doodle {
+  position: relative;
+  top: 35%;
+}
+
+.right-doodle {
+  position: relative;
+  top: 55%;
 }
 
 .hide {
